@@ -515,3 +515,49 @@ ruby {
     }
   }
 }
+
+//斜め画像
+.skew-img {
+  position: relative;
+  padding-top: myrem(30);
+  padding-right: myrem(43);
+  max-height: myrem(502);
+  @media #{$sp} {
+    padding-bottom: myrem(22);
+    padding-right: myrem(24);
+    padding-top: 0;
+  }
+}
+
+.skew-img__front {
+  clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 675 / 473;
+  position: relative;
+  z-index: 4;
+  @media #{$sp} {
+    width: calc(100% - #{myrem(24)});
+    height: calc(100% - #{myrem(22)});
+  }
+}
+
+.skew-img__back {
+  clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
+  width: calc(100% - #{myrem(43)});
+  height: calc(100% - #{myrem(30)});
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  filter: blur(30px);
+  background-color: #fff;
+  @media #{$sp} {
+    top: initial;
+    bottom: 0;
+    background-color: #fff;
+    width: calc(100% - #{myrem(24)});
+    height: calc(100% - #{myrem(22)});
+  }
+}
