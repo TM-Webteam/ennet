@@ -3,3 +3,110 @@
   TOP
   ----------------
 */
+
+// メインビュー
+.mv {
+  height: myrem(704);
+  background: url(../img/top/bg-mv.png) no-repeat center center /cover;
+  padding-top: myrem(150);
+  padding-bottom: myrem(50);
+  overflow: hidden;
+  @media #{$sp} {
+    background-position: 18% bottom;
+    position: relative;
+    padding-top: myrem(99);
+  }
+}
+
+.mv__containers {
+  @media #{$sp} {
+    padding-right: myrem(32);
+    padding-left: myrem(32);
+  }
+}
+
+.mv__content {
+  display: flex;
+  @media #{$sp} {
+    display: block;
+  }
+}
+
+.mv__body {
+  width: calc(600 / 1330 * 100%);
+  @media #{$sp} {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+.mv__logo {
+  width: myrem(520);
+  margin-top: myrem(57);
+  @media #{$sp} {
+    width: myrem(320);
+    margin-top: 0;
+  }
+}
+
+.mv__logo img {
+  width: initial;
+  height: auto;
+}
+
+.mv__lead {
+  font-size: myrem(15);
+  font-weight: 500;
+  line-height: calc(50/15);
+  letter-spacing: 0.04em;
+  @media #{$sp} {
+    font-size: myrem(14);
+    line-height: calc(21/14);
+    margin-top: myrem(26);
+  }
+}
+
+.mv__img {
+  width: calc(730 / 1330 * 100%);
+  @media #{$sp} {
+    width: myrem(729);
+    position: absolute;
+    top: myrem(23);
+    left: calc( 80 / 390 * 100%);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
+      width: calc(100% - #{myrem(50)});
+      height: calc(100% - #{myrem(22)});
+      background-color: #fff;
+      position: absolute;
+      bottom: #{myrem(23)};
+      left: 0;
+      z-index: 3;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
+      width: calc(100% - #{myrem(24)});
+      height: calc(100% - #{myrem(22)});
+      background-color: #fff;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+  }
+  .skew-img__front {
+    @media #{$sp} {
+      // object-position: -130px 0;
+      opacity: 0.7;
+    }
+  }
+}
+

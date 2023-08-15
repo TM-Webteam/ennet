@@ -6,7 +6,7 @@
 
 body {
   font-family: $font-family;
-  font-size: 16px;
+  font-size: myrem(16);
   line-height: 1.75;
   @media #{$sp} {
     font-size: 14px;
