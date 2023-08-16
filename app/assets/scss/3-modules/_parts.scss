@@ -519,12 +519,12 @@ ruby {
 //斜め画像
 .skew-img {
   position: relative;
-  padding-top: myrem(30);
-  padding-right: myrem(43);
-  max-height: myrem(502);
+  padding-top: 30px;
+  padding-right: 43px;
+  max-height: 502px;
   @media #{$sp} {
-    padding-bottom: myrem(22);
-    padding-right: myrem(24);
+    padding-bottom: 22px;
+    padding-right: 24px;
     padding-top: 0;
   }
 }
@@ -538,15 +538,15 @@ ruby {
   position: relative;
   z-index: 4;
   @media #{$sp} {
-    width: calc(100% - #{myrem(24)});
-    height: calc(100% - #{myrem(22)});
+    width: calc(100% - 24px);
+    height: calc(100% - 22px);
   }
 }
 
 .skew-img__back {
   clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
-  width: calc(100% - #{myrem(43)});
-  height: calc(100% - #{myrem(30)});
+  width: calc(100% - 43px);
+  height: calc(100% - 30px);
   position: absolute;
   top: 0;
   right: 0;
@@ -557,7 +557,7 @@ ruby {
     top: initial;
     bottom: 0;
     background-color: #fff;
-    width: calc(100% - #{myrem(24)});
-    height: calc(100% - #{myrem(22)});
+    width: calc(100% - 24px);
+    height: calc(100% - 22px);
   }
 }

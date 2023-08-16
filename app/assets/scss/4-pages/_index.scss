@@ -6,22 +6,22 @@
 
 // メインビュー
 .mv {
-  height: myrem(704);
+  height: 704px;
   background: url(../img/top/bg-mv.png) no-repeat center center /cover;
-  padding-top: myrem(150);
-  padding-bottom: myrem(50);
+  padding-top: 150px;
+  padding-bottom: 50px;
   overflow: hidden;
   @media #{$sp} {
     background-position: 18% bottom;
     position: relative;
-    padding-top: myrem(99);
+    padding-top: 99px;
   }
 }
 
 .mv__containers {
   @media #{$sp} {
-    padding-right: myrem(32);
-    padding-left: myrem(32);
+    padding-right: 32px;
+    padding-left: 32px;
   }
 }
 
@@ -42,10 +42,10 @@
 }
 
 .mv__logo {
-  width: myrem(520);
-  margin-top: myrem(57);
+  width: 520px;
+  margin-top: 57px;
   @media #{$sp} {
-    width: myrem(320);
+    width: 320px;
     margin-top: 0;
   }
 }
@@ -56,34 +56,34 @@
 }
 
 .mv__lead {
-  font-size: myrem(15);
+  font-size: 15px;
   font-weight: 500;
   line-height: calc(50/15);
   letter-spacing: 0.04em;
   @media #{$sp} {
-    font-size: myrem(14);
+    font-size: 14px;
     line-height: calc(21/14);
-    margin-top: myrem(26);
+    margin-top: 26px;
   }
 }
 
 .mv__img {
   width: calc(730 / 1330 * 100%);
   @media #{$sp} {
-    width: myrem(729);
+    width: 729px;
     position: absolute;
-    top: myrem(23);
+    top: 23px;
     left: calc( 80 / 390 * 100%);
 
     &::before {
       content: "";
       display: inline-block;
       clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
-      width: calc(100% - #{myrem(50)});
-      height: calc(100% - #{myrem(22)});
+      width: calc(100% - 50px);
+      height: calc(100% - 22px);
       background-color: #fff;
       position: absolute;
-      bottom: #{myrem(23)};
+      bottom: 23px;
       left: 0;
       z-index: 3;
     }
@@ -92,8 +92,8 @@
       content: "";
       display: inline-block;
       clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
-      width: calc(100% - #{myrem(24)});
-      height: calc(100% - #{myrem(22)});
+      width: calc(100% - 24px);
+      height: calc(100% - 22px);
       background-color: #fff;
       position: absolute;
       bottom: 0;
