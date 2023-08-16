@@ -187,13 +187,26 @@ $(window).on('load', function() {
 //--------------------------------------
 // ビューポート設定
 //--------------------------------------
+// $(window).on('load', function(){
+//   let ua = navigator.userAgent;
+//   if ((ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) && ua.indexOf('Mobile') > 0) {
+//     $("meta[name ='viewport']").attr('content','width=device-width, initial-scale=1.0');
+//   } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+//      $("meta[name ='viewport']").attr('content','width=1440');
+//   } else {
+//     $("meta[name ='viewport']").attr('content','width=device-width, initial-scale=1.0');
+//   }
+// });
+
 $(window).on('load', function(){
   let ua = navigator.userAgent;
+
   if ((ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) && ua.indexOf('Mobile') > 0) {
-    $("meta[name ='viewport']").attr('content','width=device-width, initial-scale=1.0');
+    $("meta[name ='viewport']").attr('content','width=390');
   } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
-     $("meta[name ='viewport']").attr('content','width=1440');
+    $("meta[name ='viewport']").attr('content','width=1440');
   } else {
-    $("meta[name ='viewport']").attr('content','width=device-width, initial-scale=1.0');
+    // PCの場合
+    $("meta[name ='viewport']").attr('content','width=1440');
   }
 });
