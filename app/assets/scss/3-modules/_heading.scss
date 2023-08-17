@@ -22,8 +22,9 @@
 		font-size: myrem(15);
 		font-weight: 500;
 		margin-top: myrem(24);
+		letter-spacing: 0.04em;
 		@media #{$sp} {
-			margin-top: myrem(10);
+			margin-top: myrem(16);
 			text-align: center;
 		}
 	}

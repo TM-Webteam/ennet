@@ -4,7 +4,7 @@
   ----------------
 */
 .top__result {
-  margin-top: myrem(88);
+  margin-top: myrem(81);
   @media #{sp} {
     margin-top: myrem(64);
   }
@@ -13,28 +13,28 @@
 .top__about {
   margin-top: myrem(169);
   @media #{$sp} {
-    margin-top: myrem(128);
+    margin-top: myrem(136);
   }
 }
 
 .top__column {
   margin-top: myrem(167);
   @media #{$sp} {
-    margin-top: myrem(128);
+    margin-top: myrem(116);
   }
 }
 
 .top__recommend {
-  margin-top: myrem(160);
+  margin-top: myrem(168);
   @media #{$sp} {
-    margin-top: myrem(128);
+    margin-top: myrem(134);
   }
 }
 
 .top__document {
   margin-top: myrem(178);
   @media #{$sp} {
-    margin-top: myrem(140);
+    margin-top: myrem(144);
   }
 }
 
@@ -46,10 +46,10 @@
 }
 
 .top__contact {
-  margin-top: myrem(160);
-  margin-bottom: myrem(90);
+  margin-top: myrem(168);
+  margin-bottom: myrem(128);
   @media #{$sp} {
-    margin-top: myrem(128);
+    margin-top: myrem(137);
   }
 }
 
@@ -66,17 +66,34 @@
   padding-bottom: myrem(50);
   overflow: hidden;
   @media #{$sp} {
-    background-position: 18% bottom;
-    position: relative;
-    padding-top: 99px;
-    background-size: 100%;
+    padding: 0;
   }
+
 }
 
 .mv__containers {
+  position: relative;
   @media #{$sp} {
     padding-right: myrem(32);
     padding-left: myrem(32);
+    height: 100%;
+  }
+  &::before {
+    content: "";
+    display: inline-block;
+    width: myrem(200);
+    height: myrem(153);
+    background: url(../img/top/img-car.png) no-repeat center / contain;
+    position: absolute;
+    bottom: myrem(-55);
+    left: myrem(55);
+    z-index: 2;
+    @media #{$sp} {
+      width: myrem(136);
+      height: myrem(105);
+      left: myrem(35);
+      bottom: 0;
+    }
   }
 }
 
@@ -84,6 +101,8 @@
   display: flex;
   @media #{$sp} {
     display: block;
+    padding-top: myrem(100);
+
   }
 }
 
@@ -128,7 +147,7 @@
   @media #{$sp} {
     width: myrem(729);
     position: absolute;
-    top: myrem(23);
+    top: myrem(26);
     left: calc( 80 / 390 * 100%);
   }
   .skew-img__front {
@@ -150,9 +169,9 @@
   border-radius: 10px;
   background: $base-color;
   box-shadow:  $shadow;
-  padding: myrem(32) myrem(30) myrem(40) myrem(30);
+  padding: myrem(36) myrem(30) myrem(40) myrem(30);
   @media #{$sp} {
-    padding: myrem(32) myrem(10) myrem(32) myrem(10);
+    padding: myrem(20) myrem(10) myrem(32) myrem(10);
     max-width: myrem(550);
     margin-inline: auto;
   }
@@ -164,14 +183,17 @@
 
 .top-result__ttl {
   color: $darkgreen;
+  font-size: myrem(25);
   font-weight: 500;
   line-height: calc(51/25);
   letter-spacing: 0.06em;
   text-align: center;
   display: inline-block;
-  transform: translateX(4%);
+  transform: translateX(11%);
   @media #{$sp} {
     font-size: myrem(18);
+    line-height: calc(30/18);
+    transform: translateX(0);
   }
 }
 
@@ -182,7 +204,7 @@
 }
 
 .top-result__content.flex {
-  margin-top: myrem(36);
+  margin-top: myrem(20);
   @media #{$sp} {
     display: block;
   }
@@ -190,9 +212,9 @@
 
 
 .top-result__item {
-  padding: myrem(10) myrem(78) 0 myrem(94);
+  padding: myrem(10) myrem(94) 0 myrem(94);
   @media #{$sp} {
-    padding: 0 myrem(10) myrem(65) myrem(10);
+    padding: myrem(10) myrem(10) myrem(65) myrem(10);
   }
 
   &:nth-child(n+2) {
@@ -235,12 +257,20 @@
 .top-result__num {
   font-size: myrem(14);
   text-align: center;
+  transform: translateX(10%);
+  @media #{$sp} {
+    padding-left: myrem(30);
+    transform: translateX(0);
+  }
 
   .large {
     font-size: myrem(60);
     letter-spacing: 0.04em;
+    margin-right: myrem(10);
     @media #{$sp} {
       font-size: myrem(86);
+      line-height: 1.1;
+      margin-left: 0;
     }
   }
 }
@@ -250,6 +280,9 @@
   height: myrem(88);
   margin-right: 0;
   margin-inline: auto;
+  @media #{$sp} {
+    margin-top: myrem(20);
+  }
 
   img {
    object-fit: contain;
@@ -337,6 +370,9 @@
 
 .top-column__form {
   margin-top: myrem(58);
+  @media #{$sp} {
+    margin-top: myrem(32);
+  }
 }
 
 .top-column__categories {
@@ -345,6 +381,9 @@
   flex-wrap: wrap;
   column-gap: myrem(13);
   row-gap: myrem(11);
+  @media #{$sp} {
+    margin-top: myrem(30);
+  }
 }
 
 .top-column__content02 {
@@ -364,9 +403,9 @@
 
 .top-column__btn {
   text-align: center;
-  margin-top: myrem(43);
+  margin-top: myrem(47);
   @media #{$sp} {
-    margin-top: myrem(40);
+    margin-top: myrem(48);
   }
 }
 
@@ -379,11 +418,15 @@
   @media #{$sp} {
     max-width: myrem(550);
     margin-inline: auto;
+    margin-top: myrem(36);
   }
 }
 
 .top-recommend__item:not(:first-child) {
   margin-top: myrem(31);
+  @media #{$sp} {
+    margin-top: myrem(38);
+  }
 }
 
 /*==================================
@@ -428,7 +471,7 @@
   min-height: myrem(312);
   @media #{$sp} {
     flex-direction: column;
-    padding: myrem(32) myrem(24) myrem(36) myrem(24);
+    padding: myrem(40) myrem(24) myrem(36) myrem(24);
   }
 
   .img {
@@ -452,7 +495,7 @@
     height: 100%;
     @media #{$sp} {
       width: 100%;
-      margin-top: myrem(19);
+      margin-top: myrem(24);
     }
   }
 
@@ -462,6 +505,9 @@
     line-height: calc(26/16);
     font-weight: 500;
     letter-spacing: 0.04em;
+    @media #{$sp} {
+
+    }
   }
 
   .text {
@@ -480,7 +526,7 @@
 
 .top-document__btn {
   text-align: center;
-  margin-top: myrem(62);
+  margin-top: myrem(55);
   .btn01 {
     box-shadow: -3px -3px 4px rgba(255, 255, 255, .1),
     -2px -2px 10px rgba(255, 255, 255, .2),
@@ -499,6 +545,9 @@
   }
   @media #{$sp} {
     margin-top: myrem(30);
+    @media #{$sp} {
+      margin-top: myrem(36);
+    }
   }
 }
 
@@ -509,6 +558,9 @@
   margin-top: myrem(40);
   max-width: myrem(816);
   margin-inline: auto;
+  @media #{$sp} {
+    margin-top: myrem(36);
+  }
 
   .tab-list {
     display: grid;
@@ -520,8 +572,9 @@
     }
 
     .tab-menu {
+      font-size: myrem(20);
       text-align: center;
-      padding: myrem(14);
+      padding: myrem(10) myrem(10);
       transition: all .2s ease-in-out;
       &:not(:last-child) {
         border-right: 1px solid #D9D9D9;
@@ -545,6 +598,7 @@
       }
 
       &:hover{
+        cursor: pointer;
         box-shadow: inset 7px 7px 14px #e6e6e6,
             inset -7px -7px 14px #ffffff;
       }
@@ -563,11 +617,13 @@
   background-color: $base-color;
   border-radius: myrem(10);
   box-shadow: $shadow;
-  margin-top: myrem(16);
+  margin-top: myrem(20);
   padding: myrem(64) myrem(48) myrem(44) myrem(56);
+  max-width: myrem(1100);
+  margin-inline: auto;
   @media #{$sp} {
     margin-top: myrem(43);
-    padding: myrem(37) myrem(24) myrem(30) myrem(24);
+    padding: myrem(25) myrem(24) myrem(30) myrem(24);
   }
 }
 
@@ -599,14 +655,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: myrem(23) 0;
+  padding: myrem(14) 0;
   border-top: 1px solid #D9D9D9;
   @media #{$sp} {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     width: calc(96 / 280 * 100%);
-    padding: myrem(10) 0 myrem(12);
+    padding: myrem(7) 0 myrem(20);
   }
 }
 
@@ -620,7 +676,7 @@
 
 .top-news__item-cat {
   @media #{$sp} {
-    margin-top: myrem(12);
+    margin-top: myrem(10);
   }
 }
 
@@ -633,7 +689,7 @@
   @media #{$sp} {
     width: calc(166 / 280 * 100%);
     margin-left: myrem(16);
-    padding: myrem(10) 0 myrem(12);
+    padding: myrem(7) 0 myrem(20);
   }
 }
 
@@ -652,7 +708,7 @@
 
 .top-news__btn {
   text-align: center;
-  margin-top: myrem(67);
+  margin-top: myrem(63);
   @media #{$sp} {
     margin-top: myrem(41);
   }
@@ -665,7 +721,7 @@
   font-size: myrem(22);
   letter-spacing: 0.06em;
   text-align: center;
-  margin-top: myrem(40);
+  margin-top: myrem(36);
   @media #{$sp} {
     margin-top: myrem(32);
   }
@@ -677,8 +733,9 @@
 
 .top-contact__btn {
   text-align: center;
-  margin-top: myrem(46);
+  margin-top: myrem(42);
 }
+
 .top-contact__document {
   background-color: $base-color;
   border-radius: myrem(10);
@@ -687,6 +744,7 @@
   margin-top: myrem(47);
   @media #{$sp} {
     padding: myrem(32) myrem(22) myrem(37) myrem(22);
+    margin-top: myrem(60);
   }
 }
 
@@ -694,6 +752,9 @@
   font-size: myrem(18);
   letter-spacing: 0.06em;
   text-align: center;
+  @media #{$sp} {
+    font-size: myrem(16);
+  }
 
   span {
     display: inline-block;
@@ -710,6 +771,7 @@
     align-items: center;
     flex-direction: column;
     row-gap: myrem(25);
+    margin-top: myrem(24);
   }
 }
 
