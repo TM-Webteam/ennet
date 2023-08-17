@@ -37,107 +37,107 @@
 }
 
 // ボタン
-.btn01 {
-	display: block;
-  max-width: 560px;
-	color: #fff;
-	font-size: 20px;
-	font-weight: bold;
-	text-align: center;
-	padding: 17px;
-	background: #0D5BAB;
-  box-shadow: 0 7px 20px rgba(0,0,0,0.22);
-	position: relative;
-  border-radius: 50px;
-  margin: 0 auto;
-  border: 3px solid #0D5BAB;
-	@media #{$sp} {
-		font-size: 14px;
-    padding: 13px;
-    max-width: 85%;
-    border: 2px solid #0D5BAB;
-	}
-  &:before {
-		content: "";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		margin: auto;
-		right: 30px;
-    width: 8px;
-    height: 8px;
-    border-top: solid 3px #fff;
-    border-right: solid 3px #fff;
-    transform: rotate(45deg);
-    transition: all .3s;
-    @media #{$sp} {
-      right: 20px;
-    }
-	}
-  &:hover {
-    opacity: 1;
-    background: #fff;
-    color: #0D5BAB;
-    &::before {
-      border-top: solid 3px #0D5BAB;
-      border-right: solid 3px #0D5BAB;
-    }
-  }
-  // サムネ付きボタン
-  &.thumb {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -50px;
-      margin: auto;
-      width: 126px;
-      height: 88px;
-      background: url("../img/common/img-thumb01.png") 50% / contain no-repeat;
-      transition: all .3s;
-      @media #{$sp} {
-        left: -30px;
-        width: 90px;
-        height: 55px;
-      }
-    }
-    &:hover {
-      &::after {
-        width: 136px;
-        height: 98px;
-      }
-    }
-  }
-  // 小さいボタン
-  &.small {
-    max-width: 330px;
-    padding: 10px;
-    &:before {
-      width: 6px;
-      height: 6px;
-      border-top: solid 2px #fff;
-      border-right: solid 2px #fff;
-    }
-    &:hover {
-      &::before {
-        border-top: solid 2px #F7A307;
-        border-right: solid 2px #F7A307;
-      }
-    }
-  }
-  // 最小ボタン
-  &.tiny {
-    font-size: 13px;
-    width: 140px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.16);
-    &:before {
-      content: none;
-    }
-  }
-}
+// .btn01 {
+// 	display: block;
+//   max-width: 560px;
+// 	color: #fff;
+// 	font-size: 20px;
+// 	font-weight: bold;
+// 	text-align: center;
+// 	padding: 17px;
+// 	background: #0D5BAB;
+//   box-shadow: 0 7px 20px rgba(0,0,0,0.22);
+// 	position: relative;
+//   border-radius: 50px;
+//   margin: 0 auto;
+//   border: 3px solid #0D5BAB;
+// 	@media #{$sp} {
+// 		font-size: 14px;
+//     padding: 13px;
+//     max-width: 85%;
+//     border: 2px solid #0D5BAB;
+// 	}
+//   &:before {
+// 		content: "";
+// 		position: absolute;
+// 		top: 0;
+// 		bottom: 0;
+// 		margin: auto;
+// 		right: 30px;
+//     width: 8px;
+//     height: 8px;
+//     border-top: solid 3px #fff;
+//     border-right: solid 3px #fff;
+//     transform: rotate(45deg);
+//     transition: all .3s;
+//     @media #{$sp} {
+//       right: 20px;
+//     }
+// 	}
+//   &:hover {
+//     opacity: 1;
+//     background: #fff;
+//     color: #0D5BAB;
+//     &::before {
+//       border-top: solid 3px #0D5BAB;
+//       border-right: solid 3px #0D5BAB;
+//     }
+//   }
+//   // サムネ付きボタン
+//   &.thumb {
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       top: 0;
+//       bottom: 0;
+//       left: -50px;
+//       margin: auto;
+//       width: 126px;
+//       height: 88px;
+//       background: url("../img/common/img-thumb01.png") 50% / contain no-repeat;
+//       transition: all .3s;
+//       @media #{$sp} {
+//         left: -30px;
+//         width: 90px;
+//         height: 55px;
+//       }
+//     }
+//     &:hover {
+//       &::after {
+//         width: 136px;
+//         height: 98px;
+//       }
+//     }
+//   }
+//   // 小さいボタン
+//   &.small {
+//     max-width: 330px;
+//     padding: 10px;
+//     &:before {
+//       width: 6px;
+//       height: 6px;
+//       border-top: solid 2px #fff;
+//       border-right: solid 2px #fff;
+//     }
+//     &:hover {
+//       &::before {
+//         border-top: solid 2px #F7A307;
+//         border-right: solid 2px #F7A307;
+//       }
+//     }
+//   }
+//   // 最小ボタン
+//   &.tiny {
+//     font-size: 13px;
+//     width: 140px;
+//     padding: 10px;
+//     border-radius: 10px;
+//     box-shadow: 0 5px 10px rgba(0,0,0,0.16);
+//     &:before {
+//       content: none;
+//     }
+//   }
+// }
 
 // 吹き出し付きボタン
 .ctabtn {
@@ -211,4 +211,117 @@
       color: #fff;
     }
   }
+}
+
+
+// #追加CSS
+// ========================================================*/
+.btn01 {
+  display: inline-block;
+  color: $lightgreen;
+  font-size: myrem(13);
+  padding: myrem(9) myrem(10);
+  text-align: center;
+  min-width: myrem(209);
+  border-radius: myrem(50);
+  background-color: $base-color;
+  // box-shadow:  6px 6px 8px #e3e3e3,
+  // -9px -9px 11px #ffffff;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              4px 4px 6px rgba(255, 255, 255, .075),
+              4px 4px 4px rgba(0, 0, 0, .15);
+  transition: all .2s ease-in-out;
+
+  &:hover,&f:focus {
+    opacity: 1;
+    outline: none;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1),
+              inset 3px 3px 10px #e6e6e6,
+            inset -3px -3px 10px #ffffff;
+
+
+  }
+
+  &:active {
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+    inset -2px -2px 4px rgba(255, 255, 255, .5),
+    inset 2px 2px 2px rgba(255, 255, 255, .075),
+    inset 2px 2px 4px rgba(0, 0, 0, .15);
+  }
+
+  &.--large {
+    padding: myrem(10) myrem(40);
+    min-width: myrem(242);
+  }
+
+  &.--yellow {
+    color: $white;
+    background-color: $yellow;
+    box-shadow: -3px -3px 12px rgba(255, 255, 255, .1),
+    -2px -2px 7px rgba(255, 255, 255, .3),
+    4px 4px 6px rgba(255, 255, 255, .075),
+    4px 4px 4px rgba(0, 0, 0, .15);
+
+    &:hover,&f:focus {
+    opacity: 1;
+    outline: none;
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, .1),
+              0px 0px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+   }
+  }
+}
+
+.btn02 {
+  font-size: myrem(20);
+  color: $white;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background-color: $darkgreen;
+  padding: myrem(18) myrem(70);
+  min-width: myrem(381);
+  text-align: center;
+  border-radius: myrem(50);
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+  @media #{$sp} {
+    min-width: myrem(326);
+    padding: myrem(18) myrem(30);
+  }
+  &:hover,&:focus {
+    opacity: 1;
+    outline: none;
+    background-color: $base-color;
+    color: $darkgreen;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .1),
+              1px 1px 4px rgba(0, 0, 0, .4),
+              inset 3px 3px 10px #e6e6e6,
+            inset -3px -3px 10px #ffffff;
+  }
+
+  &.--yellow {
+    background-color: $yellow;
+    &:hover {
+      background-color: $base-color;
+      color: $yellow;
+    }
+  }
+
+  &.--sp-small {
+    @media #{$sp} {
+      font-size: myrem(14);
+      min-width: myrem(277);
+      padding: myrem(14) myrem(30);
+    }
+  }
+
 }

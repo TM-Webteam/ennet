@@ -10,6 +10,48 @@
   }
 }
 
+// pxからremへの計算式
+// 例：myrem(32) → 2rem
+@function myrem($pixels) {
+  @return ($pixels / 16) * 1rem;
+}
+
+// 数値のみを取り出す
+// 例：strip-unit(16px) → 16
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+// フォントサイズ ÷ 画面幅 * 100vw の計算 
+// 例：vw(1250px, 16px) → 16px ÷ 1250px × 100vw
+@function vw($window_width, $size) {
+  @return ($size / $window_width) * 100vw;
+}
+
+// ルートフォント設定
+html {
+  // インナー幅＋余白+1px ~
+  font-size: 100%;
+
+  // 768px ~ インナー幅＋余白
+  @media ( max-width: $container ) {
+    font-size: vw(1440, 16);
+  }
+
+  // 390px ~ 767px
+  @media #{$sp} {
+    font-size: 100%;
+  }
+
+  // ~ 390px
+  @media (max-width: 390px) {
+    font-size: vw(390, 16);
+  }
+}
+
 
 // Clear fix （Bourbon には入っているけど、念のために）
 

@@ -15,14 +15,19 @@ $font-family: 'Noto Sans JP','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic P
 // カラー
 
 $primary-color: #000;
-
 $secondary-color: #ccc;
-
 $tertiary-color: #eee;
+$base-color: #F7F7F7;
 
+$black: #000;
+$white: #fff;
+$darkgreen: #32743D;
+$lightgreen: #7ACC88;
+$yellow: #D8BA31;
+$lightblue: #70CEEE;
+$orange: #EE8D70;
 
-// テキストカラー
-
+$grade01: transparent linear-gradient(103deg, #70CCF5 0%, #72DBA2 20%, #7ACC88 83%, #C8BE40 92%, #DBBA2E 100%) 0% 0% no-repeat padding-box;
 
 
 // コンテナー設定
@@ -34,5 +39,13 @@ $container-full: 100%;
 
 $gutter: 20px;
 $small-gutter: 10px;
+
+// ボックスシャドウ
+$shadow: 7px 7px 14px #d9d9d9,-7px -7px 14px #ffffff,-3px -3px 5px #ffffff;;
+$shadow--sm: 7px 4px 10px #d9d9d9,-7px -7px 14px #ffffff;
+
+
+$shadow-hover: 2px 2px 6px #d9d9d9,-2px -2px 6px #ffffff;
+
 
 
