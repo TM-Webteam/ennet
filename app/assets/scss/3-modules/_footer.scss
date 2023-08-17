@@ -6,7 +6,11 @@
 .footer__body {
   background: $grade01;
   padding-top: myrem(79);
-  padding-bottom: myrem(87);
+  padding-bottom: myrem(84);
+  @media #{$sp} {
+    padding-top: myrem(45);
+    background-image: linear-gradient(157deg, #70ccf5, #72dba2 20%, #7acc88 83%, #c8be40 92%, #dbba2e);
+  }
 }
 
 .footer__containers {
@@ -14,8 +18,8 @@
   margin-inline: auto;
   @media #{$sp} {
     display: block;
-    padding-right: myrem(35);
-    padding-left: myrem(35);
+    padding-right: myrem(50);
+    padding-left: myrem(50);
   }
 }
 
@@ -31,7 +35,7 @@
   width: calc(590 / 1160 * 100%);
   @media #{$sp} {
     width: 100%;
-    margin-top: myrem(40);
+    margin-top: myrem(30);
   }
 }
 
@@ -49,10 +53,10 @@
 }
 
 .footer__link {
-  margin-top: myrem(20);
+  margin-top: myrem(16);
   display: flex;
   @media #{$sp} {
-    margin-top: myrem(40);
+    margin-top: myrem(24);
     flex-direction: column;
   }
 }
@@ -108,7 +112,7 @@
     width: calc( 250/ 580 * 100%);
     @media #{$sp} {
       width: 100%;
-      margin-top: myrem(40);
+      margin-top: myrem(30);
     }
   }
 
@@ -141,7 +145,10 @@
 
     }
     &:not(:first-child) {
-      margin-top: myrem(25);
+      margin-top: myrem(16);
+      @media #{$sp} {
+        margin-top: myrem(30);
+      }
     }
   }
 }
@@ -158,7 +165,7 @@
     font-size: myrem(15);
     font-weight: 500;
     letter-spacing: 0.04em;
-    padding: rem(3) myrem(15) myrem(3) 0;
+    padding: myrem(3) myrem(15) myrem(3) 0;
     display: flex;
     align-items: center;
 
@@ -174,7 +181,7 @@
 
   &:not(:first-child) {
     @media #{$sp} {
-      margin-top: myrem(20);
+      margin-top: myrem(12);
     }
 
   }

@@ -220,13 +220,11 @@
   display: inline-block;
   color: $lightgreen;
   font-size: myrem(13);
-  padding: myrem(9) myrem(10);
+  padding: myrem(7) myrem(10);
   text-align: center;
   min-width: myrem(209);
   border-radius: myrem(50);
   background-color: $base-color;
-  // box-shadow:  6px 6px 8px #e3e3e3,
-  // -9px -9px 11px #ffffff;
   box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
               -6px -6px 10px rgba(255, 255, 255, .5),
               4px 4px 6px rgba(255, 255, 255, .075),
@@ -254,7 +252,7 @@
   }
 
   &.--large {
-    padding: myrem(10) myrem(40);
+    padding: myrem(8) myrem(40);
     min-width: myrem(242);
   }
 
@@ -283,7 +281,7 @@
   font-weight: 500;
   letter-spacing: 0.04em;
   background-color: $darkgreen;
-  padding: myrem(18) myrem(70);
+  padding: myrem(16) myrem(70);
   min-width: myrem(381);
   text-align: center;
   border-radius: myrem(50);

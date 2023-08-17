@@ -196,3 +196,51 @@ $(function () {
     });
   }
 });
+
+//--------------------------------------
+// フローティングナビ
+//--------------------------------------
+$(function() {
+  const header = $('#header-sub');
+  const scrollY = 700;
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > scrollY) {
+      header.addClass('scrolled');
+    } else {
+      header.removeClass('scrolled');
+    }
+  });
+});
+
+//--------------------------------------
+// ハンバーガーメニュー
+//--------------------------------------
+$('.js-hamburger-btn').click(function(){
+  $(this).toggleClass('open');
+  if($(this).hasClass('open')){
+    $('.js-drawer').addClass("open");
+    $('.js-overlay').addClass("open");
+  }else{
+    $('.js-drawer').removeClass("open");
+    $('.js-overlay').removeClass("open");
+  }
+});
+
+$('.js-overlay').on('click',function(){
+  if($(this).hasClass('open')){
+    $(this).removeClass('open');
+    $('.js-hamburger-btn').removeClass('open');
+    $('.js-drawer').removeClass('open');
+  }
+});
+
+$(window).on('load resize', function(){
+  const wid = $(window).width();
+  if(wid >= 640){
+    $('.js-drawer').css('display','block');
+  }else{
+    $('.js-drawer').removeClass('open');
+    $('.js-overlay').removeClass("open");
+  }
+});

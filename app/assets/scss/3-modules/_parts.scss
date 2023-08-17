@@ -746,10 +746,13 @@ ruby {
   overflow: hidden;
   @media #{$sp} {
     margin-bottom: myrem(10);
+    -webkit-line-clamp: 3;
+    margin-top: myrem(14);
   }
 }
 
 .card01__meta {
+  font-size: myrem(16);
   margin-top: auto;
   text-align: right;
   @media #{$sp} {
@@ -789,7 +792,7 @@ ruby {
 
 .card2__body {
   width: calc(580 / 1160 * 100%);
-  padding: myrem(43) myrem(10) myrem(35) myrem(10);
+  padding: myrem(50) myrem(10) myrem(30) myrem(10);
   @media #{$sp} {
     width: 100%;
     padding: myrem(32) myrem(10) myrem(33) myrem(10);
@@ -804,6 +807,7 @@ ruby {
   text-align: center;
   @media #{$sp} {
     font-size: myrem(24);
+    line-height: calc(35/24);
   }
 }
 
