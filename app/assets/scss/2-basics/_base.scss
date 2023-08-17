@@ -184,13 +184,25 @@ a,button[type="submit"] {
 	max-width: $container;
 	width: 100%;
 	margin: 0 auto;
-  padding-right: 55px;
-  padding-left: 55px;
+  padding-right: myrem(55);
+  padding-left: myrem(55);
 	@media #{$sp} {
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: myrem(34);
+    padding-left: myrem(34);
 	}
 }
+
+.containers--sm {
+  max-width: myrem(1270);
+  margin-inline: auto;
+  padding-right: myrem(55);
+  padding-left: myrem(55);
+	@media #{$sp} {
+    padding-right: myrem(34);
+    padding-left: myrem(34);
+	}
+}
+
 .containers-full {
   max-width: $container-full;
   width: 100%;
@@ -235,6 +247,9 @@ a,button[type="submit"] {
 
 
 /*** その他 ***/
+body {
+  background-color: $base-color;
+}
 
 main {
   // padding-top: 140px;

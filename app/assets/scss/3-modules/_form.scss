@@ -267,3 +267,55 @@
     }
   }
 }
+
+
+
+/*==================================
+# トップページ検索窓
+===================================*/
+.search-form {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: myrem(19);
+    height: myrem(19);
+    background: url(../img/common/icon-search-green.svg) no-repeat center center /contain;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: myrem(16);
+    z-index: 2;
+  }
+}
+
+.search-form__text{
+	box-sizing: border-box;
+  position: relative;
+  padding: 3px 10px;
+  border-radius: 20px;
+  height: 2.3em;
+  width: 260px;
+  overflow: hidden;
+  transition: .3s;
+  background-color: $base-color;
+  box-shadow:
+  6px 6px 20px #e3e3e3,
+  -6px -6px 10px #ffffff,
+    inset -2px -2px 3px #A2A2A257;
+   border: none;
+   font-size: myrem(13);
+   padding: myrem(15) myrem(25);
+   color: #9F9F9F;
+   min-height: myrem(36);
+   width: 100%;
+}
+
+.search-form__text:focus {
+	 box-shadow:
+ 10px 10px 20px #e3e3e3,
+  -10px -10px 20px #ffffff,
+    inset 3px 3px 3px #A2A2A257;
+   outline: none;
+}
