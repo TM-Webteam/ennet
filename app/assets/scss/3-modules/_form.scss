@@ -278,9 +278,19 @@
 ===================================*/
 .search-form {
   position: relative;
+  background-color: $base-color;
   max-width: myrem(400);
-  @media #{$sp} {
-    margin-inline: auto;
+  border-radius: 20px;
+  transition: .3s;
+  box-shadow:6px 6px 20px #e3e3e3,
+             -6px -6px 10px #ffffff,
+             inset -2px -2px 3px #A2A2A257;
+  border: none;
+  &:focus,&:hover {
+    box-shadow:
+    10px 10px 20px #e3e3e3,
+    -10px -10px 20px #ffffff,
+    inset 5px 5px 3px #A2A2A257;
   }
 
   &::before {
@@ -295,34 +305,28 @@
     right: myrem(16);
     z-index: 2;
   }
+
+  @media #{$sp} {
+    margin-inline: auto;
+  }
 }
 
 .search-form__text{
 	box-sizing: border-box;
-  position: relative;
-  padding: 3px 10px;
+  background-color: transparent;
   border-radius: 20px;
+  padding: 3px 10px;
   height: 2.3em;
   width: 260px;
   overflow: hidden;
-  transition: .3s;
-  background-color: $base-color;
-  box-shadow:
-  6px 6px 20px #e3e3e3,
-  -6px -6px 10px #ffffff,
-    inset -2px -2px 3px #A2A2A257;
-   border: none;
-   font-size: myrem(13);
-   padding: myrem(15) myrem(25);
-   color: #9F9F9F;
-   min-height: myrem(36);
-   width: 100%;
-}
+  font-size: myrem(13);
+  padding: myrem(15) myrem(25);
+  color: #9F9F9F;
+  min-height: myrem(36);
+  width: 100%;
 
-.search-form__text:focus {
-	 box-shadow:
- 10px 10px 20px #e3e3e3,
-  -10px -10px 20px #ffffff,
-    inset 3px 3px 3px #A2A2A257;
-   outline: none;
+  &:focus,&:hover {
+  outline: none;
+  border: none;
+  }
 }

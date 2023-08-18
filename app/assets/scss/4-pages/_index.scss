@@ -249,6 +249,7 @@
 
 .top-result__sub-ttl {
   font-size: myrem(14);
+  font-weight: 300;
   line-height: calc(30/14);
   text-align: center;
 
@@ -256,6 +257,7 @@
 
 .top-result__num {
   font-size: myrem(14);
+  font-weight: 300;
   text-align: center;
   transform: translateX(10%);
   @media #{$sp} {
@@ -265,6 +267,7 @@
 
   .large {
     font-size: myrem(60);
+    font-weight: 500;
     letter-spacing: 0.04em;
     margin-right: myrem(10);
     @media #{$sp} {
@@ -338,6 +341,7 @@
 
 .top-about__text {
   font-size: myrem(23);
+  font-weight: 500;
   line-height: calc(36/23);
   letter-spacing: 0.04em;
   margin-top: myrem(34);
@@ -516,6 +520,7 @@
 
   .text {
     font-size: myrem(15);
+    font-weight: 300;
     line-height: calc(26/15);
     letter-spacing: 0.04em;
     margin-top: myrem(8);
@@ -579,6 +584,7 @@
 
     .tab-menu {
       font-size: myrem(20);
+      font-weight: 300;
       text-align: center;
       padding: myrem(10) myrem(10);
       transition: all .2s ease-in-out;
@@ -675,6 +681,7 @@
 
 .top-news__item-time {
   font-size: myrem(25);
+  font-weight: 300;
   letter-spacing: 0.04em;
   @media #{$sp} {
     font-size: myrem(16);
@@ -703,6 +710,7 @@
 
 .top-news__item-ttl {
   font-size: myrem(16);
+  font-weight: 300;
   line-height: calc(21/16);
   letter-spacing: 0.04em;
   display: -webkit-box;
@@ -727,6 +735,7 @@
 ===================================*/
 .top-contact__text {
   font-size: myrem(22);
+  font-weight: 300;
   letter-spacing: 0.06em;
   text-align: center;
   margin-top: myrem(36);
@@ -760,6 +769,7 @@
 
 .top-contact__document-text {
   font-size: myrem(18);
+  font-weight: 300;
   letter-spacing: 0.06em;
   text-align: center;
   @media #{$sp} {

@@ -512,6 +512,7 @@ ruby {
   border-radius: myrem(30);
   box-shadow: 5px 5px 16px -2px #dedede;
   font-size: myrem(13);
+  font-weight: 300;
   min-width: myrem(80);
   padding: myrem(1) myrem(14) myrem(1) myrem(14);
 
@@ -570,7 +571,7 @@ ruby {
       clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
       width: calc(100% - #{myrem(50)});
       height: calc(100% - #{myrem(22)});
-      background-color: #fff;
+      background-color: $base-color;
       position: absolute;
       bottom: myrem(22.7);
       left: 0;
@@ -585,7 +586,7 @@ ruby {
     clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
     width: calc(100% - #{myrem(43)});
     height: calc(100% - #{myrem(30)});
-    background-color: #fff;
+    background-color: $base-color;
     position: absolute;
     top: 0;
     right: 0;
@@ -725,7 +726,7 @@ ruby {
     max-width: myrem(550);
     margin-inline: auto;
   }
-  &:hover {
+  &:hover、&:focus {
     opacity: 1;
     box-shadow: $shadow-hover;
   }
@@ -747,7 +748,6 @@ ruby {
     @media #{$sp} {
       border-radius: myrem(10) myrem(10) 0px 0px;
     }
-
   }
 }
 
@@ -781,6 +781,7 @@ ruby {
 
 .card01__meta {
   font-size: myrem(16);
+  font-weight: 300;
   margin-top: auto;
   text-align: right;
   @media #{$sp} {
