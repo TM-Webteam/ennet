@@ -3,45 +3,6 @@
   common-parts
   ----------------
 */
-
-// カテゴリ
-.cat {
-  display: inline-block;
-  color: $white;
-  letter-spacing: 0.04em;
-  background-color: $lightgreen;
-  text-align: center;
-  border-radius: myrem(30);
-  box-shadow: 5px 5px 16px -2px #dedede;
-  font-size: myrem(13);
-  min-width: myrem(80);
-  padding: myrem(1) myrem(14) myrem(1) myrem(14);
-
-  &.--large {
-    font-size: myrem(16);
-    min-width: myrem(142);
-    padding: myrem(2) myrem(35);
-  }
-
-  &.--small {
-    padding: myrem(2) myrem(14);
-  }
-
-  &.--blue {
-    background-color: $lightblue;
-  }
-
-  &.--yellow {
-    background-color: $yellow;
-  }
-
-  &.--orange {
-    background-color: $orange;
-  }
-
-}
-
-
 // 日付
 .time {
   display: inline-block;
@@ -532,7 +493,70 @@ ruby {
   }
 }
 
-//斜め画像
+
+
+
+// =========================================================================================*/
+// #追加CSS
+// =========================================================================================*/
+
+/*==================================
+#カテゴリー
+===================================*/
+.cat {
+  display: inline-block;
+  color: $white;
+  letter-spacing: 0.04em;
+  background-color: $lightgreen;
+  text-align: center;
+  border-radius: myrem(30);
+  box-shadow: 5px 5px 16px -2px #dedede;
+  font-size: myrem(13);
+  min-width: myrem(80);
+  padding: myrem(1) myrem(14) myrem(1) myrem(14);
+
+  &.--large {
+    font-size: myrem(16);
+    min-width: myrem(142);
+    padding: myrem(2) myrem(35);
+  }
+
+  &.--small {
+    padding: myrem(2) myrem(14);
+  }
+
+  &.--blue {
+    background-color: $lightblue;
+  }
+
+  &.--yellow {
+    background-color: $yellow;
+  }
+
+  &.--orange {
+    background-color: $orange;
+  }
+
+  &.--link {
+    &:hover,&:focus {
+      opacity: 1;
+      outline: none;
+      background-color: $base-color;
+      color: $lightgreen;
+      box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+                -2px -2px 4px rgba(255, 255, 255, .4),
+                2px 2px 2px rgba(255, 255, 255, .1),
+                1px 1px 6px rgba(0, 0, 0, .1),
+                inset 3px 3px 10px #e6e6e6,
+              inset -3px -3px 10px #ffffff;
+    }
+  }
+
+}
+
+/*==================================
+#斜め画像（メインビュー）
+===================================*/
 .skew-img {
   position: relative;
   padding-top: myrem(30);
@@ -617,7 +641,9 @@ ruby {
   }
 }
 
-//斜め画像02
+/*==================================
+#斜め画像（about）
+===================================*/
 .skew-img02 {
   position: relative;
   padding-top: myrem(30);
@@ -685,7 +711,9 @@ ruby {
   }
 }
 
-//card01
+/*==================================
+#カード1（トップページ：コラム）
+===================================*/
 .card01 {
   display: flex;
   background-color: $base-color;
@@ -760,7 +788,9 @@ ruby {
   }
 }
 
-//card02
+/*==================================
+#カード2（トップページ：recommend）
+===================================*/
 .card02 {
   display: flex;
   background-color: $base-color;

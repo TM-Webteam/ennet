@@ -3,61 +3,6 @@
   各　見出し
   ----------------
 */
-.ttl-primary {
-	.img {
-		height: myrem(80);
-		@media #{$sp} {
-			height: myrem(40);
-			text-align: center;
-		}
-
-		img {
-			height: 100%;
-			width: auto;
-			object-fit: contain;
-		}
-	}
-
-	.ttl {
-		font-size: myrem(15);
-		font-weight: 500;
-		margin-top: myrem(24);
-		letter-spacing: 0.04em;
-		@media #{$sp} {
-			margin-top: myrem(16);
-			text-align: center;
-		}
-	}
-
-	&.--center {
-		.img {
-			text-align: center;
-		}
-
-		.ttl {
-			text-align: center;
-		}
-	}
-
-	&.--white {
-		.ttl {
-			color: $white;
-		}
-	}
-}
-
-
-.ttl-primary--img {
-	height: myrem(80);
-	@media #{$sp} {
-		height: myrem(40);
-	}
-	img {
-		height: 100%;
-		width: 100%;
-		object-fit: contain;
-	}
-}
 
 // .ttl-secondary {
 // 	font-size: 36px;
@@ -111,4 +56,69 @@
 
 .note {
 	font-size: 12px;
+}
+
+// =========================================================================================*/
+// #追加CSS
+// =========================================================================================*/
+
+/*==================================
+#セクションタイトル（トップページ）
+===================================*/
+.ttl-primary {
+	.img {
+		height: myrem(80);
+		@media #{$sp} {
+			height: myrem(40);
+			text-align: center;
+		}
+
+		img {
+			height: 100%;
+			width: auto;
+			object-fit: contain;
+		}
+	}
+
+	.ttl {
+		font-size: myrem(15);
+		font-weight: 500;
+		margin-top: myrem(24);
+		letter-spacing: 0.04em;
+		@media #{$sp} {
+			margin-top: myrem(16);
+			text-align: center;
+		}
+	}
+
+	&.--center {
+		.img {
+			text-align: center;
+		}
+
+		.ttl {
+			text-align: center;
+		}
+	}
+
+	&.--white {
+		.ttl {
+			color: $white;
+		}
+	}
+}
+
+/*==================================
+#セクションタイトル（画像のみ）
+===================================*/
+.ttl-primary--img {
+	height: myrem(80);
+	@media #{$sp} {
+		height: myrem(40);
+	}
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
 }
