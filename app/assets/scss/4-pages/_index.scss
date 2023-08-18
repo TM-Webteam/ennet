@@ -383,6 +383,8 @@
   row-gap: myrem(11);
   @media #{$sp} {
     margin-top: myrem(30);
+    max-width: myrem(500);
+    margin-inline: auto;
   }
 }
 
@@ -453,11 +455,13 @@
 .top-document__content {
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  column-gap: myrem(63);
+  column-gap: myrem(60);
   margin-top: myrem(32);
   @media #{$sp} {
     grid-template-columns: 1fr;
     row-gap: myrem(40);
+    max-width: myrem(550);
+    margin-inline: auto;
   }
 }
 
@@ -560,6 +564,8 @@
   margin-inline: auto;
   @media #{$sp} {
     margin-top: myrem(36);
+    max-width: myrem(400);
+    margin-inline: auto;
   }
 
   .tab-list {
@@ -619,7 +625,7 @@
   box-shadow: $shadow;
   margin-top: myrem(20);
   padding: myrem(64) myrem(48) myrem(44) myrem(56);
-  max-width: myrem(1100);
+  max-width: myrem(1130);
   margin-inline: auto;
   @media #{$sp} {
     margin-top: myrem(43);
@@ -651,7 +657,7 @@
 }
 
 .top-news__item-meta {
-  width: calc(232 / 966 * 100%);
+  width: calc(240 / 966 * 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -661,7 +667,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: calc(96 / 280 * 100%);
+    // width: calc(96 / 280 * 100%);
+    width: myrem(105);
     padding: myrem(7) 0 myrem(20);
   }
 }
@@ -670,7 +677,7 @@
   font-size: myrem(25);
   letter-spacing: 0.04em;
   @media #{$sp} {
-    font-size: myrem(18);
+    font-size: myrem(16);
   }
 }
 
@@ -681,13 +688,14 @@
 }
 
 .top-news__item-body {
-  width: calc(736 / 966 * 100%);
+  width: calc(699 / 966 * 100%);
   margin-left: myrem(27);
   display: flex;
   align-items: center;
   border-top: 1px solid #D9D9D9;
   @media #{$sp} {
-    width: calc(166 / 280 * 100%);
+    // width: calc(166 / 280 * 100%);
+    flex-grow: 1;
     margin-left: myrem(16);
     padding: myrem(7) 0 myrem(20);
   }
@@ -742,6 +750,8 @@
   box-shadow: $shadow;
   padding: myrem(31) myrem(30) myrem(42) myrem(30);
   margin-top: myrem(47);
+  max-width: myrem(1124);
+  margin-inline: auto;
   @media #{$sp} {
     padding: myrem(32) myrem(22) myrem(37) myrem(22);
     margin-top: myrem(60);
