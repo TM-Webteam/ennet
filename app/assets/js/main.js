@@ -244,3 +244,4 @@ $(window).on('load resize', function(){
     $('.js-overlay').removeClass("open");
   }
 });
+
