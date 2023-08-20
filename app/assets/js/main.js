@@ -216,32 +216,25 @@ $(function() {
 //--------------------------------------
 // ハンバーガーメニュー
 //--------------------------------------
+let toggleElements = function(flag) {
+  $('.js-drawer, .js-overlay, .js-hamburger-btn').toggleClass('open', flag);
+};
+
 $('.js-hamburger-btn').click(function(){
-  $(this).toggleClass('open');
-  if($(this).hasClass('open')){
-    $('.js-drawer').addClass("open");
-    $('.js-overlay').addClass("open");
-  }else{
-    $('.js-drawer').removeClass("open");
-    $('.js-overlay').removeClass("open");
-  }
+  let isOpen = $(this).toggleClass('open').hasClass('open');
+  toggleElements(isOpen);
 });
 
-$('.js-overlay').on('click',function(){
+$('.js-overlay').click(function(){
   if($(this).hasClass('open')){
-    $(this).removeClass('open');
-    $('.js-hamburger-btn').removeClass('open');
-    $('.js-drawer').removeClass('open');
+    toggleElements(false);
   }
 });
 
 $(window).on('load resize', function(){
-  const wid = $(window).width();
-  if(wid >= 640){
+  if($(window).width() >= 640){
     $('.js-drawer').css('display','block');
-  }else{
-    $('.js-drawer').removeClass('open');
-    $('.js-overlay').removeClass("open");
+  } else {
+    toggleElements(false);
   }
 });
-

@@ -5,10 +5,11 @@
 */
 .footer__body {
   background: $grade01;
-  padding-top: myrem(79);
-  padding-bottom: myrem(84);
+  padding-top: myrem(67);
+  padding-bottom: myrem(80);
   @media #{$sp} {
     padding-top: myrem(45);
+    padding-bottom: myrem(46);
     background-image: linear-gradient(157deg, #70ccf5, #72dba2 20%, #7acc88 83%, #c8be40 92%, #dbba2e);
   }
 }
@@ -18,23 +19,24 @@
   margin-inline: auto;
   @media #{$sp} {
     display: block;
-    padding-right: myrem(50);
-    padding-left: myrem(50);
+    padding-right: myrem(56);
+    padding-left: myrem(56);
   }
 }
 
 .footer__content {
-  width: calc(522 / 1160 * 100%);
+  width: 50%;
   @media #{$sp} {
     width: 100%;
   }
 }
 
 .footer__nav {
-  width: calc(590 / 1160 * 100%);
+  width: 50%;
+  margin-top: myrem(8);
   @media #{$sp} {
     width: 100%;
-    margin-top: myrem(30);
+    margin-top: myrem(32);
   }
 }
 
@@ -52,10 +54,10 @@
 }
 
 .footer__link {
-  margin-top: myrem(16);
+  margin-top: myrem(12);
   display: flex;
   @media #{$sp} {
-    margin-top: myrem(24);
+    margin-top: myrem(22);
     flex-direction: column;
   }
 }
@@ -70,10 +72,10 @@
     color: $white;
     font-size: myrem(16);
     font-weight: 500;
-    padding: myrem(10) myrem(20);
+    padding: myrem(10) myrem(30);
     transition: all .3s;
     @media #{$sp} {
-      padding: myrem(5) myrem(20) myrem(5) 0;
+      padding: myrem(4) myrem(20) myrem(4) 0;
     }
 
     &:hover {
@@ -102,16 +104,16 @@
 }
 
 .footer__nav-content {
-  width: calc( 330/ 580 * 100%);
+  width: calc( 340/ 580 * 100%);
   @media #{$sp} {
     width: 100%;
   }
 
   &:nth-child(n+2) {
-    width: calc( 250/ 580 * 100%);
+    width: calc( 240/ 580 * 100%);
     @media #{$sp} {
       width: 100%;
-      margin-top: myrem(30);
+      margin-top: myrem(28);
     }
   }
 
@@ -146,7 +148,7 @@
     &:not(:first-child) {
       margin-top: myrem(16);
       @media #{$sp} {
-        margin-top: myrem(30);
+        margin-top: myrem(32);
       }
     }
   }
@@ -154,6 +156,9 @@
 
 .footer__nav-list {
   margin-top: myrem(18);
+  @media #{$sp} {
+    margin-top: myrem(15);
+  }
 
 }
 
@@ -195,6 +200,8 @@
 .footer__copy {
   color: $white;
   font-size: myrem(14);
+  font-weight: 500;
+  letter-spacing: 0.04em;
   text-align: center;
   @media #{$sp} {
     font-size: myrem(10);
