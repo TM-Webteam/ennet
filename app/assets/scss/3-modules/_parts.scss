@@ -563,17 +563,18 @@ ruby {
   padding-top: myrem(30);
   padding-right: myrem(43);
   max-height: myrem(502);
+  max-width: myrem(720);
 
   &::before {
     @media #{$sp} {
       content: "";
       display: inline-block;
       clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
-      width: calc(100% - #{myrem(50)});
+      width: calc(100% - #{myrem(25)});
       height: calc(100% - #{myrem(22)});
       background-color: $base-color;
       position: absolute;
-      bottom: myrem(22.7);
+      bottom: myrem(26.6);
       left: 0;
       z-index: 3;
       opacity: 1;
@@ -589,17 +590,19 @@ ruby {
     background-color: $base-color;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1px;
     z-index: 1;
     @media #{$sp} {
       width: calc(100% - #{myrem(24)});
       height: calc(100% - #{myrem(22)});
       top: initial;
       bottom: 0;
+      right: 0;
     }
   }
 
   @media #{$sp} {
+    max-height: myrem(514);
     padding-bottom: myrem(22);
     padding-right: myrem(24);
     padding-top: 0;
@@ -618,8 +621,6 @@ ruby {
     position: relative;
     z-index: 4;
     @media #{$sp} {
-      width: calc(100% - #{myrem(24)});
-      height: calc(100% - #{myrem(22)});
     }
   }
 }
@@ -725,6 +726,7 @@ ruby {
     flex-direction: column;
     max-width: myrem(550);
     margin-inline: auto;
+    min-height: myrem(416);
   }
   &:hover,&:focus {
     opacity: 1;
@@ -753,7 +755,7 @@ ruby {
 
 .card01__body {
   width: calc( 388 / 636 * 100%);
-  padding: myrem(15) myrem(20) myrem(13) myrem(13);
+  padding: myrem(15) myrem(20) myrem(13) myrem(15);
   display: flex;
   flex-direction: column;
   @media #{$sp} {
@@ -767,7 +769,7 @@ ruby {
   font-weight: 500;
   line-height: calc(26/16);
   letter-spacing: 0.04em;
-  margin-top: myrem(12);
+  margin-top: myrem(14);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -775,13 +777,15 @@ ruby {
   @media #{$sp} {
     margin-bottom: myrem(10);
     -webkit-line-clamp: 3;
-    margin-top: myrem(14);
+    margin-top: myrem(16);
   }
 }
 
 .card01__meta {
   font-size: myrem(16);
   font-weight: 300;
+  line-height: calc(26/16);
+  letter-spacing: 0.04em;
   margin-top: auto;
   text-align: right;
   @media #{$sp} {
@@ -800,6 +804,7 @@ ruby {
   min-height: myrem(208);
   @media #{$sp} {
     display: block;
+    min-height: myrem(294);
   }
 }
 
@@ -817,6 +822,7 @@ ruby {
     border-radius: myrem(10) 0 0 myrem(10);
     @media #{$sp} {
       border-radius: myrem(10) myrem(10) 0 0 ;
+      min-height: myrem(120);
     }
   }
 }

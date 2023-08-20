@@ -38,8 +38,9 @@
 #セクションタイトル（トップページ）
 ===================================*/
 .ttl-primary {
+
 	.img {
-		height: myrem(80);
+		height: myrem(86);
 		@media #{$sp} {
 			height: myrem(40);
 			text-align: center;
@@ -55,10 +56,11 @@
 	.ttl {
 		font-size: myrem(15);
 		font-weight: 500;
-		margin-top: myrem(24);
+		margin-top: myrem(23);
 		letter-spacing: 0.04em;
 		@media #{$sp} {
-			margin-top: myrem(16);
+			margin-top: myrem(25);
+			line-height: calc(21/15);
 			text-align: center;
 		}
 	}
@@ -78,13 +80,25 @@
 			color: $white;
 		}
 	}
+
+	&.--document {
+		.img {
+			height: myrem(89);
+		}
+
+		.ttl {
+			@media #{$sp} {
+				margin-top: myrem(-5);
+			}
+		}
+	}
 }
 
 /*==================================
 #セクションタイトル（画像のみ）
 ===================================*/
 .ttl-primary--img {
-	height: myrem(80);
+	height: myrem(86);
 	@media #{$sp} {
 		height: myrem(40);
 	}
