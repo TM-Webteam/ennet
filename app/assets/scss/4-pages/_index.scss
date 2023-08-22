@@ -59,17 +59,27 @@
 ===================================*/
 .mv {
   height: myrem(704);
-  background: url(../img/top/bg-mv.png) ;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 48.9% bottom;
+  // background: url(../img/top/bg-mv.png) ;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: 48.9% bottom;
   padding-top: myrem(150);
   padding-bottom: myrem(50);
   overflow: hidden;
+  position: relative;
   @media #{$sp} {
     padding: 0;
     background-position: 46.5% bottom;
   }
+}
+
+.mv__bg {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  // transform: translateX(-50%);
+  z-index: -1;
 }
 
 .mv__containers {
@@ -79,22 +89,21 @@
     padding-left: myrem(32);
     height: 100%;
   }
-  &::before {
-    content: "";
-    display: inline-block;
-    width: myrem(200);
-    height: myrem(153);
-    background: url(../img/top/img-car.png) no-repeat center / contain;
-    position: absolute;
-    bottom: myrem(-55);
-    left: myrem(55);
-    z-index: 2;
-    @media #{$sp} {
-      width: myrem(136);
-      height: myrem(105);
-      left: myrem(35);
-      bottom: 0;
-    }
+}
+
+.mv__car {
+  width: myrem(200);
+  height: myrem(153);
+  background: url(../img/top/img-car.png) no-repeat center / contain;
+  position: absolute;
+  bottom: myrem(-55);
+  left: myrem(55);
+  z-index: 2;
+  @media #{$sp} {
+    width: myrem(136);
+    height: myrem(105);
+    left: myrem(35);
+    bottom: 0;
   }
 }
 
@@ -505,6 +514,28 @@
     padding: myrem(36) myrem(24) myrem(36) myrem(24);
   }
 
+  &:hover {
+    opacity: 1;
+    background-color: $base-color;
+
+    .top-document__btn {
+      .btn01 {
+        background-color: $yellow;
+        color: $white;
+        opacity: 1;
+        outline: none;
+        background-color: $base-color;
+        color: $yellow;
+        box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+                  -2px -2px 4px rgba(255, 255, 255, .4),
+                  2px 2px 2px rgba(255, 255, 255, .1),
+                  1px 1px 4px rgba(0, 0, 0, .4),
+                  inset 3px 3px 10px #e6e6e6,
+                inset -3px -3px 10px #ffffff;
+      }
+    }
+  }
+
   .img {
     width: calc(177 / 456 * 100%);
     @media #{$sp} {
@@ -567,6 +598,8 @@
 
     &:hover {
       opacity: 1;
+      color: $lightgreen;
+      background-color: $white;
       box-shadow: 0px 0px 0px rgba(255, 255, 255, .6),
       0px 0px 0px rgba(255, 255, 255, .4),
       2px 2px 2px rgba(255, 255, 255, .075),
