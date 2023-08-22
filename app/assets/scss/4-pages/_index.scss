@@ -59,10 +59,6 @@
 ===================================*/
 .mv {
   height: myrem(704);
-  // background: url(../img/top/bg-mv.png) ;
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-position: 48.9% bottom;
   padding-top: myrem(150);
   padding-bottom: myrem(50);
   overflow: hidden;
@@ -75,11 +71,14 @@
 
 .mv__bg {
   position: absolute;
-  width: 100%;
+  width: 134%;
   left: 0;
   bottom: 0;
-  // transform: translateX(-50%);
   z-index: -1;
+  @media #{$sp} {
+    width: myrem(1920);
+    left: -400px;
+  }
 }
 
 .mv__containers {
@@ -342,8 +341,8 @@
     margin-left: 0;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-73%);
+    left: myrem(-90);
+    // transform: translateX(-73%);
     margin-top: 0;
   }
 }
@@ -509,29 +508,38 @@
   border-radius: myrem(10);
   box-shadow:  11px 11px 22px #6fba7c,-11px -11px 22px #85de94;
   min-height: myrem(312);
+  background-color: $white;
   @media #{$sp} {
     flex-direction: column;
     padding: myrem(36) myrem(24) myrem(36) myrem(24);
   }
 
+  .btn {
+    .btn01 {
+      min-width: myrem(208);
+      padding: myrem(9) myrem(10);
+    }
+  }
+
   &:hover {
     opacity: 1;
-    background-color: $base-color;
+    // background-color: #e9e9e9;
 
-    .top-document__btn {
+    .btn {
       .btn01 {
         background-color: $yellow;
-        color: $white;
-        opacity: 1;
-        outline: none;
-        background-color: $base-color;
-        color: $yellow;
-        box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
-                  -2px -2px 4px rgba(255, 255, 255, .4),
-                  2px 2px 2px rgba(255, 255, 255, .1),
-                  1px 1px 4px rgba(0, 0, 0, .4),
-                  inset 3px 3px 10px #e6e6e6,
-                inset -3px -3px 10px #ffffff;
+        color: $base-color;
+        box-shadow: -4px -4px 10px rgba(255, 255, 255, .9),
+    -4px -4px 6px rgba(255, 255, 255, 1),
+    4px 4px 4px rgba(0, 0, 0, .1),
+    2px 2px 2px rgba(0, 0, 0, .2);
+        // box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+        // -2px -2px 4px rgba(255, 255, 255, .4),
+        // 2px 2px 2px rgba(255, 255, 255, .1),
+        // 1px 1px 4px rgba(0, 0, 0, .4),
+        // inset 3px 3px 10px #e6e6e6,
+        // inset -3px -3px 10px #ffffff;
+
       }
     }
   }
@@ -598,7 +606,7 @@
 
     &:hover {
       opacity: 1;
-      color: $lightgreen;
+      color: $lightgreen2;
       background-color: $white;
       box-shadow: 0px 0px 0px rgba(255, 255, 255, .6),
       0px 0px 0px rgba(255, 255, 255, .4),
