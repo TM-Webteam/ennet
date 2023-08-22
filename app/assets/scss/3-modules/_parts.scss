@@ -802,6 +802,7 @@ ruby {
   box-shadow: $shadow--sm;
   border-radius: myrem(10);
   min-height: myrem(208);
+  border: 2px solid $lightgreen2;
   @media #{$sp} {
     display: block;
     min-height: myrem(294);
