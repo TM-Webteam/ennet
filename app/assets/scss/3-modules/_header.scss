@@ -111,8 +111,8 @@
       position: absolute;
       width: 100%;
       height: 4px;
-      background-color: #383838;
-      transition: all .3s; /*アニメーション速度*/
+      background-color: #69AC74;
+      transition: all .3s;
       transform: scaleX(0);
       @media #{$sp} {
         display: none;
