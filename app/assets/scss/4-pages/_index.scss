@@ -76,9 +76,10 @@
   bottom: 0;
   z-index: -1;
   @media #{$sp} {
-    width: myrem(1920);
-    left: myrem(-694);
+    width: myrem(1625);
+    left: myrem(-330);
   }
+
 }
 
 .mv__containers {
