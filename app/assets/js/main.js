@@ -9,7 +9,7 @@ $(document).ready(function() {
     }
   });
 
-  
+
   //---------------------------------
   // Smooth Scrolling
   //---------------------------------
@@ -35,7 +35,7 @@ $(document).ready(function() {
 $(function(){
   var pos = 0;
   var header = $('header');
-  
+
   $(window).on('scroll', function(){
     if($(this).scrollTop() < pos || $(this).scrollTop() < 400){
       header.removeClass('hide');
@@ -165,7 +165,7 @@ $(function(){
     } else{
       $('.floating').fadeIn();
     }
-  });      
+  });
 });
 
 
@@ -242,25 +242,40 @@ $(window).on('load resize', function(){
 //--------------------------------------
 // カウントアップ
 //--------------------------------------
+// $(function () {
+//   $(window).on("load scroll", function () {
+//     $(".js-count").each(function () {
+//       var txtPos = $(this).offset().top;
+//       var scroll = $(window).scrollTop();
+//       var windowHeight = $(window).height();
+//       if (scroll > txtPos - windowHeight + windowHeight / 5) { // 画面サイズの下から1/5までスクロールしたらカウントアップを開始
+//         if ($(".js-num", this).attr("data-num").indexOf(".") > -1) {
+//           var rounding = 1;
+//         } else {
+//           var rounding = 0;
+//         }
+//         $(".js-num", this).numerator({
+//           easing: "linear", // カウントアップの動き
+//           duration: 1000, // カウントアップの時間
+//           toValue: $(".js-num", this).attr("data-num"), // カウントアップする数値
+//           rounding: rounding, // 小数点以下の桁数（初期値：0）
+//         });
+//       }
+//     });
+//   });
+// });
 $(function () {
-  $(window).on("load scroll", function () {
-    $(".js-count").each(function () {
-      var txtPos = $(this).offset().top;
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      if (scroll > txtPos - windowHeight + windowHeight / 5) { // 画面サイズの下から1/5までスクロールしたらカウントアップを開始
-        if ($(".js-num", this).attr("data-num").indexOf(".") > -1) {
-          var rounding = 1;
-        } else {
-          var rounding = 0;
-        }
-        $(".js-num", this).numerator({
-          easing: "linear", // カウントアップの動き
-          duration: 1000, // カウントアップの時間
-          toValue: $(".js-num", this).attr("data-num"), // カウントアップする数値
-          rounding: rounding, // 小数点以下の桁数（初期値：0）
-        });
-      }
+  $(".js-count").on('inview',   function() {
+    if ($(".js-num", this).attr("data-num").indexOf(".") > -1) {
+      var rounding = 1;
+    } else {
+      var rounding = 0;
+    }
+    $(".js-num", this).numerator({
+      easing: "linear", // カウントアップの動き
+      duration: 1000, // カウントアップの時間
+      toValue: $(".js-num", this).attr("data-num"), // カウントアップする数値
+      rounding: rounding, // 小数点以下の桁数（初期値：0）
     });
-  });
+    });
 });
