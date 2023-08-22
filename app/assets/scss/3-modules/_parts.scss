@@ -520,10 +520,13 @@ ruby {
     font-size: myrem(16);
     min-width: myrem(142);
     padding: myrem(2) myrem(35);
+    @media #{$sp} {
+      padding: myrem(2) myrem(14);
+    }
   }
 
   &.--small {
-    padding: myrem(2) myrem(14);
+    padding: myrem(2) myrem(15);
   }
 
   &.--blue {
@@ -818,10 +821,10 @@ ruby {
       outline: none;
       color: $white;
       background-color: $lightgreen;
-      box-shadow: -2px -2px 6px rgba(255, 255, 255, .9),
-      -2px -2px 3px rgba(255, 255, 255, 1),
-      2px 2px 2px rgba(0, 0, 0, .2),
-      2px 2px 6px rgba(0, 0, 0, .1);
+      box-shadow: -4px -4px 10px rgba(255, 255, 255, .9),
+      -4px -4px 6px rgba(255, 255, 255, 1),
+      3px 3px 4px rgba(0, 0, 0, .2),
+      7px 7px 8px rgba(0, 0, 0, .05);
     }
   }
 
