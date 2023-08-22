@@ -71,8 +71,8 @@
 
 .mv__bg {
   position: absolute;
-  width: 134%;
-  left: 0;
+  width: 138%;
+  left: myrem(-266);
   bottom: 0;
   z-index: -1;
   @media #{$sp} {
