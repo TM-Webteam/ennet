@@ -342,8 +342,8 @@
     margin-left: 0;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-73%);
+    left: myrem(-88);
+    // transform: translateX(-73%);
     margin-top: 0;
   }
 }
