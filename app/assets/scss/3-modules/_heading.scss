@@ -84,11 +84,14 @@
 	&.--document {
 		.img {
 			height: myrem(89);
+			@media #{$sp} {
+				height: myrem(40);
+			}
 		}
 
 		.ttl {
 			@media #{$sp} {
-				margin-top: myrem(-5);
+				// margin-top: myrem(5);
 			}
 		}
 	}
