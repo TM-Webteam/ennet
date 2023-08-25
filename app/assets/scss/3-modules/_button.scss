@@ -168,6 +168,12 @@
     }
   }
 
+  &.--bold {
+    font-size: myrem(20);
+    min-width: myrem(384);
+    padding: myrem(25);
+  }
+
   &.--yellow {
     color: $white;
     background-color: $yellow;

@@ -4,18 +4,27 @@
   ----------------
 */
 .header {
-  height: myrem(88);
+  height: myrem(120);
   width: 100%;
   position: absolute;
   z-index: 10;
   top: 0;
   left: 0;
-  padding-top: myrem(16);
+  padding-top: myrem(20);
 }
 
 .header__containers {
   max-width: myrem(1350);
   margin-inline: auto;
+}
+
+.header__logo {
+  height: myrem(24);
+
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .header__body {
@@ -25,6 +34,7 @@
   border-radius: myrem(16);
   padding-right: myrem(40);
   padding-left: myrem(40);
+  margin-top: myrem(20);
 
   @media #{$md} {
     width: myrem(500);
@@ -200,7 +210,8 @@
   top: 0;
   left: 0;
   z-index: 100;
-  transform: translateY(-82px);
+  height: myrem(88);
+  transform: translateY(-90px);
   width: 100%;
   padding-top: myrem(10);
   transition: all 0.4s ease-in-out;

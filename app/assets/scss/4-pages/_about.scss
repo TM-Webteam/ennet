@@ -1,0 +1,138 @@
+/*
+  ----------------
+  about
+  ----------------
+*/
+
+// .about {
+//   margin-top: myrem(136);
+
+//   .header {
+//     padding-top: myrem(50);
+//   }
+// }
+
+
+.about__sec1 {
+  .container {
+    margin-top: myrem(72);
+  }
+
+  .body {
+    width: calc(648 / 1240 * 100%);
+    background-color: $base-color;
+    padding: myrem(50) myrem(46) myrem(28) myrem(46);
+    box-shadow: $shadow;
+    border-radius: myrem(10);
+
+    .text {
+      font-size: myrem(14);
+      line-height: calc(26/14);
+      letter-spacing: 0.04em;
+      font-weight: 500;
+      span {
+        display: block;
+
+        &:not(:first-child) {
+          margin-top: myrem(26);
+        }
+
+        &.marker-green {
+          display: inline;background: linear-gradient(transparent 3%,#B7EBBD -2%) ;
+          display: inline;
+        }
+      }
+    }
+  }
+
+  .img-area {
+    width: calc(597 / 1240 * 100%);
+    padding-top: myrem(50);
+    margin-right: myrem(-54);
+    // margin-left: myrem(50);
+    .img1 {
+      width: calc(285 / 598 * 100%);
+    }
+    .img2 {
+      width: calc(285 / 598 * 100%);
+      margin-top: myrem(208);
+    }
+    img {
+      width: 100%;
+      border-radius: myrem(10);
+      box-shadow: 3px 3px 6px rgba(0, 0, 0, .16);
+    }
+  }
+}
+
+.about__ttl {
+  &.ttl-primary {
+    .img {
+      height: myrem(81);
+    }
+
+  }
+}
+
+.about__sec2 {
+  margin-top: myrem(210);
+
+  .ttl {
+    text-align: center;
+  }
+
+  .text1 {
+    text-align: center;
+    margin-top: myrem(40);
+  }
+
+  .note {
+    color: #8D8D8D;
+    font-size: myrem(13);
+    line-height: calc(24/13);
+    letter-spacing: 0.04em;
+    text-align: center;
+    margin-top: myrem(16);
+  }
+
+  .text2 {
+    text-align: center;
+    margin-top: myrem(40);
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: myrem(36);
+    margin-top: myrem(81);
+    max-width: myrem(1053);
+    margin-inline: auto;
+    @media #{$sp} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .text3 {
+    text-align: center;
+    margin-top: myrem(50);
+  }
+
+  .btn-wrapper {
+    text-align: center;
+    margin-top: myrem(40);
+    margin-left: myrem(43);
+
+    .btn {
+      margin-top: myrem(20);
+    }
+  }
+}
+
+.about__ennev {
+  margin-top: myrem(175);
+}
+
+.about__contact {
+  margin-top: myrem(155);
+}
+

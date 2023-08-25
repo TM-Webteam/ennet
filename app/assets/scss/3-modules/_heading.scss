@@ -12,6 +12,13 @@
 	
 }
 
+.text {
+	font-size: myrem(16);
+	font-weight: 500;
+	line-height: calc(32/16);
+	letter-spacing: 0.06em;
+}
+
 .lead {
 	font-size: 18px;
 	font-weight: 500;
@@ -27,7 +34,9 @@
 }
 
 .note {
-	font-size: 12px;
+	font-size: myrem(13);
+	line-height: calc(24/13);
+	letter-spacing: 0.04em;
 }
 
 // =========================================================================================*/
@@ -35,10 +44,9 @@
 // =========================================================================================*/
 
 /*==================================
-#セクションタイトル（トップページ）
+#セクションタイトル
 ===================================*/
 .ttl-primary {
-
 	.img {
 		height: myrem(86);
 		@media #{$sp} {
@@ -97,9 +105,6 @@
 	}
 }
 
-/*==================================
-#セクションタイトル（画像のみ）
-===================================*/
 .ttl-primary--img {
 	height: myrem(86);
 	@media #{$sp} {
@@ -110,4 +115,42 @@
 		width: 100%;
 		object-fit: contain;
 	}
+}
+
+.ttl-secondary {
+	color: $darkgreen;
+	font-size: myrem(24);
+	font-weight: 700;
+	line-height: calc(26/24);
+	letter-spacing: 0.04em;
+}
+
+/*==================================
+#ふきだし
+===================================*/
+.fukidashi {
+	display: inline-block;
+	color: $white;
+	font-size: myrem(12);
+	font-weight: 500;
+	line-height: calc(26/12);
+	letter-spacing: 0.04em;
+	background-color: $darkgreen;
+	padding: myrem(2) myrem(10);
+	position: relative;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		width: myrem(7);
+		height: myrem(7);
+		background-color: $darkgreen;
+		clip-path: polygon(0 0, 48% 100%, 100% 0);
+		position: absolute;
+		top: calc(100% - 1px);
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+
 }
