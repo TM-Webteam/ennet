@@ -898,6 +898,43 @@ ruby {
   margin-top: myrem(16);
 }
 
+/*==================================
+# カード4
+===================================*/
+.card4 {
+  background-color: $base-color;
+  box-shadow: $shadow--sm;
+  border-radius: myrem(10);
+  padding: myrem(24) myrem(40);
+}
+
+.card__step {
+  width: calc(46 / 924 * 100%);
+  img {
+    width: 100%;
+  }
+}
+
+.card4__ttl {
+  width: calc(202 / 924 * 100%);
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: calc(20/16);
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 0 myrem(20);
+}
+
+.card4__text {
+  width: calc(676 / 924 * 100%);
+  font-size: myrem(14);
+  font-weight: 300;
+  line-height: calc(24/14);
+  letter-spacing: 0.04em;
+}
+
+
+
 
 
 
@@ -1045,6 +1082,71 @@ ruby {
     height: 100%;
   }
 
+}
+
+/*==================================
+# column
+===================================*/
+.column__wrapper {
+  @media #{$sp} {
+    display: block;
+  }
+}
+.column__content01 {
+  width: calc(456 / 1160 * 100%);
+  @media #{$sp} {
+    width: 100%;
+  }
+}
+
+.column__ttl {
+  margin-top: myrem(5);
+  @media #{$sp} {
+    margin-top: 0;
+  }
+}
+
+.column__form {
+  margin-top: myrem(56);
+  @media #{$sp} {
+    margin-top: myrem(32);
+  }
+}
+
+.column__categories {
+  margin-top: myrem(36);
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: myrem(13);
+  row-gap: myrem(11);
+  @media #{$sp} {
+    margin-top: myrem(34);
+    max-width: myrem(500);
+    margin-inline: auto;
+  }
+}
+
+.column__content02 {
+  width: calc(636 / 1160 * 100%);
+  @media #{$sp} {
+    width: 100%;
+    margin-top: myrem(35);
+  }
+}
+
+.column__item:not(:first-child) {
+  margin-top: myrem(16);
+  @media #{$sp} {
+    margin-top: myrem(46);
+  }
+}
+
+.column__btn {
+  text-align: center;
+  margin-top: myrem(51);
+  @media #{$sp} {
+    margin-top: myrem(48);
+  }
 }
 
 /*==================================
@@ -1310,5 +1412,55 @@ ruby {
 
 .enneev__btn {
   margin-top: myrem(32);
+}
+
+/*==================================
+# ページ内リンク
+===================================*/
+.page-link {
+  max-width: myrem(788);
+  margin-inline: auto;
+}
+
+.page-link__list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: myrem(54);
+}
+
+.page-link__item {
+  a {
+    display: inline-block;
+    width: 100%;
+    font-size: myrem(20);
+    font-weight: 500;
+    line-height: calc(26/20);
+    letter-spacing: 0.04em;
+    text-align: center;
+    padding: myrem(40) myrem(20) myrem(60) myrem(20);
+    background-color: $base-color;
+    box-shadow: $shadow--sm;
+    border-radius: myrem(10);
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: myrem(24);
+      height: myrem(22);
+      background: url(../img/common/icon-arrow-tri-bottom.png) no-repeat center / contain;
+      position: absolute;
+      bottom: myrem(18);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
+    &:hover {
+      opacity: 1;
+      box-shadow:  9px 9px 12px rgba(0, 0, 0, .2),
+      -7px -7px 14px #ffffff;
+    }
+  }
 }
 
