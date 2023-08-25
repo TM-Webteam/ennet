@@ -19,7 +19,7 @@ $(document).ready(function() {
     var the_id = $(this).attr("href");
 
     $('html, body').animate({
-      scrollTop:$(the_id).offset().top-50
+      scrollTop:$(the_id).offset().top-130
     }, 'slow');
 
     return false;
@@ -242,28 +242,6 @@ $(window).on('load resize', function(){
 //--------------------------------------
 // カウントアップ
 //--------------------------------------
-// $(function () {
-//   $(window).on("load scroll", function () {
-//     $(".js-count").each(function () {
-//       var txtPos = $(this).offset().top;
-//       var scroll = $(window).scrollTop();
-//       var windowHeight = $(window).height();
-//       if (scroll > txtPos - windowHeight + windowHeight / 5) { // 画面サイズの下から1/5までスクロールしたらカウントアップを開始
-//         if ($(".js-num", this).attr("data-num").indexOf(".") > -1) {
-//           var rounding = 1;
-//         } else {
-//           var rounding = 0;
-//         }
-//         $(".js-num", this).numerator({
-//           easing: "linear", // カウントアップの動き
-//           duration: 1000, // カウントアップの時間
-//           toValue: $(".js-num", this).attr("data-num"), // カウントアップする数値
-//           rounding: rounding, // 小数点以下の桁数（初期値：0）
-//         });
-//       }
-//     });
-//   });
-// });
 $(function () {
   $(".js-count").on('inview',   function() {
     if ($(".js-num", this).attr("data-num").indexOf(".") > -1) {
