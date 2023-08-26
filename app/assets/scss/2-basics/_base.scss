@@ -203,7 +203,7 @@ a,button[type="submit"] {
 	}
 }
 
-.containers--mid {
+.containers--md {
   max-width: myrem(1350);
   margin-inline: auto;
   padding-right: myrem(55);
@@ -268,7 +268,7 @@ body {
 }
 
 main {
-  margin-top: myrem(95);
+  // margin-top: myrem(95);
 
   &.top__main {
     margin-top: 0;
