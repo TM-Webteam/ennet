@@ -16,7 +16,7 @@
 	font-size: myrem(16);
 	font-weight: 500;
 	line-height: calc(32/16);
-	letter-spacing: 0.06em;
+	letter-spacing: 0.04em;
 }
 
 .lead {
@@ -121,7 +121,6 @@
 	color: $darkgreen;
 	font-size: myrem(24);
 	font-weight: 700;
-	line-height: calc(26/24);
 	letter-spacing: 0.04em;
 }
 
@@ -152,5 +151,44 @@
 		transform: translateX(-50%);
 	}
 
+	&.--large {
+		font-size: myrem(16);
+		font-weight: 700;
 
+		&::before {
+			width: myrem(15);
+		height: myrem(7);
+		}
+	}
+
+	&.--blue {
+		background-color: #0EA3D6;
+
+		&::before {
+			background-color: #0EA3D6;
+		}
+	}
+}
+
+
+/*==================================
+#グラデーションの下線
+===================================*/
+.grade-line {
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+	&::after {
+		content: "";
+		display: inline-block;
+		height: myrem(8);
+		width: 100%;
+		background: transparent linear-gradient(91deg, #70CEEE 0%, #69AC74 34%, #69AC74 79%, #DBBA2E 100%) 0% 0% no-repeat padding-box;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		transform: skewX(-50deg);
+		overflow: hidden;
+	}
 }

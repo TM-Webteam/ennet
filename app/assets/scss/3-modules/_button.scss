@@ -186,7 +186,7 @@
   font-weight: 700;
   letter-spacing: 0.04em;
   background-color: $darkgreen;
-  padding: myrem(16) myrem(70);
+  padding: myrem(16) myrem(30);
   min-width: myrem(381);
   text-align: center;
   border-radius: myrem(50);
@@ -211,6 +211,27 @@
             inset -3px -3px 10px #ffffff;
   }
 
+  &.--small {
+    font-size: myrem(15);
+    min-width: myrem(292);
+    padding: myrem(12) myrem(30);
+  }
+
+  &.--white {
+    color: #DBBA2E;
+    background-color: #F7F7F7;
+    outline: 2px solid #DBBA2E;
+    outline-offset: -2px;
+
+    &:hover,&:focus {
+      color: #F7F7F7;
+      background-color: #DBBA2E;
+      box-shadow: inset 4px 4px 8px rgba(0, 0, 0, .16),
+            inset -4px -4px 8px rgba(255, 255, 255, .16);
+
+    }
+  }
+
   &.--yellow {
     background-color: $yellow;
     &:hover {
@@ -226,5 +247,4 @@
       padding: myrem(14) myrem(30);
     }
   }
-
 }
