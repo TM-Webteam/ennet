@@ -15,20 +15,35 @@
 
 .introduction__flow {
   margin-top: myrem(120);
+  @media #{$sp} {
+    margin-top: myrem(100);
+  }
 }
 
 .introduction__document {
   margin-top: myrem(130);
+  @media #{$sp} {
+    margin-top: myrem(80);
+  }
 }
 
+.introduction__column {
+  margin-top: myrem(190);
+  @media #{$sp} {
+    margin-top: myrem(100);
+  }
+}
+
+.introduction__contact {
+  margin-top: myrem(160);
+  @media #{$sp} {
+    margin-top: myrem(130);
+  }
+}
 
 /*==================================
 #introduction-top
 ===================================*/
-.introduction-top__containers {
-
-}
-
 .introduction-top__content {
   @media #{$sp} {
     display: block;
@@ -156,9 +171,6 @@
 }
 
 
-
-
-
 /*==================================
 #flow02
 ===================================*/
@@ -239,7 +251,7 @@
   &::after {
     content: "";
     display: inline-block;
-    width: myrem(4);
+    width: 4px;
     height: calc( 100% - #{myrem(152)});
     background: linear-gradient(180deg, #70CEEE 0%, #70CEEE 61%, #69AC74 90%, #DBBA2E 100%) 0% 0% no-repeat padding-box;
     position: absolute;
@@ -248,7 +260,8 @@
     transform: translateX(-50%);
     @media #{$sp} {
       left: 38%;
-      height: calc( 100% - #{myrem(138)});
+      top: myrem(76);
+      height: calc( 100% - #{myrem(142)});
     }
   }
 
@@ -316,9 +329,9 @@
     padding-left: 0;
   }
   &::after {
-    top: myrem(90);
+    top: myrem(86);
     left: 51%;
-    height: calc( 100% - #{myrem(162)});
+    height: calc( 100% - #{myrem(155)});
     background: transparent linear-gradient(180deg, #69AC74 0%, #DBBA2E 100%) 0% 0% no-repeat padding-box;
     @media #{$sp} {
       left: 22%
@@ -385,12 +398,10 @@
 }
 
 
-
-
-
+/*==================================
+#flow02
+===================================*/
 .introduction__column {
-  margin-top: myrem(190);
-
   .column__btn {
     margin-top: myrem(50);
     .btn01 {
@@ -401,6 +412,3 @@
   }
 }
 
-.introduction__contact {
-  margin-top: myrem(160);
-}

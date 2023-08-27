@@ -3,7 +3,6 @@
   about
   ----------------
 */
-
 .about__main {
   margin-top: myrem(96);
   @media #{$sp} {
@@ -26,9 +25,9 @@
 }
 
 .about__contact {
-  margin-top: myrem(165);
+  margin-top: myrem(160);
   @media #{$sp} {
-    margin-top: myrem(110);
+    margin-top: myrem(130);
   }
 }
 
@@ -263,6 +262,7 @@
   @media #{$sp} {
     font-size: myrem(12);
     text-align: center;
+    margin-top: 0;
   }
 }
 
