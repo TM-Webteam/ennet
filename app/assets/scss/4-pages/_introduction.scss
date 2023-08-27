@@ -329,11 +329,13 @@
     padding-left: 0;
   }
   &::after {
-    top: myrem(86);
+    top: myrem(91);
     left: 51%;
-    height: calc( 100% - #{myrem(155)});
+    height: calc( 100% - #{myrem(162)});
     background: transparent linear-gradient(180deg, #69AC74 0%, #DBBA2E 100%) 0% 0% no-repeat padding-box;
     @media #{$sp} {
+      top: myrem(85);
+      height: calc( 100% - #{myrem(153)});
       left: 22%
     }
   }

@@ -170,7 +170,7 @@
 
   .btn02 {
     box-shadow:6px 6px 8px rgba(255, 255, 255, .075),
-              6px 6px 10px rgba(0, 0, 0, .15);
+              4px 4px 8px rgba(0, 0, 0, .18);
     &:hover {
       box-shadow:
       2px 2px 2px rgba(255, 255, 255, .1),
@@ -369,8 +369,8 @@
     clip-path: polygon(100% 0, 0 51%, 100% 100%);
     background-color: #C9D4D6;
     position: absolute;
-    top: 25%;
-    left: 0;
+    top: 30%;
+    left: -1px;
     z-index: 1;
     @media #{$sp} {
       top: initial;
