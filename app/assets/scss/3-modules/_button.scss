@@ -172,6 +172,11 @@
     font-size: myrem(20);
     min-width: myrem(384);
     padding: myrem(25);
+    @media #{$sp} {
+      font-size: myrem(18);
+      padding: myrem(16) myrem(16);
+      min-width: myrem(300);
+    }
   }
 
   &.--yellow {
@@ -229,6 +234,24 @@
       box-shadow: inset 4px 4px 8px rgba(0, 0, 0, .16),
             inset -4px -4px 8px rgba(255, 255, 255, .16);
 
+    }
+  }
+
+  &.--blue {
+    color: $white;
+    background-color: $lightblue;
+    outline: 2px solid $white;
+    outline-offset: -2px;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, .1),
+    -4px -4px 4px rgba(255, 255, 255, .15);
+
+    &:hover,&:focus {
+      background-color: $white;
+      color: $lightblue;
+      box-shadow: inset 4px 4px 8px rgba(0, 0, 0, .16),
+            inset -4px -4px 8px rgba(255, 255, 255, .16),
+            6px 6px 8px rgba(0, 0, 0, .1),
+            -4px -4px 4px rgba(255, 255, 255, .15);
     }
   }
 

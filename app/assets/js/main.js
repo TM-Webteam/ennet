@@ -14,16 +14,23 @@ $(document).ready(function() {
   // Smooth Scrolling
   //---------------------------------
 
-  $('a[href^="#"]').click(function(){
-
-    var the_id = $(this).attr("href");
-
-    $('html, body').animate({
-      scrollTop:$(the_id).offset().top-130
-    }, 'slow');
-
-    return false;
+  $(document).ready(function(){
+    $('a[href^="#"]').click(function(){
+      var the_id = $(this).attr("href");
+      var offset_value;
+      // 画面幅が1000px以下の場合
+      if ($(window).width() <= 1000) {
+        offset_value = $(the_id).offset().top - 50;
+      } else {
+        offset_value = $(the_id).offset().top - 110;
+      }
+      $('html, body').animate({
+        scrollTop: offset_value
+      }, 'slow');
+      return false;
+    });
   });
+
 
 });
 

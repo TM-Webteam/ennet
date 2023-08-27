@@ -209,8 +209,8 @@ a,button[type="submit"] {
   padding-right: myrem(55);
   padding-left: myrem(55);
 	@media #{$sp} {
-    padding-right: myrem(34);
-    padding-left: myrem(34);
+    padding-right: myrem(20);
+    padding-left: myrem(20);
 	}
 }
 
@@ -264,6 +264,10 @@ body {
 
   &.top {
     margin-top: 0;
+  }
+
+  @media #{$sp} {
+    margin-top: myrem(80);
   }
 }
 

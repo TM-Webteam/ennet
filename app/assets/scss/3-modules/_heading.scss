@@ -17,6 +17,9 @@
 	font-weight: 500;
 	line-height: calc(32/16);
 	letter-spacing: 0.04em;
+	@media #{$sp} {
+		line-height: calc(28/16);
+	}
 }
 
 .lead {
@@ -122,6 +125,13 @@
 	font-size: myrem(24);
 	font-weight: 700;
 	letter-spacing: 0.04em;
+	@media #{$sp} {
+		font-size: myrem(19);
+	}
+
+	span {
+		display: inline-block;
+	}
 }
 
 /*==================================

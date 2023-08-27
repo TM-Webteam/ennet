@@ -153,23 +153,24 @@
 
 <main class="introduction__main">
 
-  <div class="introduction__head">
-    <div class="containers--md">
-      <div class="content flex nowrap">
-        <div class="body">
-          <div class="introduction__ttl ttl-primary">
+  <!--introduction__head -->
+  <div class="introduction__top introduction-top">
+    <div class="introduction-top__containers containers--md">
+      <div class="introduction-top__content flex nowrap">
+        <div class="introduction-top__body">
+          <div class="introduction-top__ttl ttl-primary">
             <div class="img">
               <img src="/assets/img/common/ttl-introduction.png" alt="introduction">
             </div>
             <h2 class="ttl">EV導入をお考えの企業さまへ</h2>
           </div>
-          <div class="lead">
-            EV導入までの流れや、導入検討中の企業さまへおすすめの<br>
+          <div class="introduction-top__lead">
+            EV導入までの流れや、導入検討中の<span>企業さまへおすすめの</span><br>
             コンテンツについてご紹介します。
           </div>
         </div>
-        <div class="img-area flex">
-          <div class="img1">
+        <div class="introduction-top__img-area flex nowrap" data-aos="fade-in" data-aos-duration="2000">
+          <div class="img1" >
             <img src="/assets/img/introduction/img-introduction01.jpg" alt="">
           </div>
           <div class="img2">
@@ -180,138 +181,157 @@
     </div>
   </div>
 
+  <!-- ページ内リンク -->
   <div class="introduction__page-link page-link">
-    <ul class="page-link__list">
-      <li class="page-link__item">
-        <a href="#introduction-flow">導入までの流れ</a>
-      </li>
-      <li class="page-link__item">
-        <a href="#introduction-document">おすすめ資料</a>
-      </li>
-      <li class="page-link__item">
-        <a href="#introduction-column">おすすめコラム</a>
-      </li>
-    </ul>
+    <div class="containers--md">
+      <ul class="page-link__list">
+        <li class="page-link__item" data-aos="fade-up">
+          <a href="#introduction-flow">導入までの流れ</a>
+        </li>
+        <li class="page-link__item" data-aos="fade-up">
+          <a href="#introduction-document">おすすめ資料</a>
+        </li>
+        <li class="page-link__item" data-aos="fade-up">
+          <a href="#introduction-column">おすすめコラム</a>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <div class="introduction__flow" id="introduction-flow">
-    <div class="containers--md">
-      <div class="head">
-        <h3 class="ttl ttl-secondary">EV導入までの流れ</h3>
-        <p class="text">
+  <!-- introduction-flow -->
+  <div class="introduction__flow introduction-flow" id="introduction-flow">
+    <div class="introduction-flow__containers containers--md">
+      <div class="introduction-flow__head" >
+        <h3 class="introduction-flow__ttl ttl-secondary" data-aos="fade-up">
+          EV導入までの流れ
+        </h3>
+        <p class="introduction-flow__text text" data-aos="fade-up">
           NTTグループの新電力会社、株式会社エネットによるEVスマート充電サービス「EnneEV (エネーブ)」のご案内になります。
         </p>
       </div>
-      <div class="content flex">
-        <div class="flow-line1">
-          <div class="circle1">
-            <img src="/assets/img/common/icon-circle-blue.svg" alt="">
-          </div>
-          <p class="period1">約2ヵ月～3ヶ月半</p>
-          <div class="circle2">
-            <img src="/assets/img/common/icon-circle-yellow.svg" alt="">
-          </div>
-        </div>
-        <div class="body">
-          <div class="wrapper01 flex">
-            <div class="flow-line2">
-              <div class="circle1">
-                <img src="/assets/img/common/icon-circle-blue.svg" alt="">
-              </div>
-              <p class="period2">約1ヵ月～1ヶ月半</p>
-              <div class="circle2">
-                <img src="/assets/img/common/icon-circle-blue.svg" alt="">
-              </div>
+      <div class="introduction-flow__content flow01">
+        <div class="flow01__wrapper flex">
+          <div class="flow01__flow-line" data-aos="fade-up">
+            <div class="circle1">
+              <img src="/assets/img/common/icon-circle-blue.svg" alt="">
             </div>
-            <ol class="list1">
-              <li class="item card4 flex aiC">
-                <div class="card__step">
-                  <img src="/assets/img/common/icon-step1.svg" alt="step1">
-                </div>
-                <div class="card4__ttl">
-                  お問い合わせ
-                </div>
-                <div class="card4__text">
-                  お問い合わせフォーム、もしくはお電話でお気軽にお問い合わせください。
-                </div>
-              </li>
-              <li class="item card4 flex aiC">
-                <div class="card__step">
-                  <img src="/assets/img/common/icon-step2.svg" alt="step2">
-                </div>
-                <div class="card4__ttl">
-                  ご説明・<br>
-                  コンサルティング
-                </div>
-                <div class="card4__text">
-                  社用車のEV化に向けた運用最適化のご提案、費用シミュレーションを行います。お客さまの電力使用パターンを分析し、どの時間帯でどの程度の出力で充電することが最適か、充電計画をご提案します。メーカーや工事会社にはできない、電力会社だからこそできる提案です。
-                </div>
-              </li>
-              <li class="item card4 flex aiC">
-                <div class="card__step">
-                  <img src="/assets/img/common/icon-step3.svg" alt="step3">
-                </div>
-                <div class="card4__ttl">
-                  導入準備・お見積り
-                </div>
-                <div class="card4__text">
-                  充電器設置工事のための現地調査を行い、お見積りを提出いたします。お客さまが個別に充電器手配・設置工事・制御システムの手配をしていただく必要はありません。全部まとめてお任せください。
-                </div>
-              </li>
-              <li class="item card4 flex aiC">
-                <div class="card__step">
-                  <img src="/assets/img/common/icon-step4.svg" alt="step4">
-                </div>
-                <div class="card4__ttl">
-                  ご契約
-                </div>
-                <div class="card4__text">
-                  契約書案をご提示しますので、内容をご検討いただき、双方合意の上、契約締結をいたします。
-                </div>
-              </li>
-            </ol>
-          </div>
-          <div class="wrapper02 flex">
-            <div class="flow-line3">
-              <div class="circle1">
-                <img src="/assets/img/common/icon-circle-green.svg" alt="">
-              </div>
-              <p class="period3">約1ヵ月～1ヶ月半</p>
-              <div class="circle2">
-                <img src="/assets/img/common/icon-circle-yellow.svg" alt="">
-              </div>
+            <p class="period">約2ヵ月<br class="sp-only">～<br class="sp-only">3ヶ月半</p>
+            <div class="circle2">
+              <img src="/assets/img/common/icon-circle-yellow.svg" alt="">
             </div>
-            <div class="list2-warap">
-              <ol class="list2">
-                <li class="item card4 flex aiC">
-                  <div class="card__step">
-                    <img src="/assets/img/common/icon-step5.svg" alt="step5">
+          </div>
+          <div class="flow01__content1">
+            <div class="flow01__wrapper01 flex">
+              <div class="flow01__flow-line flow01__flow-line--02" data-aos="fade-up">
+                <div class="circle1">
+                  <img src="/assets/img/common/icon-circle-blue.svg" alt="">
+                </div>
+                <p class="period">約1ヵ月<br class="sp-only">～<br class="sp-only">1ヶ月半</p>
+                <div class="circle2">
+                  <img src="/assets/img/common/icon-circle-blue.svg" alt="">
+                </div>
+              </div>
+              <ol class="flow01__list">
+                <li class="flow01__list-item flex aiC" data-aos="fade-up">
+                  <div class="wrapper">
+                    <div class="step">
+                      <img src="/assets/img/common/icon-step1.svg" alt="step1">
+                    </div>
+                    <div class="ttl">
+                      お問い合わせ
+                    </div>
                   </div>
-                  <div class="card4__ttl">
-                    工事
+                  <div class="text">
+                    お問い合わせフォーム、もしくはお電話でお気軽にお問い合わせください。
                   </div>
-                  <div class="card4__text">
+                </li>
+                <li class="flow01__list-item flex aiC" data-aos="fade-up">
+                  <div class="wrapper">
+                    <div class="step">
+                      <img src="/assets/img/common/icon-step2.svg" alt="step2">
+                    </div>
+                    <div class="ttl">
+                      ご説明・<br>
+                      コンサルティング
+                    </div>
+                  </div>
+                  <div class="text">
+                    社用車のEV化に向けた運用最適化のご提案、費用シミュレーションを行います。お客さまの電力使用パターンを分析し、どの時間帯でどの程度の出力で充電することが最適か、充電計画をご提案します。メーカーや工事会社にはできない、電力会社だからこそできる提案です。
+                  </div>
+                </li>
+                <li class="flow01__list-item flex aiC" data-aos="fade-up">
+                  <div class="wrapper">
+                    <div class="step">
+                      <img src="/assets/img/common/icon-step3.svg" alt="step3">
+                    </div>
+                    <div class="ttl">
+                      導入準備・<br class="sp-only"><span>お見積り</span>
+                    </div>
+                  </div>
+                  <div class="text">
+                    充電器設置工事のための現地調査を行い、お見積りを提出いたします。お客さまが個別に充電器手配・設置工事・制御システムの手配をしていただく必要はありません。全部まとめてお任せください。
+                  </div>
+                </li>
+                <li class="flow01__list-item flex aiC" data-aos="fade-up">
+                  <div class="wrapper">
+                    <div class="step">
+                      <img src="/assets/img/common/icon-step4.svg" alt="step4">
+                    </div>
+                    <div class="ttl">
+                      ご契約
+                    </div>
+                  </div>
+                  <div class="text">
+                    契約書案をご提示しますので、内容をご検討いただき、双方合意の上、契約締結をいたします。
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <div class="flow01__wrapper02 flex">
+              <div class="flow01__flow-line flow01__flow-line--03" data-aos="fade-up">
+                <div class="circle1">
+                  <img src="/assets/img/common/icon-circle-green.svg" alt="">
+                </div>
+                <p class="period">約1ヵ月<br class="sp-only">～<br class="sp-only">1ヶ月半</p>
+                <div class="circle2">
+                  <img src="/assets/img/common/icon-circle-yellow.svg" alt="">
+                </div>
+              </div>
+              <ol class="flow01__list flow01__list--02">
+                <li class="flow01__list-item flex aiC" data-aos="fade-up">
+                  <div class="wrapper">
+                    <div class="step">
+                      <img src="/assets/img/common/icon-step5.svg" alt="step5">
+                    </div>
+                    <div class="ttl">
+                      工事
+                    </div>
+                  </div>
+                  <div class="text">
                     充電器の設置工事を実施します。<br>
                     ※充電器はリース提供を標準パターンとしておりますが、ご購入もご相談可能です。
                   </div>
                 </li>
-                <li class="item card4 flex aiC">
-                  <div class="card__step">
-                    <img src="/assets/img/common/icon-step6.svg" alt="step6">
+                <li class="flow01__list-item flex aiC" data-aos="fade-up">
+                  <div class="wrapper">
+                    <div class="step">
+                      <img src="/assets/img/common/icon-step6.svg" alt="step6">
+                    </div>
+                    <div class="ttl">
+                      運用開始
+                    </div>
                   </div>
-                  <div class="card4__ttl">
-                    運用開始
-                  </div>
-                  <div class="card4__text">
+                  <div class="text">
+                    充電器の利用状況は弊社エネットで一元管理します。<br>
                     お客様の方で面倒な設定や管理・監視等をしていただく必要はありません。
                   </div>
                 </li>
               </ol>
-              <p class="note">
-                ※上記は最短の事例であり、すべてのケースにおいて確約できるものではありません。契約手続きや工事手配等、その他諸事情により時間がかかる場合もあります。
-              </p>
             </div>
           </div>
+          <p class="flow01__note note" data-aos="fade-up">
+            ※上記は最短の事例であり、すべてのケースにおいて確約できるものではありません。契約手続きや工事手配等、その他諸事情により時間がかかる場合もあります。
+          </p>
         </div>
       </div>
     </div>
@@ -323,7 +343,7 @@
       <div class="document__wrapper">
         <div class="document__ttl ttl-primary --center --white --document">
           <div class="img">
-            <img src="/assets/img/common/ttl-document.png" alt="document">
+            <img src="/assets/img/common/ttl-documents.png" alt="document">
           </div>
           <h2 class="ttl">お役立ち資料</h2>
         </div>

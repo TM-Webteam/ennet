@@ -49,6 +49,7 @@
     border-radius: 0;
     padding: myrem(90) myrem(10) myrem(100) myrem(10);
     overflow: auto;
+    margin-top: 0;
 
     &.open {
       transform: translateX(0);

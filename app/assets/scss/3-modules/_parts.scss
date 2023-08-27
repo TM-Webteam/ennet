@@ -879,7 +879,7 @@ ruby {
 }
 
 .card3__body {
-  padding: myrem(20) myrem(16);
+  padding: myrem(18) myrem(16) myrem(22);
 }
 
 .card3__ttl {
@@ -895,50 +895,8 @@ ruby {
   line-height: calc(26/16);
   letter-spacing: 0.04em;
   color: #383838;
-  margin-top: myrem(16);
+  margin-top: myrem(15);
 }
-
-/*==================================
-# カード4
-===================================*/
-.card4 {
-  background-color: $base-color;
-  box-shadow: $shadow--sm;
-  border-radius: myrem(10);
-  padding: myrem(24) myrem(40);
-}
-
-.card__step {
-  width: calc(46 / 924 * 100%);
-  img {
-    width: 100%;
-  }
-}
-
-.card4__ttl {
-  width: calc(202 / 924 * 100%);
-  font-size: myrem(16);
-  font-weight: 500;
-  line-height: calc(20/16);
-  letter-spacing: 0.04em;
-  text-align: center;
-  padding: 0 myrem(20);
-}
-
-.card4__text {
-  width: calc(676 / 924 * 100%);
-  font-size: myrem(14);
-  font-weight: 300;
-  line-height: calc(24/14);
-  letter-spacing: 0.04em;
-}
-
-
-
-
-
-
-
 
 
 /*==================================
@@ -1369,63 +1327,18 @@ ruby {
 }
 
 /*==================================
-# enneev
-===================================*/
-.enneev {
-  background-color: $base-color;
-  box-shadow: $shadow;
-  border-radius: myrem(10);
-  padding: myrem(40) myrem(3) myrem(40) myrem(40);
-}
-
-.enneev__img {
-  width: calc( 524/1193 * 100%);
-
-  img {
-    aspect-ratio: 524/256;
-    object-fit: cover;
-    width: 100%;
-    height: auto;
-    border-radius: myrem(10);
-  }
-}
-
-.enneev__body {
-  width: calc( 615/1193 * 100%);
-}
-
-.enneev__lead {
-  margin-top: myrem(20);
-}
-
-.enneev__ttl {
-  font-size: myrem(16);
-  font-weight: 500;
-  line-height: calc(26/16);
-  letter-spacing: 0.04em;
-  margin-top: myrem(10);
-
-  .large {
-    font-size: myrem(32);
-  }
-}
-
-.enneev__btn {
-  margin-top: myrem(32);
-}
-
-/*==================================
 # ページ内リンク
 ===================================*/
-.page-link {
-  max-width: myrem(788);
-  margin-inline: auto;
-}
-
 .page-link__list {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  column-gap: myrem(54);
+  gap: myrem(54);
+  max-width: myrem(788);
+  margin-inline: auto;
+  @media #{$sp} {
+    grid-template-columns: 1fr;
+    gap: myrem(30);
+  }
 }
 
 .page-link__item {
@@ -1442,18 +1355,22 @@ ruby {
     box-shadow: $shadow--sm;
     border-radius: myrem(10);
     position: relative;
+    @media #{$sp} {
+      padding: myrem(28) myrem(20) myrem(50) myrem(20);
+    }
 
     &::before {
       content: "";
       display: inline-block;
-      width: myrem(24);
-      height: myrem(22);
+      width: myrem(30);
+      height: myrem(28);
       background: url(../img/common/icon-arrow-tri-bottom.png) no-repeat center / contain;
       position: absolute;
       bottom: myrem(18);
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
+      @media #{$sp} {}
     }
 
     &:hover {
