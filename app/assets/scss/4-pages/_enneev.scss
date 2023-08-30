@@ -56,6 +56,10 @@
 .solution-mv__containers {
   height: 100%;
   position: relative;
+  @media #{$sp} {
+    padding-right: myrem(35);
+    padding-left: myrem(35);
+  }
 }
 
 .solution-mv__content {
@@ -71,6 +75,8 @@
     width: 100%;
     position: relative;
     z-index: 3;
+    max-width: myrem(500);
+    margin-inline: auto;
   }
 }
 
@@ -113,6 +119,12 @@
     margin: 0 myrem(2);
     @media #{$sp} {
       font-size: myrem(28);
+    }
+  }
+
+  .inline {
+    @media #{$sp} {
+      display: inline-block;
     }
   }
 }
@@ -161,12 +173,10 @@
   display: flex;
   align-items: center;
   @media #{$sp} {
-    display: block;
-    margin-top: myrem(80);
-    margin-top: myrem(50);
+    flex-direction: column;
+    margin-top: myrem(60);
     text-align: center;
   }
-
 
   .btn02 {
     box-shadow:6px 6px 8px rgba(255, 255, 255, .075),
@@ -204,7 +214,9 @@
   z-index: -1;
   @media #{$sp} {
     width: myrem(1625);
-    left: myrem(-519);
+    // left: myrem(-519);
+    left: inherit;
+    right: -683px;
     bottom: 0;
   }
   img {
@@ -216,7 +228,7 @@
   width: myrem(240);
   height: myrem(129);
   position: absolute;
-  left: 0;
+  left: myrem(30);
   bottom: myrem(-12);
   @media #{$sp} {
     width: myrem(130);
@@ -835,12 +847,12 @@
 }
 
 .sec4-graph__wrapper {
-  max-width: myrem(702);
+  max-width: myrem(690);
   margin-inline: auto;
   margin-top: myrem(70);
   @media #{$sp} {
     flex-direction: column;
-    margin-top: myrem(30);
+    margin-top: myrem(55);
   }
 }
 
@@ -854,7 +866,8 @@
   .img {
     margin-top: myrem(55);
     @media #{$sp} {
-      margin-top: myrem(80);
+      // margin-top: myrem(80);
+      margin-top: myrem(120);
     }
 
     img {
@@ -872,27 +885,45 @@
     background: url(../img/common/icon-arrow-right-blue.svg) no-repeat center / contain;
     position: absolute;
     top: 41%;
-    left: myrem(-80);
+    left: myrem(-84);
     @media #{$sp} {
-      top: myrem(-60);
+      top: myrem(-80);
       left: 50%;
-      transform: rotate(90deg) translateX(-50%);
+      transform: translateX(-50%) rotate(90deg);
     }
   }
   }
 }
 
 .sec4-graph_text {
-  font-size: myrem(14);
+  // font-size: myrem(14);
+  font-size: myrem(17);
   font-weight: 300;
   text-align: center;
   margin-top: 0;
+}
 
+.sec4-graph__item.--left {
+  .sec4-graph_text {
+    padding-left: myrem(45);
+    @media #{$sp} {
+      padding-left: 0;
+    }
+  }
+}
+
+.sec4-graph__item.--right {
+  .sec4-graph_text {
+    padding-right: myrem(45);
+    @media #{$sp} {
+      padding-right: 0;
+    }
+  }
 }
 
 .sec4-graph__fukidashi {
   display: inline-block;
-  font-size: myrem(10);
+  font-size: myrem(14);
   line-height: calc(15/10);
   font-weight: 500;
   text-align: center;
@@ -906,11 +937,15 @@
 
 .sec4-graph__item.--left {
   .sec4-graph__fukidashi {
-    padding: myrem(30) myrem(30) myrem(40) myrem(40);
-    background: url(../img/solution/fukidashi01.png) no-repeat center center / contain;
+    padding: myrem(44) myrem(40) myrem(50) myrem(45);
+    background: url(../img/solution/fukidashi01.png);
+    background-position: 30%;
+    background-position: center left 30%;
+    background-repeat: no-repeat;
+    background-size: 90%;
     position: absolute;
-    top: -30px;
-    left: -143px;
+    top: -47px;
+    left: -159px;
     @media #{$md} {
       padding: myrem(35) myrem(35) myrem(45) myrem(45);
       top: -34px;
@@ -918,8 +953,8 @@
     }
     @media #{$sp} {
       padding: myrem(30) myrem(30) myrem(40) myrem(40);
-      top: 26px;
-      left: -49px;
+      top: 32px;
+      left: -62px;
     }
   }
 }
@@ -929,11 +964,15 @@
     margin-top: myrem(100);
   }
   .sec4-graph__fukidashi {
-    padding: myrem(30) myrem(30) myrem(40) myrem(40);
-    background: url(../img/solution/fukidashi02.png) no-repeat center center / contain;
+    padding: myrem(44) myrem(40) myrem(50) myrem(45);
+    background: url(../img/solution/fukidashi02.png);
+    background-position: 30%;
+    background-position: center left 55%;
+    background-repeat: no-repeat;
+    background-size: 90%;
     position: absolute;
-    top: 16px;
-    right: -118px;
+    top: -17px;
+    right: -169px;
     @media #{$md} {
       padding: myrem(45) myrem(45) myrem(55) myrem(50);
       top: -18px;
@@ -941,9 +980,8 @@
     }
     @media #{$sp} {
       padding: myrem(30) myrem(30) myrem(40) myrem(40);
-      top: 26px;
-      right: -45px;
-    }
+      top: 47px;
+      right: -57px;    }
   }
 }
 
@@ -970,6 +1008,7 @@
   @media #{$sp} {
     flex-direction: column;
     padding: myrem(36) myrem(16) myrem(36) myrem(16);
+    padding: myrem(36) myrem(5) myrem(36) myrem(5);
     max-width: myrem(550);
     margin-inline: auto;
   }
@@ -979,11 +1018,11 @@
   width: calc(524 / 1160 * 100%);
   @media #{$sp} {
     width: 100%;
+    padding: 0 myrem(11);
   }
 
   img {
-    aspect-ratio: 524/256;
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     height: auto;
     border-radius: myrem(10);
@@ -1003,7 +1042,7 @@
   line-height: calc(26/16);
   font-weight: 500;
   letter-spacing: 0.04em;
-  margin-top: myrem(53);
+  margin-top: myrem(70);
   @media #{$sp} {
     text-align: center;
     font-size: myrem(14);
@@ -1013,7 +1052,7 @@
 
 .white-paper__lead {
   color: $white;
-  font-size: myrem(32);
+  font-size: myrem(40);
   font-weight: 700;
   letter-spacing: 0.04em;
   @media #{$sp} {
@@ -1024,7 +1063,7 @@
 }
 
 .white-paper__btn {
-  margin-top: myrem(35);
+  margin-top: myrem(45);
   @media #{$sp} {
     text-align: center;
     margin-top: myrem(20);

@@ -1164,6 +1164,7 @@ ruby {
   }
 
   &:hover {
+    cursor: pointer;
     .btn {
       .btn01 {
         box-shadow: -6px -6px 14px rgba(255, 255, 255, .8),
@@ -1380,4 +1381,5 @@ ruby {
     }
   }
 }
+
 

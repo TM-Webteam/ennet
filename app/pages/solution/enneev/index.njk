@@ -1,141 +1,24 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="keywords" content="">
-<meta name="description" content="ディスクリプション">
-<meta name="author" content="">
+{% extends "layout/default.njk" %}
 
-<title>EV Start Biz</title>
+{# Custom SEO tags, leave blank to apply the default values #}
+{% set title = "スマート充電サービス 『EnneEV®』 エネーブ｜EV Start Biz" %}
+{% set description = "スマート充電サービス 『EnneEV®（エネーブ）』 は、NTTグループの新電力会社エネットがご提供するソリューションです。社用車のEV導入をサポートし、充電器の時間制御と出力制御によって、電気代を契約電力内にコントロールいたします。
+" %}
+{% set keywords = "" %}
 
-<meta name="format-detection" content="telephone=no">
+{# Page settings and also body class #}
+{% set page = "about" %}
 
-<!-- Schema.org markup for Google+ -->
-<meta itemprop="name" content="">
-<meta itemprop="image" content="">
+{# Custom tags before </head> #}
+{% block customHead %}
+{% endblock %}
 
-<!-- Twitter Card data -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="サイトタイトル">
-<meta name="twitter:image:src" content="">
+{# Custom tags before </body> #}
+{% block customJs %}
+{% endblock %}
 
-<!-- Open Graph data -->
-<meta property="og:title" content="サイトタイトル">
-<meta property="og:description" content="ディスクリプション">
-<meta property="og:type" content="website">
-<meta property="og:url" content="">
-<meta property="og:image" content="">
-<meta property="og:image:width" content="">
-<meta property="og:image:height" content="">
-<meta property="og:site_name" content="">
-
-<!-- Web font -->
-
-<!-- 前から入っていたリンク -->
-<!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://use.typekit.net/ncf8fus.css"> -->
-
-<!-- 新しく入れたリンク -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-
-<!-- Style sheet -->
-<!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
-<link rel="stylesheet" href="/assets/css/main.css?1">
-
-</head>
-<body class="about">
-  <header class="header" id="header">
-	<div class="header__containers containers">
-		<div class="header__logo">
-			<img src="/assets/img/common/logo.png" alt="EV Start Biz">
-		</div>
-		<div class="header__body js-drawer">
-			<div class="header__body-inner">
-				<nav class="header__nav">
-					<ul class="header__nav-list">
-						<li class="header__nav-item active">
-							<a href="https://test2.suzu-web.com/">ホーム</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="https://test2.suzu-web.com/about/">『EV Start Biz』とは</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="https://test2.suzu-web.com/introduction/">EV車導入をお考えの企業さまへ</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="">よくあるギモン</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="">コラム</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="https://test2.suzu-web.com/solution/">ソリューション</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="">運営会社</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="header__cta">
-					<a href="#" class="header__btn">お役立ち資料</a>
-					<a href="#" class="header__btn">ご相談・お問合せ</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-
-<button class="hamburger-btn js-hamburger-btn">
-	<span></span>
-	<span></span>
-	<span></span>
-</button>
-
-<div class="overlay js-overlay"></div>
-
-<div class="header-sub" id="header-sub">
-	<div class="header__containers containers">
-		<div class="header__body">
-			<div class="header__body-inner">
-				<nav class="header__nav">
-					<ul class="header__nav-list">
-						<li class="header__nav-item active">
-							<a href="https://test2.suzu-web.com/">ホーム</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="https://test2.suzu-web.com/about/">EV Start Biz』とは</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="https://test2.suzu-web.com/introduction/">EV車導入をお考えの企業さまへ</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="">よくあるギモン</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="">コラム</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="https://test2.suzu-web.com/solution/">ソリューション</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="">運営会社</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="header__cta">
-					<a href="#" class="header__btn">お役立ち資料</a>
-					<a href="#" class="header__btn">ご相談・お問合せ</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-  
+{# Main content #}
+{% block content %}
 
 <!-- breadcrumbs -->
 <div class="breadcrumb">
@@ -169,17 +52,17 @@
           </p>
           <h2 class="solution-mv__ttl" data-aos="fade-right" data-aos-duration="900" data-aos-delay="1000">
             <span class="small">EV社用車運用のコストを抑える</span><br>
-            <span class="large">スマート充電サービス<br class="sp-only">『EnneEV®』</span>エネーブ
+            <span class="large">スマート充電サービス『EnneEV®』</span><span class="inline">エネーブ</span>
           </h2>
-          <div class="solution-mv__btn" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="2400">
-            <a href="#" class="btn02 --small --white">「EnneEV®」の資料をもらう</a>
-            <a href="#" class="btn02 --small">まずは相談・問合せする</a>
-          </div>
-          <!-- SP画像なしのとき -->
-          <!-- <div class="solution-mv__btn" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="1800">
+          <!-- <div class="solution-mv__btn" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="2400">
             <a href="#" class="btn02 --small --white">「EnneEV®」の資料をもらう</a>
             <a href="#" class="btn02 --small">まずは相談・問合せする</a>
           </div> -->
+          <!-- SP画像なしのとき -->
+          <div class="solution-mv__btn" data-aos="fade-in" data-aos-duration="1200" data-aos-delay="1800">
+            <a href="#" class="btn02 --small --white">「EnneEV®」の資料をもらう</a>
+            <a href="#" class="btn02 --small">まずは相談・問合せする</a>
+          </div>
         </div>
         <!-- 右画像 -->
         <div class="solution-mv__img" data-aos="fade-left" data-aos-duration="900" data-aos-delay="1800">
@@ -188,7 +71,7 @@
       </div>
 
       <!-- 画像 -->
-      <div class="solution-mv__img--sp skew-img" data-aos="fade-left" data-aos-duration="900" data-aos-delay="1800">
+      <!-- <div class="solution-mv__img--sp skew-img" data-aos="fade-left" data-aos-duration="900" data-aos-delay="1800">
         <div class="skew-img__front">
           <picture>
             <source media="(max-width: 768px)" srcset="/assets/img/top/img-mv-sp.png">
@@ -196,7 +79,7 @@
           </picture>
         </div>
         <img src="/assets/img/top/img-mv.png" alt="" class="skew-img__back">
-      </div>
+      </div> -->
 
 
       <!-- 車 -->
@@ -460,14 +343,14 @@
       </h2>
       <div class="white-paper__content flex" data-aos="fade-up">
         <div class="white-paper__img">
-          <img src="/assets/img/common/document-sample.png" alt="">
+          <img src="/assets/img/solution/img-white-paper.png" alt="">
         </div>
         <div class="white-paper__body">
           <p class="white-paper__catch-copy">
-            キャッチコピーが入ります
+            「うちの会社もEV（電気自動車）を導入したい！」<br class="sp-only">と思ったときに読む
           </p>
           <p class="white-paper__lead">
-            ホワイトペーパータイトルが入ります
+            社用車EV導入ガイドブック
           </p>
           <div class="white-paper__btn">
             <a href="" class="btn02 --blue --sp-small">ダウンロードページへ</a>
@@ -634,89 +517,4 @@
 </main>
 
 
-<footer class="footer">
-  <div class="footer__body">
-    <div class="footer__containers containers flex">
-      <div class="footer__content">
-        <div class="footer__logo">
-          <img src="/assets/img/common/logo-white.svg" alt="EV Start Biz">
-        </div>
-        <!-- <p>PNG</p>
-        <div class="footer__logo">
-          <img src="/assets/img/common/logo-white.png" alt="EV Start Biz">
-        </div> -->
-        <ul class="footer__link">
-          <li class="footer__link-item">
-            <a href="">プライバシーポリシー </a>
-          </li>
-          <li class="footer__link-item">
-            <a href="">Cookieポリシー</a>
-          </li>
-          <li class="footer__link-item">
-            <a href="">運営会社</a>
-          </li>
-        </ul>
-      </div>
-      <nav class="footer__nav flex">
-        <div class="footer__nav-content">
-          <p class="parent">
-            <a href="">『EV Start Biz』 とは</a>
-          </p>
-          <p class="parent">
-            <a href="">EV車導入をお考えの企業さまへ</a>
-          </p>
-          <p class="parent">
-            <a href="">よくあるギモン</a>
-          </p>
-          <p class="parent">
-            <a href="">ソリューション</a>
-          </p>
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a href="">&nbsp;スマート充電サービス EnneEV®</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__nav-content">
-          <p class="parent">
-            <a href="">お役立ち情報</a>
-          </p>
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a href="">&nbsp;お役立ちコラム</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="">&nbsp;お役立ち資料</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="">&nbsp;ニュースリリース</a>
-            </li>
-          </ul>
-          <p class="parent">
-            <a href="">お問合せ</a>
-          </p>
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a href="">&nbsp;サービス資料</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="">&nbsp;ご相談・お問合せ</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-  <div class="footer__bottom">
-    <div class="container">
-      <p class="footer__copy">Copyright（C）2023 ENNET Corporation All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-  <script src="/assets/js/vendor/jquery-numerator.js?1"></script>
-  <script src="/assets/js/all.min.js"></script>
-  <!-- <script src="/assets/js/vendor/jquery-3.2.1.min.js"></script> -->
-
-  
-</body>
-</html>
+{% endblock %}
