@@ -202,21 +202,6 @@ $(function () {
   }
 });
 
-//--------------------------------------
-// フローティングナビ
-//--------------------------------------
-$(function() {
-  const header = $('#header-sub');
-  const scrollY = 700;
-
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > scrollY) {
-      header.addClass('scrolled');
-    } else {
-      header.removeClass('scrolled');
-    }
-  });
-});
 
 //--------------------------------------
 // ハンバーガーメニュー
@@ -263,10 +248,25 @@ $(function () {
     });
 });
 
+
 //--------------------------------------
-// スクロールしたらマーカーを引く
+// スクロールイベント
 //--------------------------------------
 window.addEventListener('scroll', () => {
+
+  // ヘッダー追従
+  const header = document.getElementById('header-sub');
+  const scrollY = 700;
+  if (window.scrollY > scrollY) {
+      header.classList.add('scrolled');
+  } else {
+      header.classList.remove('scrolled');
+  }
+
+  // 2つ目の処理: アニメーション処理
+  checkAnimation();
+
+  // 3つ目の処理: .js-marker要素のスクロール処理
   const height = window.innerHeight;
   const scroll = document.documentElement.scrollTop;
   const markers = document.querySelectorAll('.js-marker');
@@ -279,14 +279,10 @@ window.addEventListener('scroll', () => {
   });
 });
 
-
-//--------------------------------------
 // ABOUTページのテキストふわっと表示
-//--------------------------------------
 function checkAnimation() {
   const scrollTop = $(window).scrollTop();
   const winH = $(window).height();
-
   // 画面幅が769px以上の場合のアニメーション
   if ($(window).width() >= 769) {
       const elementTop = $('.js-fadein-box').offset().top;
@@ -310,11 +306,9 @@ function checkAnimation() {
   }
 }
 
-$(window).on('scroll', checkAnimation);
-
-// 画面ロード時にもチェック
+// 画面ロード時にもアニメーションのチェックを行う
 $(document).ready(function() {
   setTimeout(function() {
     checkAnimation();
-  }, 500);  // 1秒後にアニメーションチェック関数を呼び出す
+  }, 500);  // 0.5秒後にアニメーションチェック関数を呼び出す
 });
