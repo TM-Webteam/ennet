@@ -71,30 +71,28 @@ $(function(){
 //--------------------------------------
 //　アニメーション　ふわっと演出
 //--------------------------------------
-window.onload = function() {
-  scroll_effect();
+// window.onload = function() {
+//   scroll_effect();
 
-  $(window).scroll(function(){
-   scroll_effect();
-  });
+//   $(window).scroll(function(){
+//    scroll_effect();
+//   });
 
-  function scroll_effect(){
-   $('.fadein').each(function(){
-    var elemPos = $(this).offset().top;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll > elemPos - windowHeight){
-     $(this).addClass('scrollin');
-    }
-   });
-  }
-};
+//   function scroll_effect(){
+//    $('.js-fadein').each(function(){
+//     var elemPos = $(this).offset().top;
+//     var scroll = $(window).scrollTop();
+//     var windowHeight = $(window).height();
+//     if (scroll > elemPos - windowHeight ){
+//      $(this).addClass('scrollin');
+//     }
+//    });
+// }};
 
 
 //--------------------------------------
 //　loop-slick
 //--------------------------------------
-
 $(document).ready(function() {
   $('#loop-slick').slick({
       arrows: false,
@@ -263,4 +261,60 @@ $(function () {
       rounding: rounding, // 小数点以下の桁数（初期値：0）
     });
     });
+});
+
+//--------------------------------------
+// スクロールしたらマーカーを引く
+//--------------------------------------
+window.addEventListener('scroll', () => {
+  const height = window.innerHeight;
+  const scroll = document.documentElement.scrollTop;
+  const markers = document.querySelectorAll('.js-marker');
+  const value = scroll - height + 80;
+
+  markers.forEach(marker => {
+      if (scroll > marker.getBoundingClientRect().top + value) {
+          marker.classList.add('on');
+      }
+  });
+});
+
+
+//--------------------------------------
+// ABOUTページのテキストふわっと表示
+//--------------------------------------
+function checkAnimation() {
+  const scrollTop = $(window).scrollTop();
+  const winH = $(window).height();
+
+  // 画面幅が769px以上の場合のアニメーション
+  if ($(window).width() >= 769) {
+      const elementTop = $('.js-fadein-box').offset().top;
+      const elementHeight = $('.js-fadein-box').outerHeight();
+      if (elementTop < scrollTop + winH && elementTop + elementHeight > scrollTop) {
+          $('.js-fadein-box').find('.js-fadein').each(function(index){
+              $(this).delay(index * 300).queue(function(){
+                  $(this).addClass('active');
+              });
+          });
+      }
+  }
+  // 画面幅が768px以下の場合のアニメーション
+  else {
+      $('.js-fadein').each(function () {
+          const targetPosition = $(this).offset().top;
+          if (scrollTop > targetPosition - winH + 100) {
+              $(this).addClass('active');
+          }
+      });
+  }
+}
+
+$(window).on('scroll', checkAnimation);
+
+// 画面ロード時にもチェック
+$(document).ready(function() {
+  setTimeout(function() {
+    checkAnimation();
+  }, 500);  // 1秒後にアニメーションチェック関数を呼び出す
 });

@@ -89,10 +89,31 @@
   }
 
   &.marker-green {
-    display: inline;background: linear-gradient(transparent 3%,#B7EBBD -2%) ;
+    background: linear-gradient(transparent 3%,#B7EBBD -2%) ;
     display: inline;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition:background-size 2.5s ease-in-out;
+    }
+
+    &.on {
+      background-size: 100% 100%;
     }
   }
+}
+
+/* アニメーション */
+.js-fadein {
+  transform: translateY(30px);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 1s, opacity 1s, visibility 1s;
+}
+
+.js-fadein.active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .about-sec1__img-area {
@@ -217,6 +238,7 @@
 }
 
 .about-enneev__wrapper {
+  display: flex;
   background-color: $base-color;
   box-shadow: $shadow;
   border-radius: myrem(10);
@@ -227,6 +249,19 @@
     text-align: center;
     max-width: myrem(550);
     margin-inline: auto;
+  }
+
+  &:hover {
+    .about-enneev__btn {
+      p {
+        opacity: 1;
+        outline: none;
+        box-shadow: -6px -6px 14px rgba(255, 255, 255, .8),
+                  -4px -4px 6px rgba(255, 255, 255, 1),
+                  3px 3px 6px rgba(0, 0, 0, .3),
+                  8px 8px 12px rgba(0, 0, 0, .15);
+      }
+    }
   }
 }
 
