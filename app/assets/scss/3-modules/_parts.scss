@@ -609,7 +609,8 @@ ruby {
   }
 
   &.--small {
-    padding: myrem(2) myrem(15);
+    min-width: myrem(80);
+    padding: myrem(2) myrem(12);
   }
 
   &.--blue {
@@ -1480,7 +1481,7 @@ ruby {
     gap: myrem(54);
   }
   &.--col4 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: myrem(12);
   }
 }
@@ -1607,6 +1608,20 @@ ruby {
 /*==================================
 # ニュースの記事一覧( news-list )
 ===================================*/
+.news-list {
+  max-width: myrem(1130);
+  margin-inline: auto;
+  background-color: $base-color;
+  border-radius: myrem(10);
+  box-shadow: $shadow;
+  // margin-top: myrem(20);
+  padding: myrem(64) myrem(48) myrem(44) myrem(56);
+  @media #{$sp} {
+    // margin-top: myrem(40);
+    padding: myrem(25) myrem(24) myrem(30) myrem(24);
+  }
+}
+
 .news-list__item {
   &:last-child {
     .news-list__item-meta {
@@ -1653,6 +1668,7 @@ ruby {
   font-size: myrem(25);
   font-weight: 300;
   letter-spacing: 0.04em;
+  flex-grow: 1;
 
   @media #{$sp} {
     font-size: myrem(16);
@@ -1702,4 +1718,62 @@ ruby {
   @media #{$sp} {
     margin-top: myrem(41);
   }
+}
+
+/*==================================
+# アコーディオン
+===================================*/
+.accordion__item + .accordion__item {
+  margin-top: 2rem;
+}
+
+.accordion__btn {
+  background-color: pink;
+  color: white;
+  font-size: 1.6rem;
+  position: relative;
+  padding: 3rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.accordion__btn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 46%;
+  right: 2rem;
+  transform: translateY(-50%) rotate(135deg);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transition: .3s;
+}
+
+.accordion__btn.open::after {
+  transform: rotate(-45deg);
+}
+
+.accordion__content {
+  display: none;
+  padding: 3rem 6rem;
+  font-size: 1.6rem;
+  color: pink;
+  border: 2px solid pink;
+}
+
+/* 見た目調整 */
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* リセット */
+button {
+  border: none;
+  padding: 0;
+  text-align-last: left;
 }

@@ -312,3 +312,13 @@ $(document).ready(function() {
     checkAnimation();
   }, 500);  // 0.5秒後にアニメーションチェック関数を呼び出す
 });
+
+//--------------------------------------
+// アコーディオン
+//--------------------------------------
+$(function(){
+  $('.js-accordion-btn').on('click', function(){
+    $(this).next('.js-accordion-content').slideToggle(200);
+    $(this).toggleClass('open');
+  });
+});

@@ -5,10 +5,6 @@
 */
 
 .pagination {
-  margin-top: 70px;
-  @media #{$sp} {
-    margin-top: 30px;
-  }
   .screen-reader-text {
     display: none;
   }
@@ -17,71 +13,99 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: myrem(12);
+    @media #{$sp} {
+      gap: myrem(10);
+    }
     .page-numbers {
-      width: 38px;
-      height: 38px;
+      width: myrem(58);
+      height: myrem(58);
       text-align: center;
-      font-size: 16px;
-      font-weight: 600;
+      font-size: myrem(16);
+      font-weight: 700;
       display: flex;
+      color: $lightgreen;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+      border-radius: 50%;
+      background-color: $base-color;
+      transition: .3s;
+      box-shadow: 5px 5px 12px #e1e1e1,
+             -5px -5px 12px #ffffff;
       @media #{$sp} {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
+        width: myrem(30);
+        height: myrem(30);
+        font-size: myrem(14);
+
       }
+
+
       &:hover {
         opacity: 1;
-        color: #223B80;
+        box-shadow:  6px 6px 15px #bebebe,
+             -8px -8px 10px #ffffff;
       }
       &.prev {
-        margin-right: 20px;
+        padding-right: myrem(10);
         width: auto;
         height: auto;
         position: relative;
+        box-shadow: none;
         @media #{$sp} {
-          margin-right: 15px;
+          padding-right: myrem(4);
+        }
+        &:hover {
+          opacity: 0.7;
         }
         &::before {
           content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          width: 6px;
-          height: 6px;
-          border: 2px solid;
-          border-color: transparent transparent #000 #000;
-          transform: rotate(45deg);
+          display: inline-block;
+          width: myrem(40);
+          height: myrem(30);
+          background: url(../img/common/icon-pagination.png) no-repeat center / contain;
+          transform: rotate(180deg);
+          @media #{$sp} {
+            width: myrem(30);
+            height: myrem(23);
+          }
         }
       }
       &.next {
-        margin-left: 20px;
+        padding-left: myrem(10);
         width: auto;
         height: auto;
         position: relative;
+        box-shadow: none;
         @media #{$sp} {
-          margin-left: 15px;
+          padding-right: myrem(4);
         }
         &::before {
           content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          width: 6px;
-          height: 6px;
-          border: 2px solid;
-          border-color: #000 #000 transparent transparent;
-          transform: rotate(45deg);
+          display: inline-block;
+          width: myrem(40);
+          height: myrem(30);
+          background: url(../img/common/icon-pagination.png) no-repeat center / contain;
+          @media #{$sp} {
+            width: myrem(30);
+            height: myrem(23);
+          }
+        }
+        &:hover {
+          opacity: 0.7;
         }
       }
       &.current {
-        color: #223B80;
-        background-color:rgba(34,59,128,0.05);
+        color: $white;
+        background-color: $lightgreen;
+        box-shadow: 5px 5px 12px #d7d6d6,
+             -5px -5px 12px #ffffff;
+        &:hover {
+          opacity: 1;
+          box-shadow: 5px 5px 12px #e1e1e1,
+             -5px -5px 12px #ffffff;
+        }
       }
     }
   }

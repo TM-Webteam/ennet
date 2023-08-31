@@ -3,14 +3,14 @@
   about
   ----------------
 */
-.about__main {
+.about__head {
   margin-top: myrem(96);
   @media #{$sp} {
     margin-top: myrem(50);
   }
 }
 
-.about__sec2 {
+.about__sec1 {
   margin-top: myrem(210);
   @media #{$sp} {
     margin-top: myrem(110);
@@ -33,9 +33,9 @@
 
 
 /*==================================
-# about-sec1
+# about-head
 ===================================*/
-.about-sec1__containers {
+.about-head__containers {
   margin-top: myrem(72);
   @media #{$sp} {
     display: block;
@@ -44,7 +44,7 @@
   }
 }
 
-.about-sec1__body {
+.about-head__body {
   width: calc(648 / 1240 * 100%);
   background-color: $base-color;
   padding: myrem(50) myrem(40) myrem(48) myrem(46);
@@ -57,7 +57,7 @@
   }
 }
 
-.about-sec1__wrapper {
+.about-head__wrapper {
   margin-top: myrem(70);
   @media #{$sp} {
     margin-top: myrem(40);
@@ -65,7 +65,7 @@
   }
 }
 
-.about-sec1__ttl {
+.about-head__ttl {
   &.ttl-primary {
     .img {
       height: myrem(81);
@@ -76,7 +76,7 @@
   }
 }
 
-.about-sec1__text {
+.about-head__text {
   font-size: myrem(14);
   line-height: calc(26/14);
   letter-spacing: 0.04em;
@@ -146,13 +146,13 @@
 }
 
 /*==================================
-# about-sec2
+# about-sec1
 ===================================*/
-.about-sec2__ttl {
+.about-sec1__ttl {
   text-align: center;
 }
 
-.about-sec2__text1 {
+.about-sec1__text1 {
   text-align: center;
   margin-top: myrem(34);
   @media #{$sp} {
@@ -161,7 +161,7 @@
   }
 }
 
-.about-sec2__note {
+.about-sec1__note {
   color: #8D8D8D;
   font-size: myrem(13);
   line-height: calc(24/13);
@@ -173,7 +173,7 @@
   }
 }
 
-.about-sec2__text2 {
+.about-sec1__text2 {
   text-align: center;
   margin-top: myrem(40);
   @media #{$sp} {
@@ -182,7 +182,7 @@
   }
 }
 
-.about-sec2__list {
+.about-sec1__list {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   column-gap: myrem(36);
@@ -198,7 +198,7 @@
   }
 }
 
-.about-sec2__text3 {
+.about-sec1__text3 {
   text-align: center;
   margin-top: myrem(50);
   @media #{$sp} {
@@ -206,7 +206,7 @@
   }
 }
 
-.about-sec2__note2 {
+.about-sec1__note2 {
   color: #8D8D8D;
   font-size: myrem(13);
   line-height: calc(24/13);
@@ -218,12 +218,12 @@
   }
 }
 
-.about-sec2__btn-wrapper {
+.about-sec1__btn-wrapper {
   text-align: center;
   margin-top: myrem(36);
 }
 
-.about-sec2__btn {
+.about-sec1__btn {
   margin-top: myrem(18);
 }
 
