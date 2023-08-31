@@ -317,8 +317,10 @@ $(document).ready(function() {
 // アコーディオン
 //--------------------------------------
 $(function(){
-  $('.js-accordion-btn').on('click', function(){
-    $(this).next('.js-accordion-content').slideToggle(200);
-    $(this).toggleClass('open');
-  });
+  if ($('.js-accordion-btn').length) { // この条件を追加します
+    $('.js-accordion-btn').on('click', function(){
+      $(this).next('.js-accordion-content').slideToggle(300);
+      $(this).toggleClass('open');
+    });
+  }
 });

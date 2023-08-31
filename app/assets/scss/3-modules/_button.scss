@@ -183,6 +183,11 @@
     color: $white;
     background-color: $yellow;
   }
+
+  &.--border {
+    padding: myrem(4) myrem(40);
+    border: 2px solid $lightgreen2;
+  }
 }
 
 .btn02 {

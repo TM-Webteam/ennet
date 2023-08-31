@@ -1472,17 +1472,21 @@ ruby {
   display: grid;
   max-width: myrem(788);
   margin-inline: auto;
-  @media #{$sp} {
-    grid-template-columns: 1fr;
-    gap: myrem(30);
-  }
   &.--col3 {
     grid-template-columns: repeat(3, 1fr);
     gap: myrem(54);
+    @media #{$sp} {
+      grid-template-columns: 1fr;
+      gap: myrem(30);
+    }
   }
   &.--col4 {
     grid-template-columns: repeat(4, 1fr);
     gap: myrem(12);
+    @media #{$sp} {
+      grid-template-columns: 1fr;
+      gap: myrem(30);
+    }
   }
 }
 
@@ -1723,57 +1727,185 @@ ruby {
 /*==================================
 # アコーディオン
 ===================================*/
+.accordion {
+  max-width: myrem(1004);
+  margin-inline: auto;
+  @media #{$sp} {
+    max-width: myrem(600);
+  }
+}
+
 .accordion__item + .accordion__item {
-  margin-top: 2rem;
+  margin-top: myrem(53);
+  @media #{$sp} {
+    margin-top: myrem(20);
+  }
 }
 
 .accordion__btn {
-  background-color: pink;
-  color: white;
-  font-size: 1.6rem;
+  background-color: $base-color;
+  font-size: myrem(16);
+  line-height: calc(40/16);
+  font-weight: 500;
+  letter-spacing: 0.04em;
   position: relative;
-  padding: 3rem 6rem;
+  padding: myrem(40) myrem(110) myrem(40) myrem(42);
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
   position: relative;
+  box-shadow: $shadow;
+  border-radius: myrem(6);
+  text-align: left;
+  @media #{$sp} {
+    padding: myrem(20) myrem(40) myrem(20) myrem(12);
+    line-height: 1.6;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: myrem(41);
+    height: myrem(40);
+    background: url(../img/common/icon-q.svg) no-repeat center / contain;
+    margin-right: myrem(53);
+    flex-shrink: 0;
+    @media #{$sp} {
+      width: myrem(21);
+      height: myrem(20);
+      margin-right: myrem(10);
+      margin-top: myrem(2);
+    }
+  }
+
+  &.open {
+    .accordion__icon {
+      &::after {
+        transform: translateX(-50%) rotate(-90deg);
+      }
+    }
+
+  }
 }
 
-.accordion__btn::after {
-  content: "";
-  display: inline-block;
+.accordion__icon {
+  width: myrem(32);
+  height: myrem(32);
+  margin-left: auto;
   position: absolute;
-  top: 46%;
-  right: 2rem;
-  transform: translateY(-50%) rotate(135deg);
-  width: 1.5rem;
-  height: 1.5rem;
-  border-top: 3px solid white;
-  border-right: 3px solid white;
-  transition: .3s;
-}
+  top: 50%;
+  right: myrem(34);
+  transform: translateY(-50%);
+  @media #{$sp} {
+    width: myrem(20);
+    height: myrem(20);
+    right: myrem(10);
+  }
 
-.accordion__btn.open::after {
-  transform: rotate(-45deg);
+  &::before {
+    content: "";
+    display: inline-block;
+    width: myrem(32);
+    height: myrem(5);
+    background-color: $darkgreen;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    @media #{$sp} {
+      width: myrem(20);
+      height: 3px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: myrem(5);
+    height: myrem(32);
+    background-color: $darkgreen;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+    @media #{$sp} {
+      width: 3px;
+      height: myrem(20);
+    }
+  }
 }
 
 .accordion__content {
   display: none;
-  padding: 3rem 6rem;
-  font-size: 1.6rem;
-  color: pink;
-  border: 2px solid pink;
+  background-color: $base-color;
+  border-radius: myrem(10);
+  box-shadow: inset 6px 6px 8px rgba(0, 0, 0, .05);
+  border: 4px solid $white;
+  margin-top: myrem(24);
+  box-shadow: $shadow;
+  position: relative;
+
+  .inner {
+    padding: myrem(45) myrem(110) myrem(40) myrem(42);
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    @media #{$sp} {
+      padding: myrem(25) myrem(15) myrem(25) myrem(12);
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      width: myrem(38);
+      height: myrem(68);
+      background: url(../img/common/icon-a.svg) no-repeat center / contain;
+      margin-right: myrem(53);
+      flex-shrink: 0;
+      transform: translateY(myrem(-20));
+      @media #{$sp} {
+        width: myrem(28);
+        height: myrem(22);
+        margin-right: myrem(10);
+        margin-top: myrem(2);
+        transform: translateY(0);
+      }
+    }
+
+    .note {
+      margin-top: rem10;
+    }
+    .btn-wrapper {
+      text-align: center;
+      margin-top: myrem(40);
+      width: 100%;
+      @media #{$sp} {
+        margin-top: myrem(30);
+      }
+    }
+  }
+
+  .text {
+    font-size: myrem(16);
+    font-weight: 300;
+    line-height: calc(30/16);
+    letter-spacing: 0.04em;
+    width: calc(100% - #{myrem(91)});
+    @media #{$sp} {
+      line-height: 1.7;
+      width: calc(100% - #{myrem(38)});
+    }
+    span {
+      display: block;
+      &:not(:first-child) {
+        margin-top: myrem(30);
+        @media #{$sp} {
+          margin-top: myrem(22);
+        }
+      }
+    }
+
+  }
+
 }
 
-/* 見た目調整 */
-.wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* リセット */
-button {
-  border: none;
-  padding: 0;
-  text-align-last: left;
-}
