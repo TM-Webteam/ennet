@@ -3,11 +3,8 @@
   introduction
   ----------------
 */
-.introduction__main {
+.introduction__head {
   margin-top: myrem(30);
-}
-
-.introduction__top {
   @media #{$sp} {
     margin-top: myrem(50);
   }
@@ -42,16 +39,15 @@
 }
 
 /*==================================
-#introduction-top
+#introduction-head
 ===================================*/
-.introduction-top__content {
+.introduction-head__content {
   @media #{$sp} {
     display: block;
   }
-
 }
 
-.introduction-top__body{
+.introduction-head__body{
   width: calc(793/1240 * 100%);
   position: relative;
   margin-right: myrem(-34);
@@ -63,7 +59,7 @@
   }
 }
 
-.introduction-top__lead {
+.introduction-head__lead {
   font-size: myrem(23);
   line-height: calc(36/22);
   font-weight: 300;
@@ -80,7 +76,7 @@
   }
 }
 
-.introduction-top__ttl {
+.introduction-head__ttl {
   &.ttl-primary {
     img {
       height: myrem(86);
@@ -95,7 +91,7 @@
   }
 }
 
-.introduction-top__img-area {
+.introduction-head__img-area {
   width: calc(525/1240 * 100%);
   margin-right: myrem(-44);
   @media #{$sp} {

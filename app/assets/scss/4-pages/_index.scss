@@ -298,16 +298,9 @@
 # news
 ===================================*/
 .top-news__content {
-  background-color: $base-color;
-  border-radius: myrem(10);
-  box-shadow: $shadow;
   margin-top: myrem(20);
-  padding: myrem(64) myrem(48) myrem(44) myrem(56);
-  max-width: myrem(1130);
-  margin-inline: auto;
   @media #{$sp} {
     margin-top: myrem(40);
-    padding: myrem(25) myrem(24) myrem(30) myrem(24);
   }
 }
 

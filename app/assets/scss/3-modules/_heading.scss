@@ -76,6 +76,22 @@
 		}
 	}
 
+	.lead {
+		font-size: myrem(22);
+		font-weight: 300;
+		line-height: calc(36/22);
+		letter-spacing: 0.06em;
+		margin-top: myrem(35);
+		margin-bottom: 0;
+		span {
+			display: inline-block;
+		}
+		@media #{$sp} {
+			font-size: myrem(18);
+			margin-top: myrem(24);
+		}
+	}
+
 	&.--center {
 		.img {
 			text-align: center;
@@ -99,12 +115,6 @@
 				height: myrem(40);
 			}
 		}
-
-		.ttl {
-			@media #{$sp} {
-				// margin-top: myrem(5);
-			}
-		}
 	}
 }
 
@@ -117,6 +127,7 @@
 		height: 100%;
 		width: 100%;
 		object-fit: contain;
+		background-color: $base-color;
 	}
 }
 
@@ -202,4 +213,36 @@
 		overflow: hidden;
 	}
 }
+
+/*==================================
+#下層ページの、背景がある見出し
+===================================*/
+.page-head {
+	padding-top: myrem(119);
+	position: relative;
+	@media #{$sp} {
+		padding-top: myrem(50);
+		min-height: initial;
+	}
+}
+
+.page-head::after {
+	content: "";
+	display: inline-block;
+	width: myrem(796);
+	height: myrem(400);
+	background: url(../img/common/bg-ttl-orange.png) no-repeat center center / contain;
+	position: absolute;
+	top: myrem(32);
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+	@media #{$sp} {
+		width: myrem(398);
+		height: myrem(200);
+		top: myrem(-5);
+	}
+}
+
+
 
