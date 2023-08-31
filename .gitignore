@@ -3,3 +3,5 @@ package-lock.json
 dist/assets/css/main.css
 dist/assets/css/main.css.map
 dist/assets/img/
+dist/
+wp/
