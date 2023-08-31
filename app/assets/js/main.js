@@ -194,7 +194,7 @@ $(window).on('load', function() {
 //--------------------------------------
 // タブメニュー
 $(function () {
-  if ($('.tab-menu').length) {
+  if ($('.js-tab-menu').length) {
     $(".js-tab").on("click", function () {
       $(".current").removeClass("current");
       $(this).addClass("current");
