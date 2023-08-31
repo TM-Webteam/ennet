@@ -7,6 +7,7 @@
 .time {
   display: inline-block;
   font-size: 14px;
+
   @media #{$sp} {
     font-size: 12px;
   }
@@ -16,13 +17,16 @@
 .search {
   max-width: 500px;
   margin: 0 auto 50px;
+
   @media #{$sp} {
     width: 80%;
     margin: 0 auto 20px;
   }
+
   &__form {
     position: relative;
   }
+
   &__input[type=search] {
     display: block;
     width: 100%;
@@ -31,15 +35,18 @@
     font-size: 16px;
     background: #ccc;
     border-radius: 27px;
+
     &::placeholder {
       color: #777777;
       text-align: center;
       font-weight: 500;
     }
+
     @media #{$sp} {
       height: 40px;
     }
   }
+
   &__btn {
     display: block;
     width: 55px;
@@ -50,14 +57,17 @@
     right: 5px;
     z-index: 3;
     border-radius: 50%;
+
     @media #{$sp} {
       width: 35px;
       height: 35px;
       padding: 6px 7px;
     }
+
     img {
       transition: all .3s;
     }
+
     &:hover {
       img {
         transform: scale(1.2);
@@ -69,6 +79,7 @@
 // 吹き出し（ボタン等）
 .speech {
   text-align: center;
+
   span {
     display: inline-block;
     margin-bottom: 10px;
@@ -76,9 +87,11 @@
     font-size: 18px;
     font-weight: 700;
     position: relative;
+
     @media #{$sp} {
       font-size: 13px;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -91,10 +104,12 @@
       background-color: #333;
       transform: rotate(60deg);
       vertical-align: 0.3em;
+
       @media #{$sp} {
         width: 15px;
       }
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -107,15 +122,19 @@
       background-color: #333;
       transform: rotate(-60deg);
       vertical-align: 0.3em;
+
       @media #{$sp} {
         width: 15px;
       }
     }
+
     &.cW {
       color: #fff;
+
       &::before {
         background-color: #fff;
       }
+
       &::after {
         background-color: #fff;
       }
@@ -132,6 +151,7 @@
 ruby {
   rt {
     font-size: 18px;
+
     @media #{$sp} {
       font-size: 14px;
     }
@@ -142,31 +162,39 @@ ruby {
 .cardLink {
   padding: 30px;
   margin-bottom: 30px;
-  box-shadow: 0 3px 6px rgba(0,30,78,0.16);
+  box-shadow: 0 3px 6px rgba(0, 30, 78, 0.16);
+
   @media #{$sp} {
     padding: 15px;
     margin-bottom: 15px;
   }
+
   &__img {
     width: 25%;
+
     @media #{$sp} {
       width: 85%;
       margin: 0 auto 15px;
     }
+
     img {
       aspect-ratio: 3 / 2;
       object-fit: cover;
     }
   }
+
   &__box {
     width: calc(100% - 25% - 30px);
+
     @media #{$sp} {
       width: 100%;
     }
+
     &--ttl {
       font-weight: bold;
       margin-bottom: 10px;
     }
+
     &--txt {
       overflow: hidden;
       display: -webkit-box;
@@ -174,6 +202,7 @@ ruby {
       -webkit-line-clamp: 2;
     }
   }
+
   &:hover {
     opacity: 1;
     background: #0D5BAB;
@@ -184,6 +213,7 @@ ruby {
 // SNSシェアボタン
 .sns-share {
   margin-bottom: 30px;
+
   @media #{$sp} {
     margin-bottom: 15px;
   }
@@ -195,58 +225,72 @@ ruby {
     margin-bottom: 40px;
     padding: 30px;
     background: #F7F7F7;
+
     @media #{$sp} {
       padding: 15px;
       margin-bottom: 20px;
     }
+
     &__img {
       width: 30%;
+
       @media #{$sp} {
         width: 85%;
         margin: 0 auto 15px;
       }
+
       img {
         aspect-ratio: 3 / 2;
         object-fit: cover;
       }
     }
+
     &__box {
       width: calc(100% - 30% - 30px);
+
       @media #{$sp} {
         width: 100%;
       }
+
       &--ttl {
         font-size: 20px;
         font-weight: bold;
         margin-bottom: 20px;
+
         @media #{$sp} {
           font-size: 16px;
           margin-bottom: 15px;
         }
       }
+
       &--txt {
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
         overflow: hidden;
         margin-bottom: 20px;
+
         @media #{$sp} {
           margin-bottom: 15px;
         }
       }
     }
+
     .more.small {
       width: 350px;
       box-shadow: none;
       border: 1px solid #0D5BAB;
+
       &::before {
         border-top: 2px solid #0D5BAB;
         border-right: 2px solid #0D5BAB;
       }
+
       @media #{$sp} {
         width: 85%;
         margin: 0 auto;
       }
+
       &:hover {
         &::before {
           border-top: 2px solid #fff;
@@ -262,29 +306,36 @@ ruby {
   .item {
     padding: 30px;
     background: #F7F7F7;
+
     @media #{$sp} {
       padding: 15px;
     }
+
     &__box {
       &:not(:last-child) {
         margin-bottom: 30px;
+
         @media #{$sp} {
           margin-bottom: 15px;
         }
       }
+
       &--img {
         width: 25%;
+
         img {
           aspect-ratio: 16 / 9;
           object-fit: cover;
         }
       }
+
       &--txt {
         width: calc(100% - 25% - 30px);
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         overflow: hidden;
+
         @media #{$sp} {
           width: calc(100% - 25% - 15px);
         }
@@ -297,6 +348,7 @@ ruby {
 .bnr-contact,
 .bnr-catalog {
   margin-bottom: 30px;
+
   @media #{$sp} {
     margin-bottom: 15px;
   }
@@ -305,9 +357,11 @@ ruby {
 // カテゴリで探す
 .catSearch {
   margin-bottom: 30px;
+
   @media #{$sp} {
     margin-bottom: 15px;
   }
+
   &__list {
     li {
       a {
@@ -315,6 +369,7 @@ ruby {
         position: relative;
         padding: 10px 0 10px 40px;
         border-bottom: 1px solid #DDDDDD;
+
         &::before {
           content: " ";
           position: absolute;
@@ -329,10 +384,12 @@ ruby {
           transform: rotate(45deg);
           transition: all .3s;
         }
+
         &:hover {
           opacity: 1;
           background: #0D5BAB;
           color: #fff;
+
           &::before {
             left: 20px;
             border-color: #fff #fff transparent transparent;
@@ -348,16 +405,20 @@ ruby {
   .item {
     padding: 20px 0;
     border-bottom: 1px solid #DDDDDD;
+
     @media #{$sp} {
       padding: 10px 0;
     }
+
     &__img {
       width: 30%;
+
       img {
         aspect-ratio: 3 / 2;
         object-fit: cover;
       }
     }
+
     &__ttl {
       width: calc(100% - 30% - 20px);
       display: -webkit-box;
@@ -373,11 +434,13 @@ ruby {
 .wp-slick {
   width: 85%;
   margin: 0 auto 30px;
+
   .slick-arrow {
     z-index: 2;
     width: 42px;
     height: 42px;
-    &::before{
+
+    &::before {
       content: "";
       width: 42px;
       height: 42px;
@@ -386,6 +449,7 @@ ruby {
       left: 0;
     }
   }
+
   .slick-next,
   .slick-prev {
     transform: none;
@@ -396,9 +460,11 @@ ruby {
 
   .slick-next {
     right: -60px;
-    &::before{
+
+    &::before {
       background: url("../img/slick/arrow_r.svg") 50% / contain no-repeat;
     }
+
     @media #{$sp} {
       right: -40px;
     }
@@ -406,9 +472,11 @@ ruby {
 
   .slick-prev {
     left: -60px;
-    &::before{
+
+    &::before {
       background: url("../img/slick/arrow_l.svg") 50% / contain no-repeat;
     }
+
     @media #{$sp} {
       left: -40px;
     }
@@ -426,10 +494,12 @@ ruby {
     margin-bottom: 15px;
     padding: 5px 0 5px 50px;
     position: relative;
+
     @media #{$sp} {
       font-size: 16px;
       padding: 5px 0 5px 40px;
     }
+
     &::before {
       content: " ";
       position: absolute;
@@ -440,51 +510,63 @@ ruby {
       width: 30px;
       height: 30px;
       background: url("../img/common/icon-writer.png") 50% / contain no-repeat;
+
       @media #{$sp} {
         width: 20px;
         height: 20px;
       }
     }
   }
+
   .card {
     margin: 40px 0;
     border: 2px solid #6785c1;
     background: #fff;
     border-radius: 20px;
     padding: 15px 15px 15px 20px;
+
     @media #{$sp} {
       padding: 15px;
       border: 3px solid #6785c1;
       margin: 20px 0;
     }
+
     &__img {
       width: 15%;
+
       @media #{$sp} {
         width: 85%;
         margin: 0 auto 15px;
       }
+
       img {
         aspect-ratio: 16 / 9;
         object-fit: cover;
       }
     }
+
     &__box {
       width: calc(100% - 15% - 20px);
       transition: all .3s;
+
       @media #{$sp} {
         width: 100%;
       }
+
       &--ttl {
         font-size: 15px;
         font-weight: bold;
         margin-bottom: 10px;
+
         @media #{$sp} {
           font-size: 14px;
         }
       }
+
       &--txt {
         font-size: 14px;
         font-weight: normal;
+
         @media #{$sp} {
           font-size: 12px;
         }
@@ -520,6 +602,7 @@ ruby {
     font-size: myrem(16);
     min-width: myrem(142);
     padding: myrem(2) myrem(35);
+
     @media #{$sp} {
       padding: myrem(2) myrem(14);
     }
@@ -542,17 +625,19 @@ ruby {
   }
 
   &.--link {
-    &:hover,&:focus {
+
+    &:hover,
+    &:focus {
       opacity: 1;
       outline: none;
       background-color: $base-color;
       color: $lightgreen;
       box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
-                -2px -2px 4px rgba(255, 255, 255, .4),
-                2px 2px 2px rgba(255, 255, 255, .1),
-                1px 1px 6px rgba(0, 0, 0, .1),
-                inset 3px 3px 10px #e6e6e6,
-              inset -3px -3px 10px #ffffff;
+        -2px -2px 4px rgba(255, 255, 255, .4),
+        2px 2px 2px rgba(255, 255, 255, .1),
+        1px 1px 6px rgba(0, 0, 0, .1),
+        inset 3px 3px 10px #e6e6e6,
+        inset -3px -3px 10px #ffffff;
     }
   }
 
@@ -595,6 +680,7 @@ ruby {
     top: 0;
     right: 1px;
     z-index: 1;
+
     @media #{$sp} {
       width: calc(100% - #{myrem(24)});
       height: calc(100% - #{myrem(22)});
@@ -615,6 +701,7 @@ ruby {
 .skew-img__front {
   position: relative;
   z-index: 3;
+
   img {
     clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
     height: auto;
@@ -623,8 +710,8 @@ ruby {
     aspect-ratio: 675 / 473;
     position: relative;
     z-index: 4;
-    @media #{$sp} {
-    }
+
+    @media #{$sp} {}
   }
 }
 
@@ -638,6 +725,7 @@ ruby {
   z-index: 2;
   filter: blur(30px);
   background-color: $base-color;
+
   @media #{$sp} {
     top: initial;
     bottom: 0;
@@ -655,6 +743,7 @@ ruby {
   padding-right: myrem(43);
   max-height: myrem(502);
   position: relative;
+
   @media #{$sp} {
     padding-bottom: myrem(22);
     padding-left: myrem(24);
@@ -688,6 +777,7 @@ ruby {
   aspect-ratio: 675 / 473;
   position: relative;
   z-index: 3;
+
   @media #{$sp} {
     width: calc(100% - #{myrem(24)});
     height: calc(100% - #{myrem(22)});
@@ -705,6 +795,7 @@ ruby {
   z-index: 2;
   filter: blur(30px);
   background-color: #fff;
+
   @media #{$sp} {
     top: initial;
     right: initial;
@@ -725,21 +816,25 @@ ruby {
   box-shadow: $shadow--sm;
   border-radius: myrem(10);
   min-height: myrem(168);
+
   @media #{$sp} {
     flex-direction: column;
     max-width: myrem(550);
     margin-inline: auto;
     min-height: myrem(416);
   }
-  &:hover,&:focus {
+
+  &:hover,
+  &:focus {
     opacity: 1;
     box-shadow: $shadow-hover;
   }
 }
 
 .card01__img {
-  width: calc( 248 / 636 * 100%);
+  width: calc(248 / 636 * 100%);
   height: auto;
+
   @media #{$sp} {
     width: 100%;
     height: myrem(220);
@@ -750,6 +845,7 @@ ruby {
     height: 100%;
     object-fit: cover;
     border-radius: myrem(10) 0px 0px myrem(10);
+
     @media #{$sp} {
       border-radius: myrem(10) myrem(10) 0px 0px;
     }
@@ -757,10 +853,11 @@ ruby {
 }
 
 .card01__body {
-  width: calc( 388 / 636 * 100%);
+  width: calc(388 / 636 * 100%);
   padding: myrem(15) myrem(20) myrem(13) myrem(15);
   display: flex;
   flex-direction: column;
+
   @media #{$sp} {
     width: 100%;
   }
@@ -777,6 +874,7 @@ ruby {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+
   @media #{$sp} {
     margin-bottom: myrem(10);
     -webkit-line-clamp: 3;
@@ -791,6 +889,7 @@ ruby {
   letter-spacing: 0.04em;
   margin-top: auto;
   text-align: right;
+
   @media #{$sp} {
     text-align: left;
   }
@@ -805,6 +904,7 @@ ruby {
   border-radius: myrem(10);
   min-height: myrem(208);
   border: 2px solid $lightgreen2;
+
   @media #{$sp} {
     display: block;
     min-height: myrem(294);
@@ -813,6 +913,7 @@ ruby {
 
 .card02__img {
   width: calc(580 / 1160 * 100%);
+
   @media #{$sp} {
     width: 100%;
     min-height: myrem(120);
@@ -823,8 +924,9 @@ ruby {
     height: 100%;
     object-fit: cover;
     border-radius: myrem(10) 0 0 myrem(10);
+
     @media #{$sp} {
-      border-radius: myrem(10) myrem(10) 0 0 ;
+      border-radius: myrem(10) myrem(10) 0 0;
       min-height: myrem(120);
     }
   }
@@ -833,6 +935,7 @@ ruby {
 .card2__body {
   width: calc(580 / 1160 * 100%);
   padding: myrem(50) myrem(10) myrem(30) myrem(10);
+
   @media #{$sp} {
     width: 100%;
     padding: myrem(32) myrem(10) myrem(33) myrem(10);
@@ -845,6 +948,7 @@ ruby {
   font-weight: 500;
   letter-spacing: 0.04em;
   text-align: center;
+
   @media #{$sp} {
     font-size: myrem(24);
     line-height: calc(35/24);
@@ -854,6 +958,7 @@ ruby {
 .card2__btn {
   text-align: center;
   margin-top: myrem(32);
+
   @media #{$sp} {
     margin-top: myrem(27);
   }
@@ -910,8 +1015,9 @@ ruby {
 .result__wrapper {
   border-radius: 10px;
   background: $base-color;
-  box-shadow:  $shadow;
+  box-shadow: $shadow;
   padding: myrem(34) myrem(30) myrem(40) myrem(30);
+
   @media #{$sp} {
     padding: myrem(20) myrem(10) myrem(32) myrem(10);
     max-width: myrem(550);
@@ -932,6 +1038,7 @@ ruby {
   text-align: center;
   display: inline-block;
   transform: translateX(11%);
+
   @media #{$sp} {
     font-size: myrem(18);
     line-height: calc(30/18);
@@ -943,6 +1050,7 @@ ruby {
   color: #8D8D8D;
   font-size: myrem(13);
   font-weight: 300;
+
   @media #{$sp} {
     display: inline-block;
     margin-top: myrem(-10);
@@ -951,6 +1059,7 @@ ruby {
 
 .result__content.flex {
   margin-top: myrem(20);
+
   @media #{$sp} {
     display: block;
   }
@@ -959,6 +1068,7 @@ ruby {
 
 .result__item {
   padding: myrem(10) myrem(100) 0 myrem(74);
+
   @media #{$sp} {
     padding: myrem(10) myrem(10) myrem(65) myrem(10);
   }
@@ -985,6 +1095,7 @@ ruby {
     left: 0;
     box-shadow: 0px 0px 10px #00000029;
     transform: translateX(myrem(-10));
+
     @media #{$sp} {
       width: 60%;
       height: 2px;
@@ -1007,6 +1118,7 @@ ruby {
   font-weight: 300;
   text-align: center;
   transform: translateX(10%);
+
   @media #{$sp} {
     padding-left: myrem(30);
     transform: translateX(0);
@@ -1017,6 +1129,7 @@ ruby {
     font-weight: 500;
     letter-spacing: 0.04em;
     margin-right: myrem(10);
+
     @media #{$sp} {
       font-size: myrem(86);
       line-height: 1.1;
@@ -1030,12 +1143,13 @@ ruby {
   height: myrem(88);
   margin-right: 0;
   margin-inline: auto;
+
   @media #{$sp} {
     margin-top: myrem(20);
   }
 
   img {
-   object-fit: contain;
+    object-fit: contain;
     width: 100%;
     height: 100%;
   }
@@ -1045,38 +1159,43 @@ ruby {
 /*==================================
 # column
 ===================================*/
-.column__wrapper {
+.common-column__wrapper {
   @media #{$sp} {
     display: block;
   }
 }
-.column__content01 {
+
+.common-column__content01 {
   width: calc(456 / 1160 * 100%);
+
   @media #{$sp} {
     width: 100%;
   }
 }
 
-.column__ttl {
+.common-column__ttl {
   margin-top: myrem(5);
+
   @media #{$sp} {
     margin-top: 0;
   }
 }
 
-.column__form {
+.common-column__form {
   margin-top: myrem(56);
+
   @media #{$sp} {
     margin-top: myrem(32);
   }
 }
 
-.column__categories {
+.common-column__categories {
   margin-top: myrem(36);
   display: flex;
   flex-wrap: wrap;
   column-gap: myrem(13);
   row-gap: myrem(11);
+
   @media #{$sp} {
     margin-top: myrem(34);
     max-width: myrem(500);
@@ -1084,24 +1203,27 @@ ruby {
   }
 }
 
-.column__content02 {
+.common-column__content02 {
   width: calc(636 / 1160 * 100%);
+
   @media #{$sp} {
     width: 100%;
     margin-top: myrem(35);
   }
 }
 
-.column__item:not(:first-child) {
+.common-column__item:not(:first-child) {
   margin-top: myrem(16);
+
   @media #{$sp} {
     margin-top: myrem(46);
   }
 }
 
-.column__btn {
+.common-column__btn {
   text-align: center;
   margin-top: myrem(51);
+
   @media #{$sp} {
     margin-top: myrem(48);
   }
@@ -1110,29 +1232,31 @@ ruby {
 /*==================================
 # document
 ===================================*/
-.document__container {
+.common-document__container {
   @media #{$sp} {
     padding-right: myrem(10);
     padding-left: myrem(10);
   }
 }
 
-.document__wrapper {
+.common-document__wrapper {
   background-color: $lightgreen;
   border-radius: myrem(10);
   box-shadow: $shadow;
   padding: myrem(70) myrem(127) myrem(50) myrem(127);
+
   @media #{$sp} {
     padding: myrem(35) myrem(27) myrem(50) myrem(25);
 
   }
 }
 
-.document__content {
+.common-document__content {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: myrem(60);
   margin-top: myrem(32);
+
   @media #{$sp} {
     grid-template-columns: 1fr;
     row-gap: myrem(40);
@@ -1142,15 +1266,16 @@ ruby {
   }
 }
 
-.document__item {
+.common-document__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: myrem(19) myrem(26) myrem(36) myrem(32);
   border-radius: myrem(10);
-  box-shadow:  11px 11px 22px #6fba7c,-11px -11px 22px #85de94;
+  box-shadow: 11px 11px 22px #6fba7c, -11px -11px 22px #85de94;
   min-height: myrem(312);
   background-color: $white;
+
   @media #{$sp} {
     flex-direction: column;
     padding: myrem(36) myrem(24) myrem(36) myrem(24);
@@ -1165,18 +1290,20 @@ ruby {
 
   &:hover {
     cursor: pointer;
+
     .btn {
       .btn01 {
         box-shadow: -6px -6px 14px rgba(255, 255, 255, .8),
-        -4px -4px 6px rgba(255, 255, 255, 1),
-        3px 3px 6px rgba(0, 0, 0, .4),
-        8px 8px 12px rgba(0, 0, 0, .15);
+          -4px -4px 6px rgba(255, 255, 255, 1),
+          3px 3px 6px rgba(0, 0, 0, .4),
+          8px 8px 12px rgba(0, 0, 0, .15);
       }
     }
   }
 
   .img {
     width: calc(177 / 456 * 100%);
+
     @media #{$sp} {
       width: myrem(177);
       margin-inline: auto;
@@ -1194,6 +1321,7 @@ ruby {
     display: flex;
     flex-direction: column;
     height: 100%;
+
     @media #{$sp} {
       width: 100%;
       margin-top: myrem(14);
@@ -1215,6 +1343,7 @@ ruby {
     letter-spacing: 0.04em;
     margin-top: myrem(11);
     margin-bottom: myrem(20);
+
     @media #{$sp} {
       margin-bottom: myrem(32);
     }
@@ -1226,25 +1355,27 @@ ruby {
   }
 }
 
-.document__btn {
+.common-document__btn {
   text-align: center;
   margin-top: myrem(55);
+
   .btn01 {
     box-shadow: -3px -3px 4px rgba(255, 255, 255, .1),
-    -2px -2px 10px rgba(255, 255, 255, .2),
-    4px 4px 6px rgba(255, 255, 255, .075),
-    6px 6px 6px rgba(0, 0, 0, .15);
+      -2px -2px 10px rgba(255, 255, 255, .2),
+      4px 4px 6px rgba(255, 255, 255, .075),
+      6px 6px 6px rgba(0, 0, 0, .15);
 
     &:hover {
       opacity: 1;
       color: $lightgreen2;
       background-color: $white;
       box-shadow: -4px -4px 10px rgba(255, 255, 255, .1),
-      -2px -2px 10px rgba(255, 255, 255, .2),
-      4px 4px 8px rgba(0, 0, 0, .5),
-      8px 8px 14px rgba(0, 0, 0, .1);
+        -2px -2px 10px rgba(255, 255, 255, .2),
+        4px 4px 8px rgba(0, 0, 0, .5),
+        8px 8px 14px rgba(0, 0, 0, .1);
     }
   }
+
   @media #{$sp} {
     margin-top: myrem(36);
   }
@@ -1254,20 +1385,22 @@ ruby {
 /*==================================
 # contact
 ===================================*/
-.contact {
+.common-contact {
   margin-bottom: myrem(98);
+
   @media #{$sp} {
     margin-bottom: myrem(134);
   }
 }
 
-.contact__text {
+.common-contact__text {
   font-size: myrem(22);
   font-weight: 300;
   line-height: calc(36/22);
   letter-spacing: 0.06em;
   text-align: center;
   margin-top: myrem(34);
+
   @media #{$sp} {
     margin-top: myrem(28);
   }
@@ -1277,15 +1410,16 @@ ruby {
   }
 }
 
-.contact__btn {
+.common-contact__btn {
   text-align: center;
   margin-top: myrem(42);
+
   @media #{$sp} {
     margin-top: myrem(50);
   }
 }
 
-.contact__document {
+.common-contact__document {
   background-color: $base-color;
   border-radius: myrem(10);
   box-shadow: $shadow;
@@ -1293,17 +1427,19 @@ ruby {
   margin-top: myrem(47);
   max-width: myrem(1100);
   margin-inline: auto;
+
   @media #{$sp} {
     padding: myrem(32) myrem(22) myrem(37) myrem(22);
     margin-top: myrem(60);
   }
 }
 
-.contact__document-text {
+.common-contact__document-text {
   font-size: myrem(18);
   font-weight: 300;
   letter-spacing: 0.06em;
   text-align: center;
+
   @media #{$sp} {
     font-size: myrem(16);
   }
@@ -1313,11 +1449,12 @@ ruby {
   }
 }
 
-.contact__document-btn {
+.common-contact__document-btn {
   display: flex;
   justify-content: center;
   column-gap: myrem(46);
   margin-top: myrem(30);
+
   @media #{$sp} {
     display: flex;
     align-items: center;
@@ -1332,13 +1469,19 @@ ruby {
 ===================================*/
 .page-link__list {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: myrem(54);
   max-width: myrem(788);
   margin-inline: auto;
   @media #{$sp} {
     grid-template-columns: 1fr;
     gap: myrem(30);
+  }
+  &.--col3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: myrem(54);
+  }
+  &.--col4 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: myrem(12);
   }
 }
 
@@ -1356,6 +1499,7 @@ ruby {
     box-shadow: $shadow--sm;
     border-radius: myrem(10);
     position: relative;
+
     @media #{$sp} {
       padding: myrem(28) myrem(20) myrem(50) myrem(20);
     }
@@ -1371,13 +1515,14 @@ ruby {
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
+
       @media #{$sp} {}
     }
 
     &:hover {
       opacity: 1;
-      box-shadow:  9px 9px 12px rgba(0, 0, 0, .2),
-      -7px -7px 14px #ffffff;
+      box-shadow: 9px 9px 12px rgba(0, 0, 0, .2),
+        -7px -7px 14px #ffffff;
     }
   }
 }
@@ -1390,6 +1535,7 @@ ruby {
   margin-top: myrem(40);
   max-width: myrem(816);
   margin-inline: auto;
+
   @media #{$sp} {
     margin-top: myrem(34);
     max-width: myrem(400);
@@ -1398,9 +1544,10 @@ ruby {
 
   .news-tab__list {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     border-radius: myrem(10);
     box-shadow: $shadow;
+
     @media #{$sp} {
       grid-template-columns: 1fr;
     }
@@ -1411,12 +1558,15 @@ ruby {
       text-align: center;
       padding: myrem(10) myrem(10);
       transition: all .2s ease-in-out;
+
       @media #{$sp} {
-        font-size:myrem(16);
+        font-size: myrem(16);
         padding: myrem(14) myrem(10);
       }
+
       &:not(:last-child) {
         border-right: 1px solid #D9D9D9;
+
         @media #{$sp} {
           border-bottom: 1px solid #D9D9D9;
         }
@@ -1424,6 +1574,7 @@ ruby {
 
       &:first-child {
         border-radius: myrem(10) 0 0 myrem(10);
+
         @media #{$sp} {
           border-radius: myrem(10) myrem(10) 0 0;
         }
@@ -1431,22 +1582,23 @@ ruby {
 
       &:last-child {
         border-radius: 0 myrem(10) myrem(10) 0;
+
         @media #{$sp} {
           border-radius: 0 0 myrem(10) myrem(10);
         }
       }
 
-      &:hover{
+      &:hover {
         cursor: pointer;
         box-shadow: inset 7px 7px 14px #e6e6e6,
-            inset -7px -7px 14px #ffffff;
+          inset -7px -7px 14px #ffffff;
       }
 
       &.current {
         background-color: #707070;
         color: $white;
         box-shadow: inset 6px 6px 12px #414141,
-        inset -6px -6px 12px #9f9f9f;
+          inset -6px -6px 12px #9f9f9f;
       }
     }
   }
@@ -1467,12 +1619,12 @@ ruby {
   }
 }
 
-
 .news-list__link {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
   transition: all .3s ease-in-out;
+
   &:hover {
     background-color: #e9e9e9;
     opacity: 1;
@@ -1486,6 +1638,7 @@ ruby {
   justify-content: space-between;
   padding: myrem(14) 0;
   border-top: 1px solid #D9D9D9;
+
   @media #{$sp} {
     flex-direction: column;
     align-items: flex-start;
@@ -1500,6 +1653,7 @@ ruby {
   font-size: myrem(25);
   font-weight: 300;
   letter-spacing: 0.04em;
+
   @media #{$sp} {
     font-size: myrem(16);
   }
@@ -1517,6 +1671,7 @@ ruby {
   display: flex;
   align-items: center;
   border-top: 1px solid #D9D9D9;
+
   @media #{$sp} {
     // width: calc(166 / 280 * 100%);
     flex-grow: 1;
@@ -1534,6 +1689,7 @@ ruby {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+
   @media #{$sp} {
     -webkit-line-clamp: 4;
   }
@@ -1542,6 +1698,7 @@ ruby {
 .news-list__btn {
   text-align: center;
   margin-top: myrem(45);
+
   @media #{$sp} {
     margin-top: myrem(41);
   }
