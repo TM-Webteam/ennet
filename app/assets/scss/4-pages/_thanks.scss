@@ -1,0 +1,26 @@
+/*
+  ----------------
+  thanks
+  ----------------
+*/
+.utility-thanks__sec,
+.contact-thanks__sec {
+  margin-top: myrem(36);
+  margin-bottom: myrem(160);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  @media #{$sp} {
+    margin-top: myrem(20);
+    margin-bottom: myrem(80);
+  }
+}
+
+.utility-thanks__sec.thanks {
+  background-image: url(../../assets/img/common/bg-ttl-blue.png);
+}
+
+.contact-thanks__sec.thanks {
+  background-image: url(../../assets/img/common/bg-ttl-yellow.png);
+}
