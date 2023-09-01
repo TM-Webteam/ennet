@@ -198,6 +198,12 @@
     min-width: myrem(208);
     padding: myrem(5) myrem(10);
   }
+
+  &.--blue-line {
+    border: 2px solid $lightblue;
+    background-color: $white;
+    color: $lightblue;
+  }
 }
 
 .btn02 {
@@ -285,4 +291,19 @@
       padding: myrem(14) myrem(30);
     }
   }
+
+  &.--large {
+    width: 100%;
+    min-width: myrem(318);
+    padding: myrem(15) myrem(50) myrem(18);
+    font-size: myrem(22);
+    border-radius: myrem(100);
+    span {
+      font-size: myrem(16);
+      font-weight: 400;
+      line-height: calc(40/16);
+      letter-spacing: 0.04em;
+    }
+  }
+
 }
