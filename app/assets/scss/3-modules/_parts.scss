@@ -968,13 +968,13 @@ ruby {
 /*==================================
 #カード3（トップページ：about）
 ===================================*/
-.card3 {
+.card03 {
   border-radius: myrem(10);
   box-shadow: $shadow--sm;
   background-color: $base-color;
 }
 
-.card3__img {
+.card03__img {
   img {
     aspect-ratio: 328/220;
     object-fit: cover;
@@ -984,18 +984,18 @@ ruby {
   }
 }
 
-.card3__body {
+.card03__body {
   padding: myrem(18) myrem(16) myrem(22);
 }
 
-.card3__ttl {
+.card03__ttl {
   font-size: myrem(20);
   font-weight: 500;
   line-height: calc(28/20);
   text-align: center;
 }
 
-.card3__text {
+.card03__text {
   font-size: myrem(16);
   font-weight: 300;
   line-height: calc(26/16);
@@ -1007,7 +1007,7 @@ ruby {
 /*==================================
 #カード4（お役立ち資料）
 ===================================*/
-.card4 {
+.card04 {
   // background-color: pink;
   background-color: $base-color;
   border-radius: myrem(10);
@@ -1017,7 +1017,7 @@ ruby {
   flex-direction: column;
 }
 
-.card4__img {
+.card04__img {
   img {
     aspect-ratio: 280/192;
     object-fit: cover;
@@ -1026,11 +1026,11 @@ ruby {
   }
 }
 
-.card4__body {
+.card04__body {
   margin-top: myrem(17);
 }
 
-.card4__ttl {
+.card04__ttl {
   font-size: myrem(16);
   font-weight: 500;
   line-height: calc(26/16);
@@ -1043,9 +1043,130 @@ ruby {
   overflow: hidden;
 }
 
-.card4__btn {
+.card04__btn {
   text-align: center;
   margin-top: auto;
+}
+
+/*==================================
+#カード5（コラム一覧）
+===================================*/
+.card05 {
+  display: flex;
+  background-color: $base-color;
+  box-shadow: $shadow--sm;
+  border-radius: myrem(10);
+  min-height: myrem(168);
+
+  @media #{$sp} {
+    flex-direction: column;
+    max-width: myrem(550);
+    margin-inline: auto;
+    min-height: myrem(416);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    box-shadow: $shadow-hover;
+  }
+}
+
+.card05__img {
+  width: calc(248 / 636 * 100%);
+  height: auto;
+
+  @media #{$sp} {
+    width: 100%;
+    height: myrem(220);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: myrem(10) 0px 0px myrem(10);
+
+    @media #{$sp} {
+      border-radius: myrem(10) myrem(10) 0px 0px;
+    }
+  }
+}
+
+.card05__body {
+  width: calc(388 / 636 * 100%);
+  padding: myrem(15) myrem(20) myrem(13) myrem(15);
+  display: flex;
+  flex-direction: column;
+  @media #{$sp} {
+    width: 100%;
+    padding: myrem(10) myrem(15) myrem(20) myrem(15);
+  }
+}
+
+.card05__ttl {
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: calc(26/16);
+  letter-spacing: 0.04em;
+  margin-top: myrem(14);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  @media #{$sp} {
+    margin-top: myrem(20);
+  }
+}
+
+.card05__meta {
+  display: flex;
+  @media #{$sp} {
+    display: block;
+  }
+}
+
+.card05__time {
+  font-size: myrem(16);
+  font-weight: 300;
+  letter-spacing: 0.04;
+}
+
+.card05__categories {
+  margin-left: myrem(10);
+  @media #{$sp} {
+    margin-left: 0;
+    margin-top: myrem(8);
+  }
+  span {
+    &:not(:first-child) {
+      margin-left: myrem(8);
+    }
+  }
+}
+
+.card05__ttl {
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: calc(25/16);
+  letter-spacing: 0.04em;
+  margin-top: myrem(7);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 制限したい行数が3の場合 */
+  overflow: hidden;
+}
+
+.card05__text {
+  font-size: myrem(14);
+  font-weight: 300;
+  line-height: calc(21/14);
+  letter-spacing: 0.04em;
+  margin-top: myrem(8);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 制限したい行数が3の場合 */
+  overflow: hidden;
 }
 
 
@@ -1354,6 +1475,7 @@ ruby {
     @media #{$sp} {
       width: myrem(177);
       margin-inline: auto;
+      filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .1));
     }
 
     img {

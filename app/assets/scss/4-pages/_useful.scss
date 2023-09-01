@@ -10,6 +10,13 @@
   }
 }
 
+.useful__list {
+  margin-top: myrem(139);
+  @media #{$sp} {
+    margin-top: myrem(80);
+  }
+}
+
 .useful__contact {
   margin-top: myrem(160);
   @media #{$sp} {
@@ -35,12 +42,6 @@
   justify-content: center;
 }
 
-.useful__list {
-  margin-top: myrem(139);
-  @media #{$sp} {
-    margin-top: myrem(80);
-  }
-}
 
 /*==================================
 #useful-list
