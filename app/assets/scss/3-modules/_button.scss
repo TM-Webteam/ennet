@@ -188,6 +188,16 @@
     padding: myrem(4) myrem(40);
     border: 2px solid $lightgreen2;
   }
+
+  &.--yellow-b {
+    color: $yellow;
+    border: 2px solid $yellow;
+  }
+
+  &.--small {
+    min-width: myrem(208);
+    padding: myrem(5) myrem(10);
+  }
 }
 
 .btn02 {

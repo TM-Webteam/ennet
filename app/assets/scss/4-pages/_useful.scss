@@ -1,0 +1,58 @@
+/*
+  ----------------
+  useful
+  ----------------
+*/
+.useful__cat {
+  margin-top: 133px;
+  @media #{$sp} {
+    margin-top: myrem(70);
+  }
+}
+
+.useful__contact {
+  margin-top: myrem(160);
+  @media #{$sp} {
+    margin-top: myrem(130);
+  }
+}
+
+
+/*==================================
+#useful-cat
+===================================*/
+.useful-cat__ttl {
+  text-align: center;
+}
+
+.useful-cat__list {
+  margin-top: myrem(27);
+  display: flex;
+  flex-wrap: wrap;
+  gap: myrem(10);
+  max-width: myrem(550);
+  margin-inline: auto;
+  justify-content: center;
+}
+
+.useful__list {
+  margin-top: myrem(139);
+  @media #{$sp} {
+    margin-top: myrem(80);
+  }
+}
+
+/*==================================
+#useful-list
+===================================*/
+.useful-list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: myrem(31);
+  row-gap: myrem(32);
+  max-width: myrem(1036);
+  margin-inline: auto;
+  @media #{$sp} {
+    grid-template-columns: 1fr;
+  }
+}
