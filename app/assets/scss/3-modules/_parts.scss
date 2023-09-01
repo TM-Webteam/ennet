@@ -1004,6 +1004,52 @@ ruby {
   margin-top: myrem(15);
 }
 
+/*==================================
+#カード4（お役立ち資料）
+===================================*/
+.card4 {
+  // background-color: pink;
+  background-color: $base-color;
+  border-radius: myrem(10);
+  box-shadow: $shadow--sm;
+  padding: myrem(16) myrem(23) myrem(30);
+  display: flex;
+  flex-direction: column;
+}
+
+.card4__img {
+  img {
+    aspect-ratio: 280/192;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card4__body {
+  margin-top: myrem(17);
+}
+
+.card4__ttl {
+  font-size: myrem(16);
+  font-weight: 500;
+  line-height: calc(26/16);
+  letter-spacing: 0.04em;
+  margin-top: myrem(18);
+  margin-bottom: myrem(22);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 制限したい行数が3の場合 */
+  overflow: hidden;
+}
+
+.card4__btn {
+  text-align: center;
+  margin-top: auto;
+}
+
+
+
 
 /*==================================
 #実績
