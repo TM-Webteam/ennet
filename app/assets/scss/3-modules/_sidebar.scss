@@ -166,7 +166,11 @@
   }
 }
 
+/*==================================
+# col2
+===================================*/
 .sidebar {
+  // min-width: 140px;
   &.--column {
     .sidebar01__search {
       max-width: myrem(318);
@@ -175,28 +179,28 @@
     .sidebar__body {
       display: flex;
       justify-content: space-between;
-      @media #{$sp} {
+      @media #{$lg} {
         display: block;
       }
     }
 
     .sidebar__wrapper01 {
       width: calc(318/515 * 100%);
-      @media #{$sp} {
+      @media #{$lg} {
         width: 100%;
       }
     }
 
     .sidebar__wrapper02 {
       width: calc(152/515 * 100%);
-      @media #{$sp} {
+      @media #{$lg} {
         width: 100%;
       }
     }
 
     .sidebar__btn01 {
       margin-top: 0;
-      @media #{$sp} {
+      @media #{$lg} {
         margin-top: myrem(40);
       }
 
@@ -207,20 +211,20 @@
           min-width: initial;
           padding: myrem(15) myrem(5);
           border-radius: myrem(95);
-          @media #{$sp} {
+          @media #{$lg} {
             max-width: initial;
             min-width: myrem(200);
             font-size: myrem(22);
           }
           .small {
             font-size: myrem(10);
-            @media #{$sp} {
+            @media #{$lg} {
               font-size: myrem(16);
             }
           }
           .dot {
             display: none;
-            @media #{$sp} {
+            @media #{$lg} {
               display: inline-block;
             }
           }
@@ -242,7 +246,7 @@
         font-size: myrem(11);
         padding: myrem(10);
         min-width: myrem(136);
-        @media #{$sp} {
+        @media #{$lg} {
           font-size: myrem(13);
           min-width: myrem(182);
         }
@@ -256,7 +260,7 @@
         line-height: calc(17/11);
         padding: myrem(13) myrem(8);
         width: 100%;
-        @media #{$sp} {
+        @media #{$lg} {
           font-size: myrem(12);
         }
       }
@@ -269,7 +273,7 @@
         padding: myrem(8);
         min-width: initial;
         width: 100%;
-        @media #{$sp} {
+        @media #{$lg} {
           font-size: myrem(16);
           padding: myrem(17);
           min-width: myrem(318);
