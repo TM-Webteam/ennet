@@ -274,6 +274,12 @@
 			background: url(../img/common/bg-ttl-yellow.png) no-repeat center center / contain;
 		}
 	}
+
+	&.--none {
+		&::after {
+			background: none;
+		}
+	}
 }
 
 
