@@ -12,7 +12,7 @@
 
   @media #{$sp} {
     margin-top: myrem(100);
-    padding: myrem(30);
+    padding: myrem(30) myrem(20);
   }
 }
 
