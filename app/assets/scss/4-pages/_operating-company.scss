@@ -1,0 +1,68 @@
+/*
+  ----------------
+  operating-company
+  ----------------
+*/
+.operating-company__items {
+  margin-top: myrem(177);
+  margin-inline: auto;
+  padding: myrem(56);
+  max-width: myrem(1004);
+  box-shadow: $shadow;
+
+  @media #{$sp} {
+    margin-top: myrem(100);
+    padding: myrem(30);
+  }
+}
+
+.operating-company__list {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+/*==================================
+.operating-company-list
+===================================*/
+.operating-company-list {
+  display: grid;
+  grid-template-columns: myrem(172) 1fr;
+  row-gap: myrem(21);
+  column-gap: myrem(10);
+
+  @media #{$sp} {
+    grid-template-columns: 1fr;
+    row-gap: myrem(16);
+  }
+}
+
+.operating-company-list a img {
+  width: myrem(26);
+  height: myrem(26);
+}
+
+.operating-company-list__term {
+  flex-shrink: 0;
+  font-size: myrem(16);
+  font-weight: 500;
+  letter-spacing: .04em;
+  line-height: calc(24 / 14);
+}
+
+.operating-company-list__desc {
+  font-size: myrem(14);
+  font-weight: 300;
+  letter-spacing: .04em;
+  line-height: calc(24 / 14);
+  white-space: nowrap;
+
+  @media #{$sp} {
+    white-space: normal;
+  }
+}
+
+.operating-company-list__desc + .operating-company-list__term {
+  @media #{$sp} {
+    margin-top: myrem(16);
+  }
+}
