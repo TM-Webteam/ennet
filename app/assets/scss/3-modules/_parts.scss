@@ -1081,6 +1081,7 @@ ruby {
   box-shadow: $shadow--sm;
   border-radius: myrem(10);
   min-height: myrem(168);
+  transition: .3s;
 
   @media #{$sp} {
     flex-direction: column;
@@ -1696,6 +1697,7 @@ ruby {
     box-shadow: $shadow--sm;
     border-radius: myrem(10);
     position: relative;
+    transition: .3s;
 
     @media #{$sp} {
       padding: myrem(28) myrem(20) myrem(50) myrem(20);

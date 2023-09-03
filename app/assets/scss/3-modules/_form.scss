@@ -424,20 +424,6 @@
 ===================================*/
 .search-form {
   position: relative;
-  background-color: $base-color;
-  max-width: myrem(456);
-  border-radius: 20px;
-  transition: .3s;
-  box-shadow:6px 6px 20px #e3e3e3,
-             -6px -6px 10px #ffffff,
-             inset -2px -2px 3px #A2A2A257;
-  border: none;
-  &:focus,&:hover {
-    box-shadow:
-    10px 10px 20px #e3e3e3,
-    -10px -10px 20px #ffffff,
-    inset 5px 5px 3px #A2A2A257;
-  }
 
   &::before {
     content: "";
@@ -451,6 +437,34 @@
     right: myrem(16);
     z-index: 2;
   }
+
+  input {
+    background-color: $base-color;
+    max-width: myrem(456);
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow:4px 4px 6px #d9d9d9,
+    -6px -6px 10px #ffffff,
+    inset -2px -2px 3px #A2A2A257;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: inherit;
+    font-family: inherit;
+
+    &:hover,
+    &:focus {
+      background-color: $base-color;
+      box-shadow:
+      4px 4px 6px #d9d9d9,
+      -10px -10px 20px #ffffff,
+      inset 3px 3px 5px #A2A2A257;
+      outline: none;
+    }
+
+  }
+
 
   @media #{$sp} {
     margin-inline: auto;
