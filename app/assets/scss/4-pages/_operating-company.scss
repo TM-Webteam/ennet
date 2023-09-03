@@ -9,6 +9,7 @@
   padding: myrem(56);
   max-width: myrem(1004);
   box-shadow: $shadow;
+  border-radius: myrem(6);
 
   @media #{$sp} {
     margin-top: myrem(100);
