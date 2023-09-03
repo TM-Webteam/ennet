@@ -615,18 +615,42 @@ ruby {
 
   &.--blue {
     background-color: $lightblue;
+    &.--link {
+      &:hover {
+        color: $lightblue;
+      }
+    }
   }
 
   &.--yellow {
     background-color: $yellow;
+    &.--link {
+      &:hover {
+        color: $yellow;
+      }
+    }
   }
 
   &.--orange {
     background-color: $orange;
+    &.--link {
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  &.--black {
+    background-color: #383838;
+    &.--link {
+      &:hover {
+        color: #383838;
+      }
+    }
   }
 
   &.--link {
-
+    transition: .3s;
     &:hover,
     &:focus {
       opacity: 1;
@@ -2080,7 +2104,7 @@ ruby {
 #目次
 ===================================*/
 #toc_container .toc_list {
-  padding: myrem(20);
+  padding: myrem(22);
   @media #{$sp} {
     padding: myrem(20) myrem(12);
   }
@@ -2115,7 +2139,7 @@ ruby {
 
 #toc_container > ul > li {
 	counter-increment: toc;
-	margin-bottom: 20px;
+	margin-bottom: myrem(7);
 	margin-top: 0;
 }
 
@@ -2126,12 +2150,12 @@ ruby {
 #toc_container > ul > li > a {
   display: flex;
   &::before {
-    content: "⚫︎";
+    content: "●";
   }
 }
 
 #toc_container > ul > li > ul {
-	margin-top: 6px;
+	margin-top: myrem(6);
 	padding-left: myrem(10);
 }
 

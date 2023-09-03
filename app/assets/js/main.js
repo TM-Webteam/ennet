@@ -325,3 +325,14 @@ $(function(){
   }
 });
 
+//--------------------------------------
+// セレクトボックス：選択された時、文字色変更
+//--------------------------------------
+document.getElementById('inquiry').addEventListener('change', function() {
+  let selectedIndex = this.selectedIndex;
+  if (selectedIndex === 0) {
+      this.style.color = '#9F9F9F';
+  } else {
+      this.style.color = '#000';
+  }
+});
