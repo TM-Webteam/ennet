@@ -1,0 +1,43 @@
+/*
+  ----------------
+  contact
+  ----------------
+  */
+.contact__main {
+  margin-bottom: myrem(160);
+  @media #{$sp} {
+    margin-bottom: myrem(134);
+  }
+}
+
+.contact__body {
+  margin-top: myrem(145);
+
+  @media #{$sp} {
+    margin-top: myrem(70);
+  }
+}
+
+
+.contact__containers {
+  max-width: myrem(1114);
+  margin-inline: auto;
+}
+
+.contact__body-ttl {
+  color: $white;
+  font-size: myrem(17);
+  font-weight: 500;
+  line-height: calc(25/17);
+  letter-spacing: 0.04em;
+  background-color: $yellow;
+  text-align: center;
+  border-radius: myrem(6);
+  padding: myrem(11);
+}
+
+.contact__body-content {
+  max-width: myrem(876);
+  margin-inline: auto;
+}
+
