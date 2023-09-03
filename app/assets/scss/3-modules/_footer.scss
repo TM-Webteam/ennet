@@ -118,7 +118,7 @@
   }
 
   .parent {
-    a{
+    a,span{
       display: inline-block;
       color: $white;
       font-size: myrem(16);
@@ -139,11 +139,13 @@
         transform: translateY(-50%);
       }
 
+    }
+    a {
+      transform: .3s;
       &:hover {
         opacity: 1;
         text-decoration: underline;
       }
-
     }
     &:not(:first-child) {
       margin-top: myrem(16);

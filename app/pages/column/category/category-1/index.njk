@@ -46,7 +46,6 @@
         <p class="lead" data-aos="fade-up">
           環境対策のトレンドをはじめ、<br class="sp-only">EVの基礎知識やEVシフトの<br class="pc-only">ノウハウに関するお役立ち情報をお届けいたします。
         </p>
-
       </div>
     </div>
   </div>
@@ -60,8 +59,9 @@
             （カテゴリ名）のコラム一覧
           </div>
           <ul class="column-archive__list">
+            <!-- loop start -->
             <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
+              <a href="/column/category/column-single/" class="card05">
                 <div class="card05__img">
                   <img src="/assets/img/common/sample01.jpg" alt="">
                 </div>
@@ -81,7 +81,7 @@
               </a>
             </li>
             <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
+              <a href="/column/category/column-single/" class="card05">
                 <div class="card05__img">
                   <img src="/assets/img/top/img-recommend02.jpg" alt="">
                 </div>
@@ -101,7 +101,7 @@
               </a>
             </li>
             <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
+              <a href="/column/category/column-single/" class="card05">
                 <div class="card05__img">
                   <img src="/assets/img/common/sample01.jpg" alt="">
                 </div>
@@ -260,6 +260,7 @@
                 </div>
               </a>
             </li>
+            <!-- loop end -->
           </ul>
 
           <!-- pagination -->
@@ -274,9 +275,9 @@
               <a class="next page-numbers" href="#"><span></span></a>
             </div>
           </div>
-
         </div>
-        <!-- sideber -->
+
+        <!-- sidebar -->
         <aside class="column-archive__sidebar sidebar --taxonomy">
           <div class="sidebar01__search" data-aos="fade-up">
             <form role="search" method="get" action="" class="search-form">
@@ -308,32 +309,13 @@
                 </ul>
               </div>
 
+              <!-- 人気コラム -->
               <div class="sidebar__popular" data-aos="fade-up">
                 <h3 class="sidebar__popular-ttl ttl-secondary --white --large">
                   人気コラムTOP5
                 </h3>
                 <ul class="sidebar__popular-list">
-                  <li class="sidebar__popular-item">
-                    <a href="#" class="sidebar__popular-link">
-                      <div class="img">
-                        <img src="/assets/img/common/sample01.jpg" alt="">
-                      </div>
-                      <h4 class="ttl">
-                        コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。
-                      </h4>
-                    </a>
-                  </li>
-                  <li class="sidebar__popular-item">
-                    <a href="#" class="sidebar__popular-link">
-                      <div class="img">
-                        <img src="/assets/img/common/sample01.jpg" alt="">
-                      </div>
-                      <h4 class="ttl">
-                        コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。
-                      </h4>
-
-                    </a>
-                  </li>
+                  <!-- loop start -->
                   <li class="sidebar__popular-item">
                     <a href="#" class="sidebar__popular-link">
                       <div class="img">
@@ -364,6 +346,27 @@
                       </h4>
                     </a>
                   </li>
+                  <li class="sidebar__popular-item">
+                    <a href="#" class="sidebar__popular-link">
+                      <div class="img">
+                        <img src="/assets/img/common/sample01.jpg" alt="">
+                      </div>
+                      <h4 class="ttl">
+                        コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。
+                      </h4>
+                    </a>
+                  </li>
+                  <li class="sidebar__popular-item">
+                    <a href="#" class="sidebar__popular-link">
+                      <div class="img">
+                        <img src="/assets/img/common/sample01.jpg" alt="">
+                      </div>
+                      <h4 class="ttl">
+                        コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。
+                      </h4>
+                    </a>
+                  </li>
+                  <!-- loop end -->
                 </ul>
               </div>
 
@@ -396,14 +399,8 @@
           </div>
         </aside>
       </div>
-
-
     </div>
   </div>
-
-
-
-
 
   <!-- contact -->
   <section class="column__contact common-contact">

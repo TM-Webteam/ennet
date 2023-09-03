@@ -75,6 +75,11 @@
   align-items: center;
   backface-visibility: hidden;
   position: relative;
+  transition: .3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   .img {
     width: calc(104/270 * 100%);
