@@ -55,5 +55,7 @@
   margin-inline: auto;
   @media #{$sp} {
     grid-template-columns: 1fr;
+    max-width: myrem(550);
   }
 }
+

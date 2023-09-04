@@ -9,8 +9,8 @@
 
 .column-single__containers {
   @media #{$sp} {
-    padding-right: myrem(15);
-    padding-left: myrem(15);
+    // padding-right: myrem(15);
+    // padding-left: myrem(15);
   }
 }
 
@@ -24,51 +24,75 @@
 
 .column-single__body {
   width: calc(754/1240 * 100%);
+  @media #{$lg} {
+    width: 65%;
+  }
   @media #{$sp} {
     width: 100%;
   }
 }
 
+.column-single__entry {
+  @media #{$sp} {
+    margin-right: myrem(-10);
+    margin-left: myrem(-10);
+  }
+}
+
 .column-single__document {
   margin-top: myrem(60);
+  @media #{$sp} {
+    max-width: myrem(550);
+    margin-inline: auto;
+  }
 }
 
 .column-single__author {
   margin-top: myrem(40);
+  @media #{$sp} {
+    max-width: myrem(550);
+    margin-inline: auto;
+  }
 }
 
 .column-single__editor {
   margin-top: myrem(36);
+  @media #{$sp} {
+    max-width: myrem(550);
+    margin-inline: auto;
+  }
 }
 
 .column-single__relation {
   margin-top: myrem(72);
   @media #{$sp} {
     margin-top: myrem(50);
+    max-width: myrem(550);
+    margin-inline: auto;
   }
 }
 
 .column-single__keyword {
-  margin-top: myrem(64);
+  margin-top: myrem(60);
 }
 
-.column-single__sidebar {
-  margin-top: myrem(36);
-  @media #{$sp} {
-    margin-top: myrem(80);
-  }
-}
 
 .column-single__sidebar {
   width: calc(538/1240 * 100%);
   margin-right: myrem(-100);
   padding-right: myrem(21);
-  @media #{$sp} {
+  @media #{$lg} {
     width: 100%;
     padding-right: myrem(19);
     padding-left: myrem(19);
+    margin-top: myrem(80);
+  }
+  @media #{$sp} {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
+
 
 .column-single__contact {
   margin-top: myrem(160);
@@ -85,9 +109,9 @@
   background-color: $base-color;
   border-radius: myrem(10);
   box-shadow: $shadow;
-  padding: myrem(52) myrem(48) myrem(46);
+  padding: myrem(48) myrem(42) myrem(46);
   @media #{$sp} {
-    padding: 0 myrem(10) myrem(32);
+    padding: 0 0 myrem(32);
     box-shadow: none;
   }
 }
@@ -140,7 +164,7 @@
   margin-top: myrem(20);
   @media #{$sp} {
     display: block;
-    margin-top: 0;
+    margin-top: myrem(10);
   }
 }
 
@@ -163,6 +187,7 @@
   flex-wrap: wrap;
   @media #{$sp} {
     margin-left: 0;
+    margin-top: myrem(8);
   }
 }
 
@@ -179,81 +204,9 @@
 }
 
 .column-entry__table-contents {
-  margin-top: myrem(48);
+  margin-top: myrem(60);
   @media #{$sp} {
     margin-top: myrem(40);
-  }
-}
-
-.column-entry__body {
-  margin-top: myrem(41);
-
-  h2 {
-    font-size: myrem(20);
-    font-weight: 500;
-    line-height: calc(32/20);
-    letter-spacing: 0.04em;
-    padding-left: myrem(30);
-    border-bottom: 2px solid $darkgreen;
-    padding-bottom: myrem(8);
-    position: relative;
-    margin-top: myrem(65);
-    @media #{$sp} {
-      margin-top: myrem(44);
-      padding-left: myrem(22);
-    }
-
-    &::before {
-      content: "";
-      display: inline-block;
-      width: myrem(12);
-      height: calc(100% - #{myrem(7)});
-      background-color: $darkgreen;
-      position: absolute;
-      top: 0;
-      left: 0;
-      @media #{$sp} {
-        width: myrem(8);
-      }
-    }
-  }
-
-  h3 {
-    font-size: myrem(18);
-    font-weight: 500;
-    line-height: calc(31/18);
-    letter-spacing: 0.04em;
-    margin-top: myrem(67);
-    padding-left: myrem(16);
-    border-left: 8px solid $black;
-    @media #{$sp} {
-      border-left: 6px solid $black;
-      margin-top: myrem(44);
-    }
-  }
-
-  p {
-    font-size: myrem(16);
-    font-weight: 300;
-    line-height: calc(30/16);
-    letter-spacing: 0.04em;
-    margin-top: myrem(40);
-    @media #{$sp} {
-      font-size: myrem(15);
-      margin-top: myrem(32);
-    }
-  }
-
-  p + p {
-    margin-top: myrem(20);
-  }
-
-  figure {
-    margin-top: myrem(29);
-    margin-bottom: myrem(40);
-    img {
-      width: 100%;
-    }
   }
 }
 
@@ -265,7 +218,7 @@
   background-color: $lightgreen;
   border-radius: myrem(4);
   box-shadow: 3px 3px 6px #D9D9D9;
-  padding: myrem(24);
+  padding:myrem(22) myrem(24);
   display: flex;
   justify-content: space-between;
   @media #{$sp} {
@@ -344,7 +297,7 @@
   background-color: $base-color;
   border-radius: myrem(4);
   box-shadow: $shadow;
-  padding: myrem(43) myrem(41);
+  padding: myrem(34) myrem(41) myrem(32);
   display: flex;
   justify-content: space-between;
   @media #{$sp} {
@@ -355,6 +308,7 @@
 
 .entry-author__img {
   width: calc(140/586 * 100%);
+  padding-top: myrem(6);
   @media #{$sp} {
     width: myrem(160);
     margin-inline: auto;
@@ -372,7 +326,7 @@
     font-size: myrem(16);
     font-weight: 500;
     text-align: center;
-    margin-top: myrem(24);
+    margin-top: myrem(20);
     @media #{$sp} {
       margin-top: myrem(15);
     }
@@ -408,7 +362,7 @@
   font-size: myrem(14);
   font-weight: 300;
   line-height: calc(26/14);
-  margin-top: myrem(24);
+  margin-top: myrem(18);
   @media #{$sp} {
     margin-top: myrem(15);
   }
@@ -421,7 +375,7 @@
   background-color: $base-color;
   border-radius: myrem(4);
   box-shadow: $shadow;
-  padding: myrem(43) myrem(41);
+  padding: myrem(28) myrem(41) myrem(36);
   display: flex;
   justify-content: space-between;
   @media #{$sp} {
@@ -431,13 +385,14 @@
 }
 
 .entry-editor__content {
+  margin-top: myrem(6);
   width: myrem(140);
   height: myrem(140);
   border-radius: 50%;
   background: linear-gradient(145deg, #f1f1f1, #ffffff);
   box-shadow:  10px 10px 20px #dcdcdc,
             -10px -10px 20px #ffffff;
-  padding-top: myrem(50);
+  padding-top: myrem(52);
   @media #{$sp} {
     width: myrem(160);
     height: myrem(160);
@@ -483,7 +438,7 @@
   font-size: myrem(14);
   font-weight: 300;
   line-height: calc(26/14);
-  margin-top: myrem(24);
+  margin-top: myrem(20);
   @media #{$sp} {
     margin-top: myrem(10);
   }
@@ -514,7 +469,7 @@
 }
 
 .entry-relation__list {
-  margin-top: myrem(24);
+  margin-top: myrem(20);
   @media #{$sp} {
     margin-top: myrem(20);
   }
@@ -529,7 +484,6 @@
 .entry-relation__link {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .entry-relation__item-img {
@@ -554,8 +508,10 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* 制限したい行数が3の場合 */
   overflow: hidden;
+  margin-top: myrem(20);
   @media #{$sp} {
     font-size: myrem(14);
+    margin-top: 0;
   }
 }
 
@@ -586,8 +542,13 @@
     font-weight: 500;
     line-height: calc(26/18);
     text-decoration: underline;
+    transition: .3s;
     @media #{$sp} {
       font-size: myrem(14);
+    }
+
+    &:hover {
+      opacity: 0.7;
     }
   }
 }

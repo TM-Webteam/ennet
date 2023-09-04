@@ -143,9 +143,9 @@
 }
 
 // マーカーライン
-.marker {
-  background-image: linear-gradient(top, transparent 60%, #FFF826 60%);
-}
+// .marker {
+//   background-image: linear-gradient(top, transparent 60%, #FFF826 60%);
+// }
 
 // 強調打点
 ruby {
@@ -841,6 +841,7 @@ ruby {
   box-shadow: $shadow--sm;
   border-radius: myrem(10);
   min-height: myrem(168);
+  transition: .3s;
 
   @media #{$sp} {
     flex-direction: column;
@@ -929,6 +930,7 @@ ruby {
   border-radius: myrem(10);
   min-height: myrem(208);
   border: 2px solid $lightgreen2;
+  transition: .3s;
 
   @media #{$sp} {
     display: block;
@@ -1154,7 +1156,7 @@ ruby {
 .card05__time {
   font-size: myrem(16);
   font-weight: 300;
-  letter-spacing: 0.04;
+  letter-spacing: 0.04em;
 }
 
 .card05__categories {
@@ -1665,6 +1667,10 @@ ruby {
   display: grid;
   max-width: myrem(788);
   margin-inline: auto;
+  @media #{$sp} {
+    max-width: myrem(550);
+    margin-inline: auto;
+  }
   &.--col3 {
     grid-template-columns: repeat(3, 1fr);
     gap: myrem(54);
@@ -1812,11 +1818,11 @@ ruby {
   background-color: $base-color;
   border-radius: myrem(10);
   box-shadow: $shadow;
-  // margin-top: myrem(20);
   padding: myrem(64) myrem(48) myrem(44) myrem(56);
   @media #{$sp} {
-    // margin-top: myrem(40);
     padding: myrem(25) myrem(24) myrem(30) myrem(24);
+    margin-right: myrem(-10);
+    margin-left: myrem(-10);
   }
 }
 
@@ -1921,14 +1927,6 @@ ruby {
 /*==================================
 # アコーディオン
 ===================================*/
-.accordion {
-  max-width: myrem(1004);
-  margin-inline: auto;
-  @media #{$sp} {
-    max-width: myrem(600);
-  }
-}
-
 .accordion__item + .accordion__item {
   margin-top: myrem(53);
   @media #{$sp} {
@@ -2039,6 +2037,9 @@ ruby {
   margin-top: myrem(24);
   box-shadow: $shadow;
   position: relative;
+  @media #{$sp} {
+    margin-top: myrem(12);
+  }
 
   .inner {
     padding: myrem(45) myrem(110) myrem(40) myrem(42);
@@ -2067,7 +2068,7 @@ ruby {
     }
 
     .note {
-      margin-top: rem10;
+      margin-top: myrem(10);
     }
     .btn-wrapper {
       text-align: center;
@@ -2132,11 +2133,14 @@ ruby {
 
 #toc_container ul a {
 	color: $darkgreen;
-	font-weight: myrem(16);
+  font-size: myrem(16);
   font-weight: 700;
   line-height: calc(32/16);
   letter-spacing: 0.04em;
 	text-decoration: underline;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 #toc_container > ul > li {
@@ -2151,6 +2155,10 @@ ruby {
 
 #toc_container > ul > li > a {
   display: flex;
+  transition: .3s;
+  &:hover {
+    opacity: 0.7;
+  }
   &::before {
     content: "●";
   }
@@ -2176,6 +2184,10 @@ ruby {
   line-height: calc(32/16);
   letter-spacing: 0.04em;
   display: flex;
+  transition: .3s;
+  &:hover {
+    opacity: 0.7;
+  }
   &::before {
     content: "・";
   }

@@ -634,6 +634,7 @@
   border-radius: myrem(10);
   position: relative;
   padding: myrem(20) myrem(10) myrem(70);
+  transition: .3s;
   @media #{$sp} {
     padding: myrem(20) myrem(10) myrem(60);
   }

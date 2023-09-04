@@ -32,8 +32,8 @@
   height: myrem(56);
   box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
   border-radius: myrem(16);
-  padding-right: myrem(40);
-  padding-left: myrem(40);
+  padding-right: myrem(32);
+  padding-left: myrem(32);
   margin-top: myrem(20);
 
   @media #{$md} {
@@ -165,7 +165,7 @@
   background-color: $yellow;
   padding: myrem(8) myrem(16);
   border-radius: myrem(50);
-  min-width: myrem(148);
+  min-width: myrem(143);
   box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
   -6px -6px 10px rgba(255, 255, 255, .5),
   4px 4px 6px rgba(255, 255, 255, .075),
@@ -193,7 +193,7 @@
   }
 
   &:nth-child(n+2) {
-    margin-left: myrem(13);
+    margin-left: myrem(11);
     @media #{$md} {
       margin-left: 0;
       margin-top: myrem(20);
