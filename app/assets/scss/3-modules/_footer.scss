@@ -42,8 +42,10 @@
 
 .footer__logo {
   width: myrem(340);
+  padding-top: myrem(18);
   @media #{$sp} {
     width: myrem(253);
+    padding-top: 0;
   }
 
   img {
@@ -55,9 +57,9 @@
 
 .footer__link {
   margin-top: myrem(12);
+  margin-top: myrem(22);
   display: flex;
   @media #{$sp} {
-    margin-top: myrem(22);
     flex-direction: column;
   }
 }
