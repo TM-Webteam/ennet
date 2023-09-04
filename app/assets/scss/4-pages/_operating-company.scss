@@ -4,9 +4,9 @@
   ----------------
 */
 .operating-company__items {
-  margin-top: myrem(177);
+  margin-top: myrem(170);
   margin-inline: auto;
-  padding: myrem(56);
+  padding: myrem(56) myrem(56) myrem(52) myrem(56);
   max-width: myrem(1004);
   box-shadow: $shadow;
   border-radius: myrem(6);
@@ -22,6 +22,12 @@
   margin-inline: auto;
 }
 
+.operating-company__contact {
+  margin-top: myrem(167);
+  @media #{$sp} {
+    margin-top: myrem(130);
+  }
+}
 /*==================================
 .operating-company-list
 ===================================*/
