@@ -4,9 +4,9 @@
   ----------------
 */
 .sitemap__items {
-  margin-top: myrem(177);
+  margin-top: myrem(170);
   margin-inline: auto;
-  padding: myrem(56);
+  padding: myrem(57) myrem(127) myrem(50) myrem(111);
   max-width: myrem(1004);
   box-shadow: $shadow;
   border-radius: myrem(6);
@@ -17,9 +17,11 @@
   }
 }
 
-.sitemap__list {
-  width: fit-content;
-  margin-inline: auto;
+.sitemap__contact {
+  margin-top: myrem(182);
+  @media #{$sp} {
+    margin-top: myrem(130);
+  }
 }
 
 /*==================================
@@ -28,12 +30,12 @@
 .sitemap-nav {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  column-gap: myrem(96);
+  justify-content: space-between;
+  // column-gap: myrem(96);
 
   @media #{$sp} {
     flex-direction: column;
-    row-gap: myrem(48);
+    row-gap: myrem(20);
   }
 }
 
@@ -66,15 +68,15 @@
 
     }
     &:not(:first-child) {
-      margin-top: myrem(16);
+      margin-top: myrem(11);
       @media #{$sp} {
-        margin-top: myrem(32);
+        margin-top: myrem(20);
       }
     }
   }
 
   .parent + .parent {
-    margin-top: myrem(26);
+    margin-top: myrem(18);
 
     @media #{$sp} {
       margin-top: myrem(20);
@@ -83,10 +85,10 @@
 }
 
 .sitemap-nav__list {
-  margin-top: myrem(25);
+  margin-top: myrem(16);
 
   @media #{$sp} {
-    margin-top: myrem(20);
+    margin-top: myrem(16);
   }
 }
 
@@ -121,5 +123,5 @@
 }
 
 .sitemap-nav__item + .sitemap-nav__item {
-  margin-top: myrem(14);
+  margin-top: myrem(3);
 }
