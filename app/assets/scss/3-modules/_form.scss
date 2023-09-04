@@ -366,6 +366,9 @@
 
     &:not(:first-child) {
       margin-top: myrem(11);
+      @media #{$sp} {
+        margin-top: myrem(16);
+      }
     }
 
     &.--ev-status {
@@ -398,6 +401,9 @@
   .contact-form__input.--radio {
     display: block;
     margin-top: myrem(14);
+    @media #{$sp} {
+      margin-top: myrem(12);
+    }
     .radio-item {
       padding-left: myrem(14);
 
@@ -409,6 +415,9 @@
 
   .contact-form__item.--privacy-consent {
     margin-top: myrem(14);
+    @media #{$sp} {
+      margin-top: myrem(16);
+    }
     .contact-form__input {
       padding-left: myrem(14);
     }
@@ -416,9 +425,11 @@
 
   .contact-form__item.--mail-consent {
     margin-top: myrem(12);
+    @media #{$sp} {
+      margin-top: myrem(16);
+    }
     .contact-form__input {
       padding-left: myrem(14);
-
     }
   }
 }
