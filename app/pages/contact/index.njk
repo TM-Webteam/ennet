@@ -35,7 +35,7 @@
 
 <main class="contact__main">
 
-  <!-- news-head -->
+  <!-- contact-head -->
   <div class="contact__head contact-head page-head --yellow">
     <div class="contact-head__containers containers--md">
       <div class="contact-head__ttl ttl-primary --center">
@@ -44,7 +44,7 @@
         </div>
         <h1 class="ttl">ご相談・お問合せ</h1>
         <p class="lead">
-          EV導入や運用に関するお問合せ・ご相談はお気軽にご連絡ください。
+          EV導入や運用に関するお問合せ・ご相談は<span>お気軽にご連絡ください。</span>
         </p>
       </div>
     </div>
@@ -76,12 +76,12 @@
           <!-- お名前 -->
           <dl class="contact-form__item --name">
             <dt class="contact-form__label">
-              <label for="">お名前</label>
+              <span>お名前</span>
             </dt>
             <dd class="contact-form__input">
               <ul class="contact-item__input-name">
-                <li>姓<input class="input" name="first-name" type="text" placeholder="例）山田" required></li>
-                <li>名<input class="input" name="last-name" type="text" placeholder="例）太郎" required></li>
+                <li><label for="first-name">姓</label><input id="first-name" name="first-name" type="text" placeholder="例）山田" required></li>
+                <li><label for="last-name">名</label><input id="last-name" name="last-name" type="text" placeholder="例）太郎" required></li>
               </ul>
             </dd>
           </dl>

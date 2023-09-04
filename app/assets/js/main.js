@@ -3,17 +3,16 @@ $(document).ready(function() {
   // SP時横スクロール UI
   //---------------------------------
 
-  new ScrollHint('.scroll', {
-    i18n: {
-      scrollable: '横スクロールできます'
-    }
-  });
+  // new ScrollHint('.scroll', {
+  //   i18n: {
+  //     scrollable: '横スクロールできます'
+  //   }
+  // });
 
 
   //---------------------------------
   // Smooth Scrolling
   //---------------------------------
-
   $(document).ready(function(){
     $('a[href^="#"]').click(function(){
       var the_id = $(this).attr("href");
@@ -30,8 +29,6 @@ $(document).ready(function() {
       return false;
     });
   });
-
-
 });
 
 
@@ -39,33 +36,33 @@ $(document).ready(function() {
 //　header　演出
 //--------------------------------------
 
-$(function(){
-  var pos = 0;
-  var header = $('header');
+// $(function(){
+//   var pos = 0;
+//   var header = $('header');
 
-  $(window).on('scroll', function(){
-    if($(this).scrollTop() < pos || $(this).scrollTop() < 400){
-      header.removeClass('hide');
-    }else{
-      header.addClass('hide');
-    }
-    pos = $(this).scrollTop();
-  });
-});
+//   $(window).on('scroll', function(){
+//     if($(this).scrollTop() < pos || $(this).scrollTop() < 400){
+//       header.removeClass('hide');
+//     }else{
+//       header.addClass('hide');
+//     }
+//     pos = $(this).scrollTop();
+//   });
+// });
 
 
 //--------------------------------------
 //　アコーディオンメニュー
 //--------------------------------------
 
-(function ($) {
-  $(function () {
-    $('#nav-toggle').on('click', function () {
-      $('header').toggleClass('open');
-      $('#gloval-nav').slideToggle();
-    });
-  });
-})(jQuery);
+// (function ($) {
+//   $(function () {
+//     $('#nav-toggle').on('click', function () {
+//       $('header').toggleClass('open');
+//       $('#gloval-nav').slideToggle();
+//     });
+//   });
+// })(jQuery);
 
 
 //--------------------------------------
@@ -134,44 +131,43 @@ $(document).ready(function() {
 });
 
 
-
 //--------------------------------------
 //　faq　プルダウン
 //--------------------------------------
 
-$(document).ready(function(){
-  $(".question").on("click", function() {
-    $(this).toggleClass('open');
-    $(this).next().slideToggle(400);
-  });
-});
+// $(document).ready(function(){
+//   $(".question").on("click", function() {
+//     $(this).toggleClass('open');
+//     $(this).next().slideToggle(400);
+//   });
+// });
 
 
 //--------------------------------------
 //　バナー　追従
 //--------------------------------------
 
-$(function(){
-  var scrollStart = $('.show').offset().top;
-  var scrollEnd = $('.hide').offset().top;
-  var distance = 0;
+// $(function(){
+//   var scrollStart = $('.show').offset().top;
+//   var scrollEnd = $('.hide').offset().top;
+//   var distance = 0;
 
-  $(document).scroll(function(){
-    distance = $(this).scrollTop();
+//   $(document).scroll(function(){
+//     distance = $(this).scrollTop();
 
-    if (scrollStart <= distance) {
-      $('.floating').addClass('fixed');
-    } else if (scrollStart >= distance) {
-      $('.floating').removeClass('fixed');
-    }
+//     if (scrollStart <= distance) {
+//       $('.floating').addClass('fixed');
+//     } else if (scrollStart >= distance) {
+//       $('.floating').removeClass('fixed');
+//     }
 
-    if (scrollEnd <= distance) {
-      $('.floating').fadeOut();
-    } else{
-      $('.floating').fadeIn();
-    }
-  });
-});
+//     if (scrollEnd <= distance) {
+//       $('.floating').fadeOut();
+//     } else{
+//       $('.floating').fadeIn();
+//     }
+//   });
+// });
 
 
 $(window).on('load', function() {
@@ -193,14 +189,23 @@ $(window).on('load', function() {
 // タブ切り替え
 //--------------------------------------
 // タブメニュー
+// $(function () {
+//   if ($('.js-tab-menu').length) {
+//     $(".js-tab").on("click", function () {
+//       $(".current").removeClass("current");
+//       $(this).addClass("current");
+//     });
+//   }
+// });
 $(function () {
-  if ($('.js-tab-menu').length) {
+  if ($('.js-tab-menu').length) { // もし .js-tab-menu クラスがある場合は
     $(".js-tab").on("click", function () {
       $(".current").removeClass("current");
       $(this).addClass("current");
     });
   }
 });
+
 
 
 //--------------------------------------
@@ -232,21 +237,39 @@ $(window).on('load resize', function(){
 //--------------------------------------
 // カウントアップ
 //--------------------------------------
+// $(function () {
+//   $(".js-count").on('inview',   function() {
+//     if ($(".js-num", this).attr("data-num").indexOf(".") > -1) {
+//       var rounding = 1;
+//     } else {
+//       var rounding = 0;
+//     }
+//     $(".js-num", this).numerator({
+//       easing: "linear", // カウントアップの動き
+//       duration: 1000, // カウントアップの時間
+//       toValue: $(".js-num", this).attr("data-num"), // カウントアップする数値
+//       rounding: rounding, // 小数点以下の桁数（初期値：0）
+//     });
+//     });
+// });
 $(function () {
-  $(".js-count").on('inview',   function() {
-    if ($(".js-num", this).attr("data-num").indexOf(".") > -1) {
-      var rounding = 1;
-    } else {
-      var rounding = 0;
-    }
-    $(".js-num", this).numerator({
-      easing: "linear", // カウントアップの動き
-      duration: 1000, // カウントアップの時間
-      toValue: $(".js-num", this).attr("data-num"), // カウントアップする数値
-      rounding: rounding, // 小数点以下の桁数（初期値：0）
+  if ($('.js-count').length > 0) { // もし .js-count クラスがある場合は
+    $(".js-count").on('inview', function() {
+      if ($(".js-num", this).attr("data-num").indexOf(".") > -1) {
+        var rounding = 1;
+      } else {
+        var rounding = 0;
+      }
+      $(".js-num", this).numerator({
+        easing: "linear",
+        duration: 1000,
+        toValue: $(".js-num", this).attr("data-num"),
+        rounding: rounding,
+      });
     });
-    });
+  }
 });
+
 
 
 //--------------------------------------
@@ -328,11 +351,19 @@ $(function(){
 //--------------------------------------
 // セレクトボックス：選択された時、文字色変更
 //--------------------------------------
-document.getElementById('inquiry').addEventListener('change', function() {
-  let selectedIndex = this.selectedIndex;
-  if (selectedIndex === 0) {
-      this.style.color = '#9F9F9F';
+document.addEventListener('DOMContentLoaded', function() {
+  var element = document.getElementById('inquiry');
+  if (element) {
+      element.addEventListener('change', function() {
+          let selectedIndex = this.selectedIndex;
+          if (selectedIndex === 0) {
+              this.style.color = '#9F9F9F';
+          } else {
+              this.style.color = '#000';
+          }
+      });
   } else {
-      this.style.color = '#000';
+      console.warn('Element with ID "inquiry" not found.');
   }
 });
+

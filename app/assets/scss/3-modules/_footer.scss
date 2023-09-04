@@ -141,7 +141,7 @@
 
     }
     a {
-      transform: .3s;
+      transition: .3s;
       &:hover {
         opacity: 1;
         text-decoration: underline;
