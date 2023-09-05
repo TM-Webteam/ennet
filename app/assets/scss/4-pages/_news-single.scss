@@ -24,7 +24,7 @@
 
 .news-single__body {
   width: calc(754/1240 * 100%);
-  @media #{$lg} {
+  @media #{$xl} {
     width: 65%;
   }
   @media #{$sp} {

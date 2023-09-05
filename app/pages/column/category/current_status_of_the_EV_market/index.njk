@@ -1,12 +1,12 @@
 {% extends "layout/default.njk" %}
 
 {# Custom SEO tags, leave blank to apply the default values #}
-{% set title = "お役立ちコラム｜EV Start Biz" %}
-{% set description = "環境対策のトレンドをはじめ、EVの基礎知識やEVシフトのノウハウに関するお役立ち情報をお届けいたします。" %}
+{% set title = "EV市場の現状 - お役立ちコラム｜EV Start Biz" %}
+{% set description = "EV市場の現状や実態に関するお役立ちコラムです。" %}
 {% set keywords = "" %}
 
 {# Page settings and also body class #}
-{% set page = "column" %}
+{% set page = "" %}
 
 {# Custom tags before </head> #}
 {% block customHead %}
@@ -42,7 +42,7 @@
         <div class="img">
           <img src="/assets/img/common/ttl-column.png" alt="introduction">
         </div>
-        <h1 class="ttl">お役立ちコラム</h1>
+        <p class="ttl">お役立ちコラム</p>
         <p class="lead" data-aos="fade-up">
           環境対策のトレンドをはじめ、<br class="sp-only">EVの基礎知識やEVシフトの<br class="pc-only">ノウハウに関する<br class="sp-only">お役立ち情報をお届けいたします。
         </p>
@@ -50,299 +50,237 @@
     </div>
   </div>
 
-  <!-- column-cat -->
-  <div class="column__cat column-cat">
-    <div class="containers--md">
-      <h2 class="column-cat__ttl ttl-secondary" data-aos="fade-up">
-        コラムカテゴリから探す
-      </h2>
-      <ul class="column-cat__list" data-aos="fade-up">
-        <!-- loop start -->
-        <li>
-          <a href="/column/environmental_trend/" class="cat --large --link">環境対策トレンド</a>
-        </li>
-        <li>
-          <a href="/column/category/current_status_of_the_EV_market/" class="cat --large --link">EV市場の現状</a>
-        </li>
-        <li>
-          <a href="/column/category/basic_knowledge_of_EV/" class="cat --large --link">EVの基礎知識</a>
-        </li>
-        <li>
-          <a href="/column/category/ev_charging_point/" class="cat --large --link">EV充電のポイント</a>
-        </li>
-        <li>
-          <a href="/column/category/know-how_for_shifting_to_ev/" class="cat --large --link">社用車EVシフトのノウハウ</a>
-        </li>
-        <!-- loop end -->
-      </ul>
-    </div>
-  </div>
-
-  <!-- column-recommend -->
-  <div class="column__recommend column-recommend">
-    <div class="column-recommend__containers containers--sm">
-      <div data-aos="fade-up">
-        <a href="/column/category/column-single/" class="column-recommend__item" >
-          <div class="column-recommend__img">
-            <img src="/assets/img/top/img-recommend02.jpg" alt="">
-          </div>
-          <div class="column-recommend__body">
-            <div class="column-recommend__meta">
-              <time class="column-recommend__time" datetime="2023-01-01">2023.1.1</time>
-              <ul class="column-recommend__categories">
-                <li class="column-recommend__cat">
-                  <span class="cat --orange">おすすめコラム</span>
-                </li>
-                <li class="column-recommend__cat">
-                  <span class="cat">環境対策トレンド</span>
-                </li>
-                <li class="column-recommend__cat">
-                  <span class="cat">EV市場の現状</span>
-                </li>
-              </ul>
-            </div>
-            <h2 class="column-recommend__ttl">
-              コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。
-            </h2>
-            <p class="column-recommend__text">
-              コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード…
-            </p>
-            <div class="column-recommend__btn">
-              <span class="btn01">続きを読む</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <!-- column-archive -->
-  <div class="column__archive column-archive">
+  <div class="column__archive column-archive --taxonomy">
     <div class="column-archive__containers containers--sm">
       <div class="column-archive__wrapper">
         <div class="column-archive__content">
+          <h1 class="column-archive__ttl" data-aos="fade-up">
+            EV市場の現状
+          </h1>
           <ul class="column-archive__list">
+            <!-- loop start -->
+            <li class="column-archive__item" data-aos="fade-up">
+              <a href="/column/category/column-single/" class="card05">
+                <div class="card05__img">
+                  <img src="/assets/img/common/sample01.jpg" alt="">
+                </div>
+                <div class="card05__body">
+                  <div class="card05__meta">
+                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
+                    <div class="card05__categories">
+                      <span class="cat">環境対策トレンド</span>
+                      <span class="cat">EV市場の現状</span>
+                    </div>
+                  </div>
+                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
+                  <h3 class="card05__text">
+                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li class="column-archive__item" data-aos="fade-up">
+              <a href="/column/category/column-single/" class="card05">
+                <div class="card05__img">
+                  <img src="/assets/img/common/sample01.jpg" alt="">
+                </div>
+                <div class="card05__body">
+                  <div class="card05__meta">
+                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
+                    <div class="card05__categories">
+                      <span class="cat">環境対策トレンド</span>
+                      <span class="cat">EV市場の現状</span>
+                    </div>
+                  </div>
+                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
+                  <h3 class="card05__text">
+                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li class="column-archive__item" data-aos="fade-up">
+              <a href="/column/category/column-single/" class="card05">
+                <div class="card05__img">
+                  <img src="/assets/img/common/sample01.jpg" alt="">
+                </div>
+                <div class="card05__body">
+                  <div class="card05__meta">
+                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
+                    <div class="card05__categories">
+                      <span class="cat">環境対策トレンド</span>
+                      <span class="cat">EV市場の現状</span>
+                    </div>
+                  </div>
+                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
+                  <h3 class="card05__text">
+                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li class="column-archive__item" data-aos="fade-up">
+              <a href="/column/category/column-single/" class="card05">
+                <div class="card05__img">
+                  <img src="/assets/img/common/sample01.jpg" alt="">
+                </div>
+                <div class="card05__body">
+                  <div class="card05__meta">
+                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
+                    <div class="card05__categories">
+                      <span class="cat">環境対策トレンド</span>
+                      <span class="cat">EV市場の現状</span>
+                    </div>
+                  </div>
+                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
+                  <h3 class="card05__text">
+                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li class="column-archive__item" data-aos="fade-up">
+              <a href="/column/category/column-single/" class="card05">
+                <div class="card05__img">
+                  <img src="/assets/img/common/sample01.jpg" alt="">
+                </div>
+                <div class="card05__body">
+                  <div class="card05__meta">
+                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
+                    <div class="card05__categories">
+                      <span class="cat">環境対策トレンド</span>
+                      <span class="cat">EV市場の現状</span>
+                    </div>
+                  </div>
+                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
+                  <h3 class="card05__text">
+                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li class="column-archive__item" data-aos="fade-up">
+              <a href="/column/category/column-single/" class="card05">
+                <div class="card05__img">
+                  <img src="/assets/img/common/sample01.jpg" alt="">
+                </div>
+                <div class="card05__body">
+                  <div class="card05__meta">
+                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
+                    <div class="card05__categories">
+                      <span class="cat">環境対策トレンド</span>
+                      <span class="cat">EV市場の現状</span>
+                    </div>
+                  </div>
+                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
+                  <h3 class="card05__text">
+                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li class="column-archive__item" data-aos="fade-up">
+              <a href="/column/category/column-single/" class="card05">
+                <div class="card05__img">
+                  <img src="/assets/img/common/sample01.jpg" alt="">
+                </div>
+                <div class="card05__body">
+                  <div class="card05__meta">
+                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
+                    <div class="card05__categories">
+                      <span class="cat">環境対策トレンド</span>
+                      <span class="cat">EV市場の現状</span>
+                    </div>
+                  </div>
+                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
+                  <h3 class="card05__text">
+                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li class="column-archive__item" data-aos="fade-up">
+              <a href="/column/category/column-single/" class="card05">
+                <div class="card05__img">
+                  <img src="/assets/img/common/sample01.jpg" alt="">
+                </div>
+                <div class="card05__body">
+                  <div class="card05__meta">
+                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
+                    <div class="card05__categories">
+                      <span class="cat">環境対策トレンド</span>
+                      <span class="cat">EV市場の現状</span>
+                    </div>
+                  </div>
+                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
+                  <h3 class="card05__text">
+                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li class="column-archive__item" data-aos="fade-up">
+              <a href="/column/category/column-single/" class="card05">
+                <div class="card05__img">
+                  <img src="/assets/img/common/sample01.jpg" alt="">
+                </div>
+                <div class="card05__body">
+                  <div class="card05__meta">
+                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
+                    <div class="card05__categories">
+                      <span class="cat">環境対策トレンド</span>
+                      <span class="cat">EV市場の現状</span>
+                    </div>
+                  </div>
+                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
+                  <h3 class="card05__text">
+                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
+                  </h3>
+                </div>
+              </a>
+            </li>
+            <li class="column-archive__item" data-aos="fade-up">
+              <a href="/column/category/column-single/" class="card05">
+                <div class="card05__img">
+                  <img src="/assets/img/common/sample01.jpg" alt="">
+                </div>
+                <div class="card05__body">
+                  <div class="card05__meta">
+                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
+                    <div class="card05__categories">
+                      <span class="cat">環境対策トレンド</span>
+                      <span class="cat">EV市場の現状</span>
+                    </div>
+                  </div>
+                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
+                  <h3 class="card05__text">
+                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
+                  </h3>
+                </div>
+              </a>
+            </li>
 
-            <!-- loop start -->
-            <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
-                <div class="card05__img">
-                  <img src="/assets/img/common/sample01.jpg" alt="">
-                </div>
-                <div class="card05__body">
-                  <div class="card05__meta">
-                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
-                    <div class="card05__categories">
-                      <span class="cat">環境対策トレンド</span>
-                      <span class="cat">EV市場の現状</span>
-                    </div>
-                  </div>
-                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
-                  <p class="card05__text">
-                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
-                <div class="card05__img">
-                  <img src="/assets/img/common/sample01.jpg" alt="">
-                </div>
-                <div class="card05__body">
-                  <div class="card05__meta">
-                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
-                    <div class="card05__categories">
-                      <span class="cat">環境対策トレンド</span>
-                      <span class="cat">EV市場の現状</span>
-                    </div>
-                  </div>
-                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
-                  <p class="card05__text">
-                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
-                <div class="card05__img">
-                  <img src="/assets/img/common/sample01.jpg" alt="">
-                </div>
-                <div class="card05__body">
-                  <div class="card05__meta">
-                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
-                    <div class="card05__categories">
-                      <span class="cat">環境対策トレンド</span>
-                      <span class="cat">EV市場の現状</span>
-                    </div>
-                  </div>
-                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
-                  <p class="card05__text">
-                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
-                <div class="card05__img">
-                  <img src="/assets/img/common/sample01.jpg" alt="">
-                </div>
-                <div class="card05__body">
-                  <div class="card05__meta">
-                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
-                    <div class="card05__categories">
-                      <span class="cat">環境対策トレンド</span>
-                      <span class="cat">EV市場の現状</span>
-                    </div>
-                  </div>
-                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
-                  <p class="card05__text">
-                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
-                <div class="card05__img">
-                  <img src="/assets/img/common/sample01.jpg" alt="">
-                </div>
-                <div class="card05__body">
-                  <div class="card05__meta">
-                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
-                    <div class="card05__categories">
-                      <span class="cat">環境対策トレンド</span>
-                      <span class="cat">EV市場の現状</span>
-                    </div>
-                  </div>
-                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
-                  <p class="card05__text">
-                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
-                <div class="card05__img">
-                  <img src="/assets/img/common/sample01.jpg" alt="">
-                </div>
-                <div class="card05__body">
-                  <div class="card05__meta">
-                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
-                    <div class="card05__categories">
-                      <span class="cat">環境対策トレンド</span>
-                      <span class="cat">EV市場の現状</span>
-                    </div>
-                  </div>
-                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
-                  <p class="card05__text">
-                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
-                <div class="card05__img">
-                  <img src="/assets/img/common/sample01.jpg" alt="">
-                </div>
-                <div class="card05__body">
-                  <div class="card05__meta">
-                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
-                    <div class="card05__categories">
-                      <span class="cat">環境対策トレンド</span>
-                      <span class="cat">EV市場の現状</span>
-                    </div>
-                  </div>
-                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
-                  <p class="card05__text">
-                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
-                <div class="card05__img">
-                  <img src="/assets/img/common/sample01.jpg" alt="">
-                </div>
-                <div class="card05__body">
-                  <div class="card05__meta">
-                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
-                    <div class="card05__categories">
-                      <span class="cat">環境対策トレンド</span>
-                      <span class="cat">EV市場の現状</span>
-                    </div>
-                  </div>
-                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
-                  <p class="card05__text">
-                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
-                <div class="card05__img">
-                  <img src="/assets/img/common/sample01.jpg" alt="">
-                </div>
-                <div class="card05__body">
-                  <div class="card05__meta">
-                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
-                    <div class="card05__categories">
-                      <span class="cat">環境対策トレンド</span>
-                      <span class="cat">EV市場の現状</span>
-                    </div>
-                  </div>
-                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
-                  <p class="card05__text">
-                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="column-archive__item" data-aos="fade-up">
-              <a href="#" class="card05">
-                <div class="card05__img">
-                  <img src="/assets/img/common/sample01.jpg" alt="">
-                </div>
-                <div class="card05__body">
-                  <div class="card05__meta">
-                    <time class="card05__time" datetime="2023-01-01">2023.1.1</time>
-                    <div class="card05__categories">
-                      <span class="cat">環境対策トレンド</span>
-                      <span class="cat">EV市場の現状</span>
-                    </div>
-                  </div>
-                  <h2 class="card05__ttl">コラムタイトルが入ります。コラムタイトルが入ります。コラムタイトルが入ります。</h2>
-                  <p class="card05__text">
-                    コラムリード文が入ります。コラムリード文が入ります。コラムリード文が入ります。コラムリード文が…
-                  </p>
-                </div>
-              </a>
-            </li>
-            <!-- loop start -->
+
+            <!-- loop end -->
           </ul>
 
           <!-- pagination -->
           <div class="column-archive__pagination pagination" data-aos="fade-up">
             <div class="nav-links">
-              <!-- <a class="prev page-numbers" href="#"><span></span></a> -->
-              <a class="page-numbers" href="#">1</a>
-              <span class="page-numbers current">2</span>
+              <a class="prev page-numbers" href="#"><span></span></a>
               <a class="page-numbers" href="#">3</a>
-              <a class="page-numbers" href="#">4</a>
+              <span class="page-numbers current">4</span>
               <a class="page-numbers" href="#">5</a>
+              <a class="page-numbers" href="#">6</a>
+              <a class="page-numbers" href="#">7</a>
               <a class="next page-numbers" href="#"><span></span></a>
             </div>
           </div>
         </div>
 
-        <!-- sideber -->
-        <aside class="column-archive__sidebar sidebar">
+        <!-- sidebar -->
+        <aside class="column-archive__sidebar sidebar --taxonomy">
           <div class="sidebar01__search" data-aos="fade-up">
             <form role="search" method="get" action="" class="search-form">
               <input type="text" size="25" class="search-form__text" placeholder="キーワードから検索する">
@@ -355,30 +293,29 @@
                   カテゴリで探す
                 </p>
                 <ul class="sidebar__category-list" data-aos="fade-up">
-                  <!-- loop start -->
                   <li class="sidebar__category-cat">
-                    <a href="/column/environmental_trend/" class="cat --large --link">環境対策トレンド</a>
+                    <a href="#" class="cat --large --link">環境対策トレンド</a>
                   </li>
                   <li class="sidebar01__category-cat">
-                    <a href="/column/current_status_of_the_EV_market/" class="cat --large --link">EV市場の現状</a>
+                    <a href="#" class="cat --large --link">EV市場の現状</a>
                   </li>
                   <li class="sidebar01__category-cat">
-                    <a href="/column/basic_knowledge_of_EV/" class="cat --large --link">EVの基礎知識</a>
+                    <a href="#" class="cat --large --link">EVの基礎知識</a>
                   </li>
                   <li class="sidebar01__category-cat">
-                    <a href="/column/ev_charging_point/" class="cat --large --link">EV充電のポイント</a>
+                    <a href="#" class="cat --large --link">EV充電のポイント</a>
                   </li>
                   <li class="sidebar01__category-cat">
-                    <a href="/column/know-how_for_shifting_to_ev/" class="cat --large --link">社用車EVシフトのノウハウ</a>
+                    <a href="#" class="cat --large --link">社用車EVシフトのノウハウ</a>
                   </li>
-                  <!-- loop start -->
                 </ul>
               </div>
 
+              <!-- 人気コラム -->
               <div class="sidebar__popular" data-aos="fade-up">
-                <h2 class="sidebar__popular-ttl">
+                <p class="sidebar__popular-ttl">
                   <img src="/assets/img/common/text-popular.svg" alt="人気コラムTOP5">
-                </h2>
+                </p>
                 <ul class="sidebar__popular-list">
                   <!-- loop start -->
                   <li class="sidebar__popular-item">
@@ -431,7 +368,7 @@
                       </p>
                     </a>
                   </li>
-                  <!-- loop start -->
+                  <!-- loop end -->
                 </ul>
               </div>
 
@@ -453,12 +390,13 @@
 
               <div class="sidebar__btn02-area" data-aos="fade-up">
                 <div class="fukidashi --lightblue">
-                  \ EV(電気自動車)の導入までの<span>流れなどをご紹介 /</span>
+                  \ EV(電気自動車)の導入までの流れなどをご紹介 /
                 </div>
                 <div class="sidebar__btn02">
                   <a href="" class="btn01 --blue-line">おすすめのコンテンツを見る</a>
                 </div>
               </div>
+
             </div>
           </div>
         </aside>

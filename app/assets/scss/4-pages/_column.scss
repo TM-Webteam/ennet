@@ -51,7 +51,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: myrem(10);
-  max-width: myrem(550);
+  max-width: myrem(750);
   margin-inline: auto;
   justify-content: center;
 }
@@ -71,15 +71,32 @@
   margin-inline: auto;
   background-color: $base-color;
   border-radius: myrem(10);
-  box-shadow: $shadow;
+  box-shadow:
+    7px 4px 10px #d9d9d9,
+    -7px -7px 14px #ffffff;
   display: flex;
   justify-content: space-between;
   padding: myrem(32) myrem(32) myrem(33);
+  transition: all .3s;
+
   @media #{$sp} {
     flex-direction: column;
     padding: myrem(20) myrem(20) myrem(26);
     max-width: myrem(600);
     margin-inline: auto;
+  }
+
+  &:hover {
+    box-shadow: 11px 10px 15px #b2b2b2,
+      -11px -11px 21px #fff;
+
+      .btn01 {
+        box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              5px 5px 12px rgba(0, 0, 0, .2);
+      }
+
   }
 }
 
