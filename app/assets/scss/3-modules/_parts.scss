@@ -1034,7 +1034,6 @@ ruby {
 #カード4（お役立ち資料）
 ===================================*/
 .card04 {
-  // background-color: pink;
   background-color: $base-color;
   border-radius: myrem(10);
   box-shadow: $shadow--sm;
@@ -1084,6 +1083,7 @@ ruby {
   border-radius: myrem(10);
   min-height: myrem(168);
   transition: .3s;
+  height: 100%;
 
   @media #{$sp} {
     flex-direction: column;

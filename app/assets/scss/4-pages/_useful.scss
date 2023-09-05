@@ -59,3 +59,11 @@
   }
 }
 
+.useful-list__item-link {
+  height: 100%;
+  transition: .3s;
+  &:hover {
+    box-shadow: $shadow-hover;
+  }
+}
+

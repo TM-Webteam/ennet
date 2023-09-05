@@ -195,7 +195,7 @@
 # col2
 ===================================*/
 .sidebar.--col2 {
-  @media #{$lg} {
+  @media #{$xl} {
     margin-right: 0;
     padding-right: 0;
     max-width: myrem(350);
@@ -216,29 +216,35 @@
   .sidebar__body {
     display: flex;
     justify-content: space-between;
-    @media #{$lg} {
+    @media #{$xl} {
       display: block;
     }
   }
 
   .sidebar__content {
-    @media #{$lg} {
+    @media #{$xl} {
       position: static;
     }
 
   }
 
   .sidebar__wrapper01 {
-    width: calc(318/515 * 100%);
-    @media #{$lg} {
+    // width: calc(318/515 * 100%);
+    // width: 54%;
+    width: 57%;
+    @media #{$xl} {
       width: 100%;
     }
+
+
   }
 
   .sidebar__wrapper02 {
-    width: calc(152/515 * 100%);
+    // width: calc(152/515 * 100%);
+    // width: 43%;
+    width: 39%;
 
-    @media #{$lg} {
+    @media #{$xl} {
       width: 100%;
       max-width: myrem(280);
       margin-inline: auto;
@@ -250,7 +256,7 @@
   }
 
   .sidebar01__search {
-    @media #{$lg} {
+    @media #{$xl} {
       margin-inline: auto;
     }
   }
@@ -259,7 +265,7 @@
     margin-top: 0;
     margin-top: myrem(7);
     margin-top: myrem(14);
-    @media #{$lg} {
+    @media #{$xl} {
       margin-top: myrem(40);
     }
     @media #{$sp} {
@@ -268,21 +274,20 @@
 
     .btn02{
       &.--large {
-        font-size: myrem(16);
-        max-width: myrem(152);
+        font-size: myrem(22);
+        max-width: myrem(300);
         min-width: initial;
         padding: myrem(12) myrem(5);
+        line-height: 1.4;
         border-radius: myrem(95);
-        @media #{$lg} {
+        padding: myrem(25) myrem(5) myrem(20);
+        @media #{$xl} {
           max-width: initial;
           min-width: myrem(200);
           font-size: myrem(22);
         }
         .small {
-          font-size: myrem(10);
-          @media #{$lg} {
-            font-size: myrem(16);
-          }
+          font-size: myrem(14);
         }
         .dot {
           display: none;
@@ -296,7 +301,7 @@
 
   .sidebar__document {
     margin-top: myrem(18);
-    padding: myrem(24) myrem(8);
+    padding: myrem(24) myrem(5);
     @media #{$sp} {
       margin-top: myrem(60);
     }
@@ -309,11 +314,10 @@
 
   .sidebar__document-btn {
     .btn01 {
-      font-size: myrem(11);
+      font-size: myrem(14);
       padding: myrem(10);
       min-width: myrem(136);
-      @media #{$lg} {
-        font-size: myrem(13);
+      @media #{$xl} {
         min-width: myrem(182);
       }
 
@@ -326,19 +330,16 @@
       margin-top: myrem(60);
     }
     .fukidashi {
-      font-size: myrem(11);
+      font-size: myrem(14);
       line-height: calc(17/11);
       padding: myrem(13) myrem(8);
       width: 100%;
-      @media #{$lg} {
-        font-size: myrem(12);
-      }
     }
   }
 
   .sidebar__btn02 {
     .btn01.--blue-line {
-      font-size: myrem(11);
+      font-size: myrem(14);
       line-height: calc(15/11);
       padding: myrem(8);
       min-width: initial;

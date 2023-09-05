@@ -24,7 +24,7 @@
 
 .column-single__body {
   width: calc(754/1240 * 100%);
-  @media #{$lg} {
+  @media #{$xl} {
     width: 65%;
   }
   @media #{$sp} {
@@ -466,7 +466,6 @@
   font-size: myrem(20);
   font-weight: 700;
   letter-spacing: 0.04em;
-  text-align: center;
   span {
     display: inline-block;
   }
@@ -512,10 +511,10 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2; /* 制限したい行数が3の場合 */
   overflow: hidden;
-  margin-top: myrem(20);
+  padding-top: myrem(20);
   @media #{$sp} {
     font-size: myrem(14);
-    margin-top: 0;
+    padding-top: 0;
   }
 }
 
