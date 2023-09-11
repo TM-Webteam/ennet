@@ -188,20 +188,11 @@ $(window).on('load', function() {
 //--------------------------------------
 // タブ切り替え
 //--------------------------------------
-// タブメニュー
-// $(function () {
-//   if ($('.js-tab-menu').length) {
-//     $(".js-tab").on("click", function () {
-//       $(".current").removeClass("current");
-//       $(this).addClass("current");
-//     });
-//   }
-// });
 $(function () {
   if ($('.js-tab-menu').length) { // もし .js-tab-menu クラスがある場合は
     $(".js-tab").on("click", function () {
-      $(".current").removeClass("current");
-      $(this).addClass("current");
+      $(".active").removeClass("active");
+      $(this).addClass("active");
     });
   }
 });
@@ -237,23 +228,8 @@ $(window).on('load resize', function(){
 //--------------------------------------
 // カウントアップ
 //--------------------------------------
-// $(function () {
-//   $(".js-count").on('inview',   function() {
-//     if ($(".js-num", this).attr("data-num").indexOf(".") > -1) {
-//       var rounding = 1;
-//     } else {
-//       var rounding = 0;
-//     }
-//     $(".js-num", this).numerator({
-//       easing: "linear", // カウントアップの動き
-//       duration: 1000, // カウントアップの時間
-//       toValue: $(".js-num", this).attr("data-num"), // カウントアップする数値
-//       rounding: rounding, // 小数点以下の桁数（初期値：0）
-//     });
-//     });
-// });
 $(function () {
-  if ($('.js-count').length > 0) { // もし .js-count クラスがある場合は
+  if ($('.js-count').length > 0) {
     $(".js-count").on('inview', function() {
       if ($(".js-num", this).attr("data-num").indexOf(".") > -1) {
         var rounding = 1;
@@ -269,8 +245,6 @@ $(function () {
     });
   }
 });
-
-
 
 //--------------------------------------
 // スクロールイベント

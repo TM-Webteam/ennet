@@ -168,6 +168,33 @@
     }
   }
 
+  &.--large2 {
+    color: $lightgreen2;
+    font-size: myrem(20);
+    font-weight: 700;
+    padding: myrem(12) myrem(10);
+    text-align: center;
+    min-width: myrem(382);
+    min-height: myrem(64);
+    border-radius: myrem(50);
+    @media #{$sp} {
+      padding: myrem(6) myrem(20);
+      min-width: myrem(208);
+      min-height: myrem(36);
+      font-size: myrem(13);
+    }
+
+    &:hover,
+    &:focus {
+    opacity: 1;
+    outline: none;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .8),
+              -6px -6px 5px rgba(255, 255, 255, 1),
+              4px 4px 6px rgba(0, 0, 0, .3),
+              10px 10px 12px rgba(0, 0, 0, .15);
+    }
+  }
+
   &.--bold {
     font-size: myrem(20);
     min-width: myrem(384);
@@ -279,7 +306,7 @@
 
   &.--yellow {
     background-color: $yellow;
-    &:hover {
+    &:hover,&:focus {
       background-color: $base-color;
       color: $yellow;
     }
