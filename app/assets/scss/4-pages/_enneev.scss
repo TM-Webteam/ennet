@@ -590,8 +590,8 @@
 .solution-sec04__page-link {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: myrem(35);
-  max-width: myrem(1054);
+  gap: myrem(28);
+  max-width: myrem(1080);
   margin-inline: auto;
   margin-top: myrem(46);
   @media #{$sp} {
@@ -1314,10 +1314,16 @@
   }
   .period {
     left: 50%;
+    min-width: myrem(110);
     padding: myrem(8) myrem(20);
     background: transparent linear-gradient(109deg, #70CEEE 0%, #6DBEB4 29%, #69AC74 68%, #DBBA2E 100%) 0% 0% no-repeat padding-box;
     @media #{$sp} {
       padding: myrem(8) myrem(9);
+      min-width: myrem(68);
+      min-height: myrem(73);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
