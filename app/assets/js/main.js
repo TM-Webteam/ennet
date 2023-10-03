@@ -175,12 +175,12 @@ $(window).on('load', function() {
   // AOS
   //---------------------------------
   AOS.init({
-    offset: 120,　//初期値
-    delay: 0,　//初期値
+    offset: 120,//初期値
+    delay: 0,//初期値
     anchor: 'top-bottom', //初期値
-    duration: 800,　//初期値　400
-    easing: 'ease',　//初期値
-    once: true,　//初期値　false
+    duration: 800,//初期値　400
+    easing: 'ease',//初期値
+    once: true,//初期値　false
   });
 });
 
@@ -196,7 +196,6 @@ $(function () {
     });
   }
 });
-
 
 
 //--------------------------------------
