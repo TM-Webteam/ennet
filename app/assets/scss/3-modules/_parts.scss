@@ -603,6 +603,9 @@ ruby {
     font-size: myrem(16);
     min-width: myrem(142);
     padding: myrem(2) myrem(35);
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
 
     @media #{$sp} {
       padding: myrem(2) myrem(14);
