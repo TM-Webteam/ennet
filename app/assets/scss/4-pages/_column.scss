@@ -141,6 +141,7 @@
   column-gap: myrem(8);
   row-gap: myrem(6);
   margin-left: myrem(10);
+  flex-wrap: wrap;
   @media #{$sp} {
     margin-left: 0;
     flex-wrap: wrap;
@@ -262,6 +263,7 @@
 
 .column-archive__sidebar {
   width: calc(318/1004 * 100%);
+  // width: 27.67331%;
   @media #{$sp} {
     width: 100%;
     margin-top: myrem(90);

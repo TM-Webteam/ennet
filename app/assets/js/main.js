@@ -340,3 +340,25 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+
+//--------------------------------------
+// header navi  current
+//--------------------------------------
+
+// jQuery(document).ready(function($) {
+//   // 現在のURLパスを取得し、末尾のスラッシュを削除
+//   var path = window.location.pathname.replace(/\/$/, '');
+
+//   // 各ナビゲーションアイテムのhref属性を現在のURLパスと比較
+//   $('.header__nav-item a').each(function() {
+//       var href = $(this).attr('href');
+
+//       if (path === href || (path === '/' && href === theme_vars.home_url)) {
+//           // 一致する場合、"active"クラスを追加
+//           $(this).parent().addClass('active');
+//       } else {
+//           // それ以外の場合、"active"クラスを削除
+//           $(this).parent().removeClass('active');
+//       }
+//   });
+// });

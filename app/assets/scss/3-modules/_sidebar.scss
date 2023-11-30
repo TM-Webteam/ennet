@@ -140,7 +140,8 @@
 }
 
 .sidebar__document-img {
-  width: myrem(109);
+  // width: myrem(109);
+  width: 13.8125rem;
   margin-inline: auto;
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .1));
 
@@ -309,7 +310,8 @@
   }
 
   .sidebar__document-img {
-    width: myrem(109);
+    // width: myrem(109);
+    width: 13.8125rem;
   }
 
   .sidebar__document-btn {
@@ -395,5 +397,17 @@
   }
 }
 
+.sidebar01__search {
+  margin-bottom: myrem(40);
+}
+
+.sidesize {
+  .column-archive__sidebar {
+    width: 25.67331%;
+    @media #{$sp} {
+      width: 100%;
+    }
+  }
+}
 
 

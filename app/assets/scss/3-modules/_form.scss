@@ -452,17 +452,24 @@
   position: relative;
   max-width: myrem(456);
 
-  &::before {
-    content: "";
-    display: inline-block;
-    width: myrem(19);
-    height: myrem(19);
-    background: url(../img/common/icon-search-green.svg) no-repeat center center /contain;
+  // &::before {
+  //   content: "";
+  //   display: inline-block;
+  //   width: myrem(19);
+  //   height: myrem(19);
+  //   background: url(../img/common/icon-search-green.svg) no-repeat center center /contain;
+  //   position: absolute;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   right: myrem(16);
+  //   z-index: 2;
+  // }
+  &--btn {
+    width: 19px;
+    height: 19px;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: myrem(16);
-    z-index: 2;
+    top: 5px;
+    right: 15px;
   }
 
   input {

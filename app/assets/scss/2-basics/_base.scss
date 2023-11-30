@@ -339,6 +339,15 @@ main {
   }
 }
 
+.sticky {
+  position: sticky;
+  width: 100%;
+  top: 100px;
+  @media #{$sp} {
+    position: static;
+  }
+}
+
 
 
 

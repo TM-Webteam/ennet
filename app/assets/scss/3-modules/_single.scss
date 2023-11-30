@@ -60,6 +60,15 @@
       font-size: myrem(15);
       margin-top: myrem(32);
     }
+    a {
+      color: #5a9264;
+      transition: all .3s;
+      text-decoration: underline;
+      &:hover {
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
   }
 
   p + p {
@@ -71,6 +80,10 @@
     margin-bottom: myrem(40);
     img {
       width: 100%;
+    }
+    &.cardLink__img {
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 }
