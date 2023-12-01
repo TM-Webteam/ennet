@@ -36,109 +36,6 @@
   } 
 }
 
-// ボタン
-.btn01 {
-	display: block;
-  max-width: 560px;
-	color: #fff;
-	font-size: 20px;
-	font-weight: bold;
-	text-align: center;
-	padding: 17px;
-	background: #0D5BAB;
-  box-shadow: 0 7px 20px rgba(0,0,0,0.22);
-	position: relative;
-  border-radius: 50px;
-  margin: 0 auto;
-  border: 3px solid #0D5BAB;
-	@media #{$sp} {
-		font-size: 14px;
-    padding: 13px;
-    max-width: 85%;
-    border: 2px solid #0D5BAB;
-	}
-  &:before {
-		content: "";
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		margin: auto;
-		right: 30px;
-    width: 8px;
-    height: 8px;
-    border-top: solid 3px #fff;
-    border-right: solid 3px #fff;
-    transform: rotate(45deg);
-    transition: all .3s;
-    @media #{$sp} {
-      right: 20px;
-    }
-	}
-  &:hover {
-    opacity: 1;
-    background: #fff;
-    color: #0D5BAB;
-    &::before {
-      border-top: solid 3px #0D5BAB;
-      border-right: solid 3px #0D5BAB;
-    }
-  }
-  // サムネ付きボタン
-  &.thumb {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -50px;
-      margin: auto;
-      width: 126px;
-      height: 88px;
-      background: url("../img/common/img-thumb01.png") 50% / contain no-repeat;
-      transition: all .3s;
-      @media #{$sp} {
-        left: -30px;
-        width: 90px;
-        height: 55px;
-      }
-    }
-    &:hover {
-      &::after {
-        width: 136px;
-        height: 98px;
-      }
-    }
-  }
-  // 小さいボタン
-  &.small {
-    max-width: 330px;
-    padding: 10px;
-    &:before {
-      width: 6px;
-      height: 6px;
-      border-top: solid 2px #fff;
-      border-right: solid 2px #fff;
-    }
-    &:hover {
-      &::before {
-        border-top: solid 2px #F7A307;
-        border-right: solid 2px #F7A307;
-      }
-    }
-  }
-  // 最小ボタン
-  &.tiny {
-    font-size: 13px;
-    width: 140px;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.16);
-    &:before {
-      content: none;
-    }
-  }
-}
-
 // 吹き出し付きボタン
 .ctabtn {
   position: relative;
@@ -211,4 +108,230 @@
       color: #fff;
     }
   }
+}
+
+// =========================================================================================*/
+// #追加CSS
+// =========================================================================================*/
+.btn01 {
+  display: inline-block;
+  color: $lightgreen;
+  text-align: center;
+  border-radius: myrem(50);
+  background-color: $base-color;
+  padding: myrem(8) myrem(40);
+  min-width: myrem(242);
+  min-height: myrem(36);
+  font-size: myrem(13);
+  font-weight: 700;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+  transition: all .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    outline: none;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .8),
+              -4px -4px 6px rgba(255, 255, 255, 1),
+              3px 3px 6px rgba(0, 0, 0, .3),
+              8px 8px 12px rgba(0, 0, 0, .15);
+  }
+
+  &.--large {
+    color: $lightgreen2;
+    font-size: myrem(20);
+    font-weight: 700;
+    padding: myrem(12) myrem(10);
+    text-align: center;
+    min-width: myrem(382);
+    min-height: myrem(64);
+    border-radius: myrem(50);
+    border: 2px solid $lightgreen2;
+    @media #{$sp} {
+      padding: myrem(6) myrem(20);
+      min-width: myrem(208);
+      min-height: myrem(36);
+      font-size: myrem(13);
+    }
+
+    &:hover,
+    &:focus {
+    opacity: 1;
+    outline: none;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .8),
+              -6px -6px 5px rgba(255, 255, 255, 1),
+              4px 4px 6px rgba(0, 0, 0, .3),
+              10px 10px 12px rgba(0, 0, 0, .15);
+    }
+  }
+
+  &.--large2 {
+    color: $lightgreen2;
+    font-size: myrem(20);
+    font-weight: 700;
+    padding: myrem(12) myrem(10);
+    text-align: center;
+    min-width: myrem(382);
+    min-height: myrem(64);
+    border-radius: myrem(50);
+    @media #{$sp} {
+      padding: myrem(6) myrem(20);
+      min-width: myrem(208);
+      min-height: myrem(36);
+      font-size: myrem(13);
+    }
+
+    &:hover,
+    &:focus {
+    opacity: 1;
+    outline: none;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .8),
+              -6px -6px 5px rgba(255, 255, 255, 1),
+              4px 4px 6px rgba(0, 0, 0, .3),
+              10px 10px 12px rgba(0, 0, 0, .15);
+    }
+  }
+
+  &.--bold {
+    font-size: myrem(20);
+    min-width: myrem(384);
+    padding: myrem(25);
+    @media #{$sp} {
+      font-size: myrem(18);
+      padding: myrem(16) myrem(16);
+      min-width: myrem(300);
+    }
+  }
+
+  &.--yellow {
+    color: $white;
+    background-color: $yellow;
+  }
+
+  &.--border {
+    padding: myrem(4) myrem(40);
+    border: 2px solid $lightgreen2;
+  }
+
+  &.--yellow-b {
+    color: $yellow;
+    border: 2px solid $yellow;
+  }
+
+  &.--small {
+    min-width: myrem(208);
+    padding: myrem(5) myrem(10);
+  }
+
+  &.--blue-line {
+    border: 2px solid $lightblue;
+    background-color: $white;
+    color: $lightblue;
+  }
+}
+
+.btn02 {
+  font-size: myrem(20);
+  color: $white;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background-color: $darkgreen;
+  padding: myrem(16) myrem(30);
+  min-width: myrem(381);
+  text-align: center;
+  border-radius: myrem(50);
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+  transition: .3s;
+  @media #{$sp} {
+    min-width: myrem(326);
+    padding: myrem(18) myrem(30);
+  }
+  &:hover,&:focus {
+    opacity: 1;
+    outline: none;
+    background-color: $base-color;
+    color: $darkgreen;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .1),
+              1px 1px 4px rgba(0, 0, 0, .4),
+              inset 3px 3px 10px #e6e6e6,
+            inset -3px -3px 10px #ffffff;
+  }
+
+  &.--small {
+    font-size: myrem(15);
+    min-width: myrem(292);
+    padding: myrem(12) myrem(30);
+  }
+
+  &.--white {
+    color: #DBBA2E;
+    background-color: #F7F7F7;
+    outline: 2px solid #DBBA2E;
+    outline-offset: -2px;
+
+    &:hover,&:focus {
+      color: #F7F7F7;
+      background-color: #DBBA2E;
+      box-shadow: inset 4px 4px 8px rgba(0, 0, 0, .16),
+            inset -4px -4px 8px rgba(255, 255, 255, .16);
+
+    }
+  }
+
+  &.--blue {
+    color: $white;
+    background-color: $lightblue;
+    outline: 2px solid $white;
+    outline-offset: -2px;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, .1),
+    -4px -4px 4px rgba(255, 255, 255, .15);
+
+    &:hover,&:focus {
+      background-color: $white;
+      color: $lightblue;
+      box-shadow: inset 4px 4px 8px rgba(0, 0, 0, .16),
+            inset -4px -4px 8px rgba(255, 255, 255, .16),
+            6px 6px 8px rgba(0, 0, 0, .1),
+            -4px -4px 4px rgba(255, 255, 255, .15);
+    }
+  }
+
+  &.--yellow {
+    background-color: $yellow;
+    &:hover,&:focus {
+      background-color: $base-color;
+      color: $yellow;
+    }
+  }
+
+  &.--sp-small {
+    @media #{$sp} {
+      font-size: myrem(14);
+      min-width: myrem(277);
+      padding: myrem(14) myrem(30);
+    }
+  }
+
+  &.--large {
+    width: 100%;
+    min-width: myrem(318);
+    padding: myrem(15) myrem(50) myrem(18);
+    font-size: myrem(22);
+    border-radius: myrem(100);
+    span {
+      font-size: myrem(16);
+      font-weight: 400;
+      line-height: calc(40/16);
+      letter-spacing: 0.04em;
+    }
+  }
+
 }

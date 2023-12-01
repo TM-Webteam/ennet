@@ -1,0 +1,100 @@
+
+/*
+  ----------------
+  sng-useful
+  ----------------
+*/
+
+.sng-useful {
+  #toc_container .toc_list {
+    padding: myrem(22);
+    @media #{$sp} {
+      padding: myrem(20) myrem(12);
+    }
+  }
+  
+  #toc_container .toc_title {
+    color: $white;
+    font-size: myrem(18);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-align: center;
+    background-color: $lightgreen2;
+    border-radius: myrem(6);
+    padding: myrem(8)
+  }
+  
+  
+  #toc_container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #toc_container ul li {
+    color: $darkgreen;
+    font-size: myrem(16);
+    font-weight: 700;
+    line-height: calc(32/16);
+    letter-spacing: 0.04em;
+  }
+  
+  #toc_container > ul > li {
+    counter-increment: toc;
+    margin-bottom: myrem(7);
+    margin-top: 0;
+    &::before {
+      content: "●";
+    }
+  }
+  
+  #toc_container > ul > li:last-child {
+    margin-bottom: 0;
+  }
+  
+  #toc_container > ul > li > a {
+    display: flex;
+    transition: .3s;
+    &:hover {
+      opacity: 0.7;
+    }
+    // &::before {
+    //   content: "●";
+    // }
+  }
+  
+  #toc_container > ul > li > ul {
+    margin-top: myrem(6);
+    padding-left: myrem(10);
+  }
+  
+  #toc_container > ul > li > ul > li {
+    margin-bottom: 2px;
+    margin-top: 0;
+    font-size: myrem(16);
+    font-weight: 400;
+    line-height: calc(32/16);
+    letter-spacing: 0.04em;
+    display: flex;
+    transition: .3s;
+    &::before {
+      content: "・";
+    }
+  }
+  
+  #toc_container > ul > li > ul > li:last-child {
+    margin-bottom: 0;
+  }
+  
+  #toc_container > ul > li > ul > li {
+    font-size: myrem(16);
+    font-weight: 400;
+    line-height: calc(32/16);
+    letter-spacing: 0.04em;
+    display: flex;
+    transition: .3s;
+    &::before {
+      content: "・";
+    }
+  }
+}

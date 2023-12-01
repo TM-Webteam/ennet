@@ -3,48 +3,6 @@
   各　見出し
   ----------------
 */
-.ttl-primary {
-	font-size: 40px;
-	font-weight: 700;
-	line-height: 1.5;
-  text-align: center;
-	margin-bottom: 40px;
-	@media #{$sp} {
-		font-size: 24px;
-		margin-bottom: 20px;
-	}
-  &.cW {
-    color: #fff;
-  }
-}
-
-.ttl-secondary {
-	font-size: 36px;
-	font-weight: 700;
-	line-height: 1.5;
-	text-align: center;
-	margin-bottom: 40px;
-	@media #{$sp} {
-		font-size: 20px;
-		margin-bottom: 20px;
-	}
-  &.cW {
-    color: #fff;
-  }
-}
-
-.ttl-tertiary {
-	font-size: 20px;
-	font-weight: 700;
-	margin-bottom: 30px;
-	@media #{$sp} {
-		font-size: 16px;
-		margin-bottom: 15px;
-	}
-  &.cW {
-    color: #fff;
-  }
-}
 
 .ttl-quaternary {
 	
@@ -52,6 +10,16 @@
 
 .ttl-quinary {
 	
+}
+
+.text {
+	font-size: myrem(16);
+	font-weight: 500;
+	line-height: calc(32/16);
+	letter-spacing: 0.04em;
+	@media #{$sp} {
+		line-height: calc(28/16);
+	}
 }
 
 .lead {
@@ -69,5 +37,249 @@
 }
 
 .note {
-	font-size: 12px;
+	color: #898989;
+	font-size: myrem(13);
+	line-height: calc(24/13);
+	letter-spacing: 0.04em;
 }
+
+// =========================================================================================*/
+// #追加CSS
+// =========================================================================================*/
+
+/*==================================
+#セクションタイトル
+===================================*/
+.ttl-primary {
+	.img {
+		height: myrem(86);
+		@media #{$sp} {
+			height: myrem(40);
+			text-align: center;
+		}
+
+		img {
+			height: 100%;
+			width: auto;
+			object-fit: contain;
+		}
+	}
+
+	.ttl {
+		font-size: myrem(15);
+		font-weight: 500;
+		margin-top: myrem(23);
+		letter-spacing: 0.04em;
+		@media #{$sp} {
+			margin-top: myrem(25);
+			line-height: calc(21/15);
+			text-align: center;
+		}
+	}
+
+	.lead {
+		font-size: myrem(22);
+		font-weight: 300;
+		line-height: calc(36/22);
+		letter-spacing: 0.06em;
+		margin-top: myrem(35);
+		margin-bottom: 0;
+		span {
+			display: inline-block;
+		}
+		@media #{$sp} {
+			font-size: myrem(18);
+			margin-top: myrem(24);
+		}
+	}
+
+	&.--center {
+		.img {
+			text-align: center;
+		}
+
+		.ttl {
+			text-align: center;
+		}
+	}
+
+	&.--white {
+		.ttl {
+			color: $white;
+		}
+	}
+
+	&.--document {
+		.img {
+			height: myrem(89);
+			@media #{$sp} {
+				height: myrem(40);
+			}
+		}
+	}
+}
+
+.ttl-primary--img {
+	height: myrem(86);
+	@media #{$sp} {
+		height: myrem(40);
+	}
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+}
+
+.ttl-secondary {
+	color: $darkgreen;
+	font-size: myrem(24);
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	@media #{$sp} {
+		font-size: myrem(19);
+	}
+
+	span {
+		display: inline-block;
+	}
+
+	&.--white {
+		color: $white;
+	}
+
+	&.--large {
+		font-size: myrem(20);
+		line-height: calc(26/20);
+	}
+}
+
+/*==================================
+#ふきだし
+===================================*/
+.fukidashi {
+	display: inline-block;
+	color: $white;
+	font-size: myrem(12);
+	font-weight: 500;
+	line-height: calc(26/12);
+	letter-spacing: 0.04em;
+	background-color: $darkgreen;
+	padding: myrem(2) myrem(10);
+	position: relative;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		width: myrem(7);
+		height: myrem(7);
+		background-color: $darkgreen;
+		clip-path: polygon(0 0, 48% 100%, 100% 0);
+		position: absolute;
+		top: calc(100% - 1px);
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&.--large {
+		font-size: myrem(16);
+		font-weight: 700;
+		&::before {
+			width: myrem(15);
+		height: myrem(7);
+		}
+	}
+
+	&.--blue {
+		background-color: #0EA3D6;
+		&::before {
+			background-color: #0EA3D6;
+		}
+	}
+
+	&.--lightblue {
+		background-color: $lightblue;
+		&::before {
+			background-color: $lightblue;
+		}
+	}
+}
+
+
+/*==================================
+#グラデーションの下線
+===================================*/
+.grade-line {
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+	&::after {
+		content: "";
+		display: inline-block;
+		height: myrem(8);
+		width: 100%;
+		background: transparent linear-gradient(91deg, #70CEEE 0%, #69AC74 34%, #69AC74 79%, #DBBA2E 100%) 0% 0% no-repeat padding-box;
+		position: absolute;
+		left: 0;
+		bottom: 1.5px;
+		z-index: -1;
+		transform: skewX(-50deg);
+		overflow: hidden;
+	}
+}
+
+/*==================================
+#下層ページの、背景がある見出し
+===================================*/
+.page-head {
+	padding-top: myrem(119);
+	position: relative;
+	@media #{$sp} {
+		padding-top: myrem(50);
+		min-height: initial;
+	}
+
+	&::after {
+		content: "";
+		display: inline-block;
+		width: myrem(796);
+		height: myrem(400);
+		background: url(../img/common/bg-ttl-orange.png) no-repeat center center / contain;
+		position: absolute;
+		top: myrem(32);
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+		@media #{$sp} {
+			width: myrem(398);
+			height: myrem(200);
+			top: myrem(-5);
+		}
+	}
+
+	&.--green {
+		&::after {
+			background: url(../img/common/bg-ttl-green.png) no-repeat center center / contain;
+		}
+	}
+
+	&.--blue {
+		&::after {
+			background: url(../img/common/bg-ttl-blue.png) no-repeat center center / contain;
+		}
+	}
+
+	&.--yellow {
+		&::after {
+			background: url(../img/common/bg-ttl-yellow.png) no-repeat center center / contain;
+		}
+	}
+
+	&.--none {
+		&::after {
+			background: none;
+		}
+	}
+}
+
+

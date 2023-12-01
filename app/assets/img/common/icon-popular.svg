@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="20" viewBox="0 0 28 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_23443" data-name="長方形 23443" width="16.199" height="10.525" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_12329" data-name="グループ 12329" transform="translate(0 -9596)">
+    <path id="長方形_23442" data-name="長方形 23442" d="M4,0H28a0,0,0,0,1,0,0V16a4,4,0,0,1-4,4H0a0,0,0,0,1,0,0V4A4,4,0,0,1,4,0Z" transform="translate(0 9596)" fill="#dbba2e"/>
+    <g id="グループ_12296" data-name="グループ 12296" transform="translate(6 9601.278)">
+      <path id="パス_9185" data-name="パス 9185" d="M47.164,76.928l-3.822-2.863,2.236,6.856h8.377l2.235-6.856-3.822,2.863-2.6-3.879Z" transform="translate(-41.769 -70.397)" fill="#fff"/>
+      <g id="グループ_12295" data-name="グループ 12295">
+        <g id="グループ_12294" data-name="グループ 12294" clip-path="url(#clip-path)">
+          <path id="パス_9186" data-name="パス 9186" d="M.963,33.109A.964.964,0,1,0,0,32.145a.966.966,0,0,0,.964.964" transform="translate(0.001 -30.05)" fill="#fff" fill-rule="evenodd"/>
+          <path id="パス_9187" data-name="パス 9187" d="M194.74,1.927a.964.964,0,1,0-.963-.964.966.966,0,0,0,.963.964" transform="translate(-186.743)" fill="#fff" fill-rule="evenodd"/>
+          <path id="パス_9188" data-name="パス 9188" d="M394.1,38.693a.964.964,0,1,0-.963-.963.966.966,0,0,0,.963.963" transform="translate(-378.865 -35.431)" fill="#fff" fill-rule="evenodd"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

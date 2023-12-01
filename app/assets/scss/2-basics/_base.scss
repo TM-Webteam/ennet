@@ -171,12 +171,12 @@
 
 /***********/
 
-a,button[type="submit"] {
-	transition: all .3s;
-  &:hover {
-    opacity: .7;
-  }
-}
+// a,button[type="submit"] {
+// 	transition: all .3s;
+//   &:hover {
+//     opacity: .7;
+//   }
+// }
 
 /*** Container ***/
 
@@ -184,11 +184,36 @@ a,button[type="submit"] {
 	max-width: $container;
 	width: 100%;
 	margin: 0 auto;
-	padding: 70px 30px;
+  padding-right: myrem(55);
+  padding-left: myrem(55);
 	@media #{$sp} {
-		padding: 35px 15px;
+    padding-right: myrem(34);
+    padding-left: myrem(34);
 	}
 }
+
+.containers--sm {
+  max-width: myrem(1270);
+  margin-inline: auto;
+  padding-right: myrem(55);
+  padding-left: myrem(55);
+	@media #{$sp} {
+    padding-right: myrem(34);
+    padding-left: myrem(34);
+	}
+}
+
+.containers--md {
+  max-width: myrem(1350);
+  margin-inline: auto;
+  padding-right: myrem(55);
+  padding-left: myrem(55);
+	@media #{$sp} {
+    padding-right: myrem(34);
+    padding-left: myrem(34);
+	}
+}
+
 .containers-full {
   max-width: $container-full;
   width: 100%;
@@ -233,11 +258,27 @@ a,button[type="submit"] {
 
 
 /*** その他 ***/
+body {
+  background-color: $base-color;
+  margin-top: myrem(136);
+
+  &.top {
+    margin-top: 0;
+  }
+
+  @media #{$sp} {
+    margin-top: myrem(80);
+  }
+}
 
 main {
-  padding-top: 140px;
+  // margin-top: myrem(95);
+
+  &.top__main {
+    margin-top: 0;
+  }
   @media #{$sp} {
-    padding-top: 60px;
+    // padding-top: 60px;
   }
 }
 
@@ -297,4 +338,16 @@ main {
     width: 100%;
   }
 }
+
+.sticky {
+  position: sticky;
+  width: 100%;
+  top: 100px;
+  @media #{$sp} {
+    position: static;
+  }
+}
+
+
+
 

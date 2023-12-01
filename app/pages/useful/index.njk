@@ -1,0 +1,243 @@
+{% extends "layout/default.njk" %}
+
+{# Custom SEO tags, leave blank to apply the default values #}
+{% set title = "お役立ち資料｜EV Start Biz" %}
+{% set description = "EV導入や運用に関するお役立ち資料のダウンロードページです。" %}
+{% set keywords = "" %}
+
+{# Page settings and also body class #}
+{% set page = "useful" %}
+
+{# Custom tags before </head> #}
+{% block customHead %}
+{% endblock %}
+
+{# Custom tags before </body> #}
+{% block customJs %}
+{% endblock %}
+
+{# Main content #}
+{% block content %}
+
+<!-- breadcrumbs -->
+<div class="breadcrumb">
+  <div class="containers--sm">
+    <ul class="flex fS">
+      <li>
+        <a href="/">ホーム</a>
+      </li>
+      <li>
+        お役立ち資料
+      </li>
+    </ul>
+  </div>
+</div>
+
+<main class="useful__main">
+
+  <!-- news-head -->
+  <div class="useful__head useful-head page-head --blue">
+    <div class="useful-head__containers containers--md">
+      <div class="useful-head__ttl ttl-primary --center">
+        <div class="img">
+          <img src="/assets/img/common/ttl-document.png" alt="introduction">
+        </div>
+        <h1 class="ttl">お役立ち資料</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- useful-cat -->
+  <div class="useful__cat useful-cat">
+    <div class="containers--md">
+      <h2 class="useful-cat__ttl ttl-secondary">
+        カテゴリから探す
+      </h2>
+      <ul class="useful-cat__list js-tab-menu" data-aos="fade-up">
+        <li class="cat --large --tab js-tab active">ホワイトペーパー</li>
+        <li class="cat --large --tab js-tab">サービス資料</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="useful__body">
+    <div class="containers--sm">
+      <ul class="useful__list useful-list">
+        <!-- loop start -->
+        <li class="useful-list__item" data-aos="fade-up">
+          <a href="/useful/useful-single/" class="useful-list__item-link card04">
+            <div class="card04__img">
+              <img src="/assets/img/solution/enneev/img-white-paper.png" alt="">
+            </div>
+            <div class="card04__body">
+              <span class="cat --large">ホワイトペーパー</span>
+              <h2 class="card04__ttl">
+                資料タイトルが入ります。
+              </h2>
+            </div>
+            <div class="card04__btn">
+              <span class="btn01 --yellow-b --small">詳細・ダウンロードはこちら</span>
+            </div>
+          </a>
+        </li>
+        <li class="useful-list__item" data-aos="fade-up">
+          <a href="/useful/useful-single/" class="useful-list__item-link card04">
+            <div class="card04__img">
+              <img src="/assets/img/solution/enneev/img-white-paper.png" alt="">
+            </div>
+            <div class="card04__body">
+              <span class="cat --large">ホワイトペーパー</span>
+              <h2 class="card04__ttl">
+                資料タイトルが入ります。資料タイトルが入ります。
+              </h2>
+            </div>
+            <div class="card04__btn">
+              <span class="btn01 --yellow-b --small">詳細・ダウンロードはこちら</span>
+            </div>
+          </a>
+        </li>
+        <li class="useful-list__item" data-aos="fade-up">
+          <a href="/useful/useful-single/" class="useful-list__item-link card04">
+            <div class="card04__img">
+              <img src="/assets/img/solution/enneev/img-white-paper.png" alt="">
+            </div>
+            <div class="card04__body">
+              <span class="cat --large">ホワイトペーパー</span>
+              <h2 class="card04__ttl">
+                資料タイトルが入ります。資料タイトルが入ります。資料タイトルが入ります。
+              </h2>
+            </div>
+            <div class="card04__btn">
+              <span class="btn01 --yellow-b --small">詳細・ダウンロードはこちら</span>
+            </div>
+          </a>
+        </li>
+        <li class="useful-list__item" data-aos="fade-up">
+          <a href="/useful/useful-single/" class="useful-list__item-link card04">
+            <div class="card04__img">
+              <img src="/assets/img/solution/enneev/img-white-paper.png" alt="">
+            </div>
+            <div class="card04__body">
+              <span class="cat --large">ホワイトペーパー</span>
+              <h2 class="card04__ttl">
+                資料タイトルが入ります。
+              </h2>
+            </div>
+            <div class="card04__btn">
+              <span class="btn01 --yellow-b --small">詳細・ダウンロードはこちら</span>
+            </div>
+          </a>
+        </li>
+        <li class="useful-list__item" data-aos="fade-up">
+          <a href="/useful/useful-single/" class="useful-list__item-link card04">
+            <div class="card04__img">
+              <img src="/assets/img/solution/enneev/img-white-paper.png" alt="">
+            </div>
+            <div class="card04__body">
+              <span class="cat --large">ホワイトペーパー</span>
+              <h2 class="card04__ttl">
+                資料タイトルが入ります。資料タイトルが入ります。
+              </h2>
+            </div>
+            <div class="card04__btn">
+              <span class="btn01 --yellow-b --small">詳細・ダウンロードはこちら</span>
+            </div>
+          </a>
+        </li>
+        <li class="useful-list__item" data-aos="fade-up">
+          <a href="/useful/useful-single/" class="useful-list__item-link card04">
+            <div class="card04__img">
+              <img src="/assets/img/solution/enneev/img-white-paper.png" alt="">
+            </div>
+            <div class="card04__body">
+              <span class="cat --large">ホワイトペーパー</span>
+              <h2 class="card04__ttl">
+                資料タイトルが入ります。資料タイトルが入ります。資料タイトルが入ります。
+              </h2>
+            </div>
+            <div class="card04__btn">
+              <span class="btn01 --yellow-b --small">詳細・ダウンロードはこちら</span>
+            </div>
+          </a>
+        </li>
+        <li class="useful-list__item" data-aos="fade-up">
+          <a href="/useful/useful-single/" class="useful-list__item-link card04">
+            <div class="card04__img">
+              <img src="/assets/img/solution/enneev/img-white-paper.png" alt="">
+            </div>
+            <div class="card04__body">
+              <span class="cat --large">ホワイトペーパー</span>
+              <h2 class="card04__ttl">
+                資料タイトルが入ります。
+              </h2>
+            </div>
+            <div class="card04__btn">
+              <span class="btn01 --yellow-b --small">詳細・ダウンロードはこちら</span>
+            </div>
+          </a>
+        </li>
+        <li class="useful-list__item" data-aos="fade-up">
+          <a href="/useful/useful-single/" class="useful-list__item-link card04">
+            <div class="card04__img">
+              <img src="/assets/img/solution/enneev/img-white-paper.png" alt="">
+            </div>
+            <div class="card04__body">
+              <span class="cat --large">ホワイトペーパー</span>
+              <h2 class="card04__ttl">
+                資料タイトルが入ります。資料タイトルが入ります。
+              </h2>
+            </div>
+            <div class="card04__btn">
+              <span class="btn01 --yellow-b --small">詳細・ダウンロードはこちら</span>
+            </div>
+          </a>
+        </li>
+        <li class="useful-list__item" data-aos="fade-up">
+          <a href="/useful/useful-single/" class="useful-list__item-link card04">
+            <div class="card04__img">
+              <img src="/assets/img/solution/enneev/img-white-paper.png" alt="">
+            </div>
+            <div class="card04__body">
+              <span class="cat --large">ホワイトペーパー</span>
+              <h2 class="card04__ttl">
+                資料タイトルが入ります。資料タイトルが入ります。資料タイトルが入ります。
+              </h2>
+            </div>
+            <div class="card04__btn">
+              <span class="btn01 --yellow-b --small">詳細・ダウンロードはこちら</span>
+            </div>
+          </a>
+        </li>
+
+        <!-- loop end -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- contact -->
+  <section class="useful__contact common-contact">
+    <div class="containers--sm">
+      <div class="common-contact__ttl ttl-primary --center">
+        <div class="img">
+          <img src="/assets/img/common/ttl-contact.png" alt="contact us">
+        </div>
+        <h2 class="ttl">ご相談・お問合せ</h2>
+      </div>
+      <p class="common-contact__text" data-aos="fade-up">EV導入や運用に関する<span>お問合せ・ご相談はお気軽に</span><span>ご連絡ください。</span></p>
+      <div class="common-contact__btn" data-aos="fade-up">
+        <a href="/contact/" class="btn02">まずは相談・問合せする</a>
+      </div>
+      <div class="common-contact__document" data-aos="fade-up">
+        <p class="common-contact__document-text">サービス資料・お役立ち資料を<span>ご希望の方はこちら</span></p>
+        <div class="common-contact__document-btn">
+          <a href="#" class="btn02 --yellow --sp-small">サービス資料</a>
+          <a href="#" class="btn02 --yellow --sp-small">お役立ち資料</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+/*
+  ----------------
+  news
+  ----------------
+*/
+
+.news__body {
+  margin-top: myrem(150);
+  @media #{$sp} {
+    margin-top: myrem(60);
+  }
+}
+
+.news__list {
+  margin-top: myrem(20);
+  @media #{$sp} {
+    margin-top: myrem(40);
+  }
+}
+
+.news__list {
+  &.news-list {
+    padding-bottom: myrem(54);
+    @media #{$sp} {
+      padding-bottom: myrem(40);
+    }
+  }
+}
+
+.news-list__pagination {
+  margin-top: myrem(75);
+  @media #{$sp} {
+    margin-top: myrem(40);
+  }
+}
+
+.news__contact {
+  margin-top: myrem(160);
+  @media #{$sp} {
+    margin-top: myrem(130);
+  }
+}

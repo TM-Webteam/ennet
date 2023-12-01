@@ -1,0 +1,165 @@
+/*
+  ----------------
+  qa
+  ----------------
+*/
+.qa__head {
+  margin-top: myrem(30);
+}
+
+.qa__page-link {
+  margin-top: myrem(104);
+  @media #{$sp} {
+    margin-top: myrem(90);
+  }
+}
+
+.qa__sec1 {
+  margin-top: myrem(113);
+  @media #{$sp} {
+    margin-top: myrem(90);
+  }
+}
+
+.qa__sec2 {
+  margin-top: myrem(85);
+  @media #{$sp} {
+    margin-top: myrem(70);
+  }
+}
+
+.qa__sec3 {
+  margin-top: myrem(85);
+  @media #{$sp} {
+    margin-top: myrem(70);
+  }
+}
+
+.qa__sec4 {
+  margin-top: myrem(85);
+  @media #{$sp} {
+    margin-top: myrem(70);
+  }
+}
+
+.qa__contact {
+  margin-top: myrem(160);
+  @media #{$sp} {
+    margin-top: myrem(130);
+  }
+}
+
+
+/*==================================
+.qa-head
+===================================*/
+.qa-head__content {
+  @media #{$sp} {
+    display: block;
+  }
+}
+
+.qa-head__body{
+  width: calc(793/1240 * 100%);
+  position: relative;
+  margin-right: myrem(-34);
+  padding-top: myrem(90);
+  z-index: 5;
+  @media #{$sp} {
+    width: 100%;
+    padding-top: myrem(0);
+  }
+}
+
+.qa-head__lead {
+  font-size: myrem(23);
+  line-height: calc(36/22);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  text-align: left;
+  margin-top: myrem(28);
+  margin-top: myrem(36);
+  span {
+    display: inline-block;
+  }
+  @media #{$sp} {
+    font-size: myrem(18);
+    text-align: center;
+  }
+}
+
+.qa-head__ttl {
+  &.ttl-primary {
+    img {
+      height: myrem(82);
+      @media #{$sp} {
+        height: myrem(40);
+      }
+    }
+
+    .ttl {
+      margin-top: myrem(15);
+    }
+  }
+}
+
+.qa-head__img {
+  width: calc(630/1240 * 100%);
+  margin-right: myrem(-44);
+  @media #{$sp} {
+    width: 100%;
+    margin-right: 0;
+    align-items: flex-start;
+    margin-top: myrem(40);
+  }
+
+  img {
+    aspect-ratio:584/312;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: myrem(4);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .16);
+  }
+}
+
+/*==================================
+.qa-page-link
+===================================*/
+.qa-page-link__ttl {
+  text-align: center;
+}
+
+.qa-page-link__list {
+  margin-top: myrem(34);
+  max-width: myrem(951);
+  margin-inline: auto;
+  @media #{$sp} {
+    max-width: myrem(550);
+    margin-inline: auto;
+  }
+}
+
+/*==================================
+.qa-sec
+===================================*/
+.qa-sec__containers {
+  @media #{$sp} {
+    padding-right: myrem(10);
+    padding-left: myrem(10);
+  }
+}
+
+.qa-sec__ttl {
+  text-align: center;
+}
+
+.qa-sec__accordion {
+  margin-top: myrem(42);
+  max-width: myrem(1004);
+  margin-inline: auto;
+  @media #{$sp} {
+    max-width: myrem(700);
+    margin-top: myrem(36);
+  }
+}
